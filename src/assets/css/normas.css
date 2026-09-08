@@ -1,0 +1,267 @@
+:root {
+    --primary-color: #33a32b;
+    --secondary-color: #2D5A27;
+    --bg-color: #F9F8F6;
+    --card-bg: #FFFFFF;
+    --text-color: #2C3E50;
+    --accent-color: #227ae6;
+
+    --text-muted: #64748B;
+    --border-color: #E2E8F0;
+    
+    --tag-strict-bg: #E8F5E9;
+    --tag-strict-text: #2E7D32;
+    --tag-strict-border: #A5D6A7;
+    
+    --tag-partial-bg: #FFF3E0;
+    --tag-partial-text: #E65100;
+    --tag-partial-border: #FFCC80;
+    
+    --tag-informal-bg: #FFEBEE;
+    --tag-informal-text: #C62828;
+    --tag-informal-border: #EF9A9A;
+
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    padding: 50px 24px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Contenedor Principal con animación de entrada */
+  .section-block {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Botón Volver al Índice */
+  .nav-back-container {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .btn-back:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateX(-5px);
+    box-shadow: 0 8px 16px rgba(51, 163, 43, 0.12);
+  }
+
+  /* Encabezado */
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 28px;
+    background: var(--card-bg);
+    border-left: 6px solid var(--primary-color);
+    border-radius: 14px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+  }
+
+  .section-header-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+  }
+
+  .section-header-title span {
+    font-size: 1.6rem;
+  }
+
+  /* Tarjeta de la Tabla */
+  .table-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05), 0 4px 10px rgba(0, 0, 0, 0.02);
+    overflow: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  thead th {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 18px 24px;
+    border: none;
+  }
+
+  tbody td {
+    padding: 22px 24px;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+    line-height: 1.6;
+    transition: background 0.2s ease;
+  }
+
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  tbody tr:hover td {
+    background-color: rgba(51, 163, 43, 0.025);
+  }
+
+  .norma-title {
+    font-weight: 700;
+    color: var(--text-color);
+    font-size: 1rem;
+    display: block;
+    letter-spacing: -0.01em;
+  }
+
+  .norma-sub {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-top: 3px;
+    display: block;
+  }
+
+  /* Aclaración Desplegable Elegante */
+  .aclaracion-details {
+    margin-top: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #FAFBFD;
+    transition: all 0.25s ease;
+    overflow: hidden;
+  }
+
+  .aclaracion-details[open] {
+    border-color: rgba(34, 122, 230, 0.4);
+    box-shadow: 0 4px 12px rgba(34, 122, 230, 0.08);
+  }
+
+  .aclaracion-summary {
+    padding: 8px 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    outline: none;
+    list-style: none;
+    transition: background 0.2s ease;
+  }
+
+  .aclaracion-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .aclaracion-summary:hover {
+    background-color: rgba(34, 122, 230, 0.06);
+  }
+
+  .summary-icon {
+    display: inline-block;
+    font-size: 0.7rem;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .aclaracion-details[open] .summary-icon {
+    transform: rotate(90deg);
+  }
+
+  .aclaracion-content {
+    padding: 12px 14px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(226, 232, 240, 0.8);
+    background-color: #FFFFFF;
+    line-height: 1.55;
+  }
+
+  .highlight {
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: rgba(34, 122, 230, 0.09);
+    padding: 2px 6px;
+    border-radius: 4px;
+  }
+
+  /* Etiquetas de Estado Tipo Pill */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+  }
+
+  .tag-si { 
+    background-color: var(--tag-strict-bg); 
+    color: var(--tag-strict-text); 
+    border-color: var(--tag-strict-border);
+  }
+  
+  .tag-parcial { 
+    background-color: var(--tag-partial-bg); 
+    color: var(--tag-partial-text); 
+    border-color: var(--tag-partial-border);
+  }
+  
+  .tag-informal { 
+    background-color: var(--tag-informal-bg); 
+    color: var(--tag-informal-text); 
+    border-color: var(--tag-informal-border);
+  }
+
+  /* Adaptación Móvil */
+  @media (max-width: 850px) {
+    body { padding: 24px 12px; }
+    .table-card { overflow-x: auto; }
+    table { min-width: 780px; }
+  }
