@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo y Costos - HuilaTour Conecta</title>
+    <link rel="stylesheet" href="../assets/css/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+  
+    </style>
+</head>
+<body>
+
+   <!-- Navbar Lateral -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>HuilaTour <span>Conecta</span></h2>
+            <small>Panel Técnico</small>
+        </div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="requerimientos.html"><i class="fa-solid fa-list-check"></i> Requerimientos</a>
+            <a href="desarrollo.html" class="active"><i class="fa-solid fa-laptop-code"></i> Desarrollo y Costos</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Desarrollo e Implementación</h1>
+            <p>Recursos tecnológicos, arquitectura de hardware, talento humano y modelo financiero estimado para HuilaTour Conecta.</p>
+        </section>
+
+        <!-- DASHBOARD INTERACTIVO DE RESUMEN DE COSTOS -->
+        <section class="content-section">
+            <h2>Panel Financiero Global (8 Semanas)</h2>
+            <p>Resumen automatizado de inversión proyectada para el desarrollo y despliegue del proyecto en el departamento del Huila.</p>
+            
+            <div class="cost-dashboard" style="margin-top: 25px;">
+                <div class="cost-card-interactive">
+                    <i class="fa-solid fa-server"></i>
+                    <h4>Hardware / Equipos</h4>
+                    <div class="amount">$9.4M - $15M</div>
+                </div>
+                <div class="cost-card-interactive" style="border-top-color: var(--accent-color);">
+                    <i class="fa-solid fa-code" style="color: var(--accent-color);"></i>
+                    <h4>Software / Licencias</h4>
+                    <div class="amount">$0 (Open Source)</div>
+                </div>
+                <div class="cost-card-interactive">
+                    <i class="fa-solid fa-users"></i>
+                    <h4>Recursos Humanos</h4>
+                    <div class="amount">$18.08M</div>
+                </div>
+                <div class="cost-card-interactive" style="border-top-color: #eab308;">
+                    <i class="fa-solid fa-chart-pie" style="color: #eab308;"></i>
+                    <h4>Adicionales (10%)</h4>
+                    <div class="amount">$2.7M - $3.3M</div>
+                </div>
+            </div>
+
+            <div class="total-banner">
+                <h3>Inversión Total Estimada del Proyecto</h3>
+                <div class="total-price">$30.228.000 – $36.188.000 COP</div>
+                <p style="font-size: 0.9rem; margin-top: 8px; opacity: 0.85;">Escenario contemplado para 8 semanas de ejecución operativa.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE PESTAÑAS INTERACTIVAS PARA RECURSOS -->
+        <section class="content-section">
+            <h2>Desglose Técnico de Recursos</h2>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-hw')"><i class="fa-solid fa-computer"></i> Hardware</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-sw')"><i class="fa-solid fa-code"></i> Software & APIs</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-hr')"><i class="fa-solid fa-user-tie"></i> Talento Humano</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-extra')"><i class="fa-solid fa-file-invoice-dollar"></i> Costos Adicionales</button>
+            </div>
+
+            <!-- TAB 1: HARDWARE -->
+            <div id="tab-hw" class="tab-content active">
+                <p style="color: var(--text-color); margin-bottom: 15px;">Equipos de cómputo portátiles utilizados por el equipo de desarrollo durante el ciclo de vida del proyecto:</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Dispositivo</th>
+                                <th>Especificaciones Técnicas</th>
+                                <th>Costo Estimado (COP)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ASUS VivoBook Go E1504FA</strong></td>
+                                <td>Ryzen 5, 8 GB RAM, SSD 477 GB, Windows 11</td>
+                                <td>$1.600.000 – $2.000.000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lenovo LOQ 15ARP9</strong></td>
+                                <td>Ryzen 7, 24 GB RAM, SSD 954 GB, RTX 4060</td>
+                                <td>$4.500.000 – $6.500.000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>HP Laptop 15-dw1xxx</strong></td>
+                                <td>Core i3, 8 GB RAM, SSD 238 GB, Windows 11</td>
+                                <td>$1.200.000 – $2.000.000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>ASUS Vivobook X1502ZA</strong></td>
+                                <td>Core i5, 16 GB RAM, SSD 477 GB, Windows 11</td>
+                                <td>$2.100.000 – $2.500.000</td>
+                            </tr>
+                            <tr>
+                                <td><strong>MSI V14 G5 IRL</strong></td>
+                                <td>Intel Core 5 210H (2.20 GHz), 8 GB RAM, SSD 238 GB, Windows 11, Intel Graphics</td>
+                                <td>$1.800.000 – $2.200.000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 2: SOFTWARE -->
+            <div id="tab-sw" class="tab-content">
+                <p style="color: var(--text-color); margin-bottom: 15px;">Herramientas, entornos de desarrollo, motores de base de datos y pasarelas de servicios:</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoría</th>
+                                <th>Tecnología / Herramienta</th>
+                                <th>Costo / Licenciamiento</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sistema Operativo</strong></td>
+                                <td>Windows 11</td>
+                                <td>$30.000 - $40.000 (mensual)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Lenguajes</strong></td>
+                                <td>PHP, JavaScript (React), Java</td>
+                                <td>$0 (Open Source)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Base de Datos</strong></td>
+                                <td>PostgreSQL</td>
+                                <td>$0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Servidor Web</strong></td>
+                                <td>Apache HTTP Server (Seleccionado) / Nginx</td>
+                                <td>$0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>IDE & Control</strong></td>
+                                <td>Visual Studio Code, Git + GitHub, PgAdmin</td>
+                                <td>$0</td>
+                            </tr>
+                            <tr>
+                                <td><strong>APIs Externas</strong></td>
+                                <td>OpenWeatherMap API / Google Maps API</td>
+                                <td>$0 (Planes gratuitos / Según consumo)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Seguridad & Gestión</strong></td>
+                                <td>Certificado SSL / HTTPS, Cifrado BCrypt, Roles RBAC</td>
+                                <td>$4.500 - $80.000 (mensual para HTTPS)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prototipado & QA</strong></td>
+                                <td>Figma, Postman, Trello</td>
+                                <td>$0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 3: TALENTO HUMANO -->
+            <div id="tab-hr" class="tab-content">
+                <p style="color: var(--text-color); margin-bottom: 15px;">Perfiles especializados requeridos para la correcta ejecución del proyecto en un periodo estimado de 8 semanas:</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rol del Proyecto</th>
+                                <th>Funciones Principales</th>
+                                <th>Tarifa por Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Líder de Proyecto / Analista</strong></td>
+                                <td>Planificación, gestión de requisitos y coordinación del equipo</td>
+                                <td>$25.000 / hora</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Diseñador de Software</strong></td>
+                                <td>Diseño de arquitectura de sistemas y esquemas de base de datos</td>
+                                <td>$24.000 / hora</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desarrolladora Frontend</strong></td>
+                                <td>Desarrollo de interfaces gráficas y componentes visuales</td>
+                                <td>$22.000 / hora</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Desarrollador Backend</strong></td>
+                                <td>Creación de servicios lógicos, endpoints y persistencia de datos</td>
+                                <td>$22.000 / hora</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tester / QA</strong></td>
+                                <td>Ejecución de pruebas de calidad, depuración y validación del sistema</td>
+                                <td>$20.000 / hora</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 4: COSTOS ADICIONALES -->
+            <div id="tab-extra" class="tab-content">
+                <p style="color: var(--text-color); margin-bottom: 15px;">Distribución porcentual establecida para la operación, soporte y gastos imprevistos (10% total):</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Concepto Operativo</th>
+                                <th>Descripción de Cobertura</th>
+                                <th>Porcentaje Asignado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Arriendo de espacio de trabajo</strong></td>
+                                <td>Espacio físico utilizado por el equipo de desarrollo</td>
+                                <td>4%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hosting y dominio</strong></td>
+                                <td>Servicios de alojamiento web y registro de dominio oficial</td>
+                                <td>2%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Internet y conectividad</strong></td>
+                                <td>Garantía de servicio de red de alta velocidad</td>
+                                <td>1%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Copias de seguridad</strong></td>
+                                <td>Almacenamiento seguro de respaldos en la nube</td>
+                                <td>1%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Mantenimiento y soporte</strong></td>
+                                <td>Soporte técnico preventivo y correctivo del sistema</td>
+                                <td>1%</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Gastos imprevistos</strong></td>
+                                <td>Fondo de contingencia para imprevistos operativos</td>
+                                <td>1%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECCIÓN 3: CONCLUSIÓN FINANCIERA -->
+        <section class="content-section">
+            <h2>Detalle Analítico y Conclusión Económica</h2>
+            <ul style="line-height: 1.8; color: var(--text-color); margin-left: 20px;">
+                <li><strong>Hardware:</strong> Corresponde a los equipos de cómputo utilizados por el equipo de desarrollo, estimándose entre $9.400.000 y $15.000.000 COP con la integración del nuevo equipo MSI V14 G5 IRL.</li>
+                <li><strong>Software:</strong> Las principales herramientas cuentan con opciones gratuitas ($0 COP), minimizando la inversión inicial en licencias comerciales.</li>
+                <li><strong>Recursos Humanos:</strong> Comprende cinco perfiles técnicos especializados durante las 8 semanas de desarrollo, cuantificando un total de $18.080.000 COP.</li>
+                <li><strong>Costos adicionales:</strong> El 10% global cubre infraestructura física, conectividad, hosting y respaldos, situándose entre $2.748.000 y $3.300.000 COP.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Script externo JS -->
+    <script src="../assets/js/desarrollo_implementacion.js"></script>
+</body>
+</html>
