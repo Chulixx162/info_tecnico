@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Técnico - HuilaTour Conecta</title>
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navegación Lateral / Header -->
+    <header class="navbar">
+        <div class="logo">
+            <h2>HuilaTour <span>Conecta</span></h2>
+            <small>Informe Técnico de Software</small>
+        </div>
+        <nav class="nav-links">
+            <a href="#resumen" class="active"><i class="fa-solid fa-file-contract"></i> Resumen</a>
+            <a href="#objetivos"><i class="fa-solid fa-bullseye"></i> Objetivos</a>
+            <a href="#requisitos"><i class="fa-solid fa-list-check"></i> Requisitos</a>
+            <a href="#arquitectura"><i class="fa-solid fa-sitemap"></i> Arquitectura</a>
+            <a href="#der"><i class="fa-solid fa-database"></i> Modelo DER</a>
+            <a href="#costos"><i class="fa-solid fa-coins"></i> Presupuesto</a>
+        </nav>
+    </header>
+
+    <main class="main-content">
+
+        <!-- Banner Principal -->
+        <section class="hero-section">
+            <div class="hero-card">
+                <h1>HuilaTour Conecta</h1>
+                <p>Sistema Inteligente de Gestión Turística Regional</p>
+                <div class="team-info">
+                    <p><strong>Aprendices SENA (ADSO - Ficha 3407799):</strong> Julio Andrés Casanova, Laura Daniela Isanoa, Karoll Nikol Coronado, Juan Manuel Barreiro, Jaime Andrés Ladino.</p>
+                    <p><strong>Instructor:</strong> José de Jesús Motta Vargas | Centro de la Industria, la Empresa y los Servicios – SENA Neiva</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resumen Ejecutivo & Justificación -->
+        <section id="resumen" class="content-section">
+            <h2><i class="fa-solid fa-compass"></i> Resumen Ejecutivo y Justificación</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Resumen del Proyecto</h3>
+                    <p>HuilaTour Conecta es una plataforma tecnológica mobile-first estructurada para centralizar la oferta turística del departamento del Huila (Desierto de la Tatacoa, San Agustín, Festival del Bambuco, etc.). Busca reducir la desarticulación de prestadores, promover la formalización y ofrecer itinerarios inteligentes con analítica de datos.</p>
+                </div>
+                <div class="card">
+                    <h3>Impacto y Justificación</h3>
+                    <p>Frente a la dispersión de información y la brecha de ocupación hotelera (85% en temporadas festivas vs. 30%-40% en temporada baja), el sistema ofrece un modelo digital unificado bajo cumplimiento normativo Ley 1581 de 2012 e ISO/IEC 25010.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Objetivos -->
+        <section id="objetivos" class="content-section">
+            <h2><i class="fa-solid fa-bullseye"></i> Objetivos del Proyecto</h2>
+            <div class="card highlight">
+                <h3>Objetivo General</h3>
+                <p>Diseñar y desarrollar una plataforma digital inteligente para la gestión integral del sector turístico del departamento del Huila, centralizando la oferta y analizando el comportamiento de la demanda.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card-sm">
+                    <i class="fa-solid fa-1"></i>
+                    <p>Analizar necesidades de digitalización del turismo en el Huila.</p>
+                </div>
+                <div class="card-sm">
+                    <i class="fa-solid fa-2"></i>
+                    <p>Diseñar la arquitectura centralizada de servicios y precios referenciales.</p>
+                </div>
+                <div class="card-sm">
+                    <i class="fa-solid fa-3"></i>
+                    <p>Implementar el módulo inteligente de rutas e itinerarios personalizados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Requisitos Funcionales y No Funcionales -->
+        <section id="requisitos" class="content-section">
+            <h2><i class="fa-solid fa-list-check"></i> Requerimientos de Software</h2>
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('rf')">Funcionales (RF-01 a RF-09)</button>
+                <button class="tab-btn" onclick="switchTab('rnf')">No Funcionales (RNF)</button>
+            </div>
+
+            <div id="rf-tab" class="tab-content active">
+                <div class="grid-3">
+                    <div class="card-req">
+                        <h4>RF-01: Destinos y Contenido</h4>
+                        <p>Gestión de galerías, precios, estado de vías y clima en tiempo real.</p>
+                    </div>
+                    <div class="card-req">
+                        <h4>RF-02: Usuarios y Autenticación</h4>
+                        <p>Roles (Admin, Operador, Turista) protegidos con tokens JWT.</p>
+                    </div>
+                    <div class="card-req">
+                        <h4>RF-03: Reservas y Chatbot</h4>
+                        <p>Contacto por WhatsApp, solicitudes de reserva e integración con chatbot 24/7.</p>
+                    </div>
+                    <div class="card-req">
+                        <h4>RF-04: Mapas y Geolocalización</h4>
+                        <p>Mapas interactivos (Google Maps / Leaflet) y precarga offline.</p>
+                    </div>
+                    <div class="card-req">
+                        <h4>RF-05: Reseñas y Confianza</h4>
+                        <p>Validación de Registro Nacional de Turismo (RNT) y reseñas verificadas.</p>
+                    </div>
+                    <div class="card-req">
+                        <h4>RF-06: Seguridad y Privacidad</h4>
+                        <p>Cifrado de datos en tránsito/reposo y mitigación de ataques DDoS.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="rnf-tab" class="tab-content">
+                <div class="grid-2">
+                    <div class="card">
+                        <h4>Rendimiento y Usabilidad</h4>
+                        <ul>
+                            <li><strong>RNF-04:</strong> Tiempo de respuesta menor a 2s.</li>
+                            <li><strong>RNF-10:</strong> Accesibilidad bajo estándar WCAG 2.1 AA.</li>
+                            <li><strong>RNF-11:</strong> Diseño Mobile-First para uso en campo.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Disponibilidad y Mantenibilidad</h4>
+                        <ul>
+                            <li><strong>RNF-07:</strong> Disponibilidad (Uptime) del 99.9% anual.</li>
+                            <li><strong>RNF-14:</strong> Código modular estructurado con Arquitectura Hexagonal.</li>
+                            <li><strong>RNF-17:</strong> Estrategia de caché para baja conectividad rural.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Arquitectura de Software -->
+        <section id="arquitectura" class="content-section">
+            <h2><i class="fa-solid fa-sitemap"></i> Arquitectura del Sistema</h2>
+            <p>Estructuración en 3 capas con el patrón MVC (Modelo - Vista - Controlador):</p>
+            <div class="arch-container">
+                <div class="arch-layer">
+                    <h4>Capa de Presentación (Vista)</h4>
+                    <p>HTML5, CSS3, JavaScript (Interfaces interactivas)</p>
+                </div>
+                <i class="fa-solid fa-arrow-down"></i>
+                <div class="arch-layer">
+                    <h4>Capa de Negocio (Controlador)</h4>
+                    <p>Java (Servicios, Reglas de Negocio, JWT, Controladores)</p>
+                </div>
+                <i class="fa-solid fa-arrow-down"></i>
+                <div class="arch-layer">
+                    <h4>Capa de Datos (Modelo)</h4>
+                    <p>PostgreSQL & Java Repositories (Persistencia)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modelado DER -->
+        <section id="der" class="content-section">
+            <h2><i class="fa-solid fa-database"></i> Modelo Entidad-Relación (DER)</h2>
+            <div class="card">
+                <p>El esquema físico organiza las entidades principales: <strong>Turistas, Administradores, Proveedores, Sitios Turísticos, Opiniones, Favoritos, Categorías y Servicios</strong>.</p>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tabla</th>
+                                <th>Campo Clave</th>
+                                <th>Relación Principal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Turistas</td>
+                                <td>n_documento (PK)</td>
+                                <td>1:N con Opiniones y Favoritos</td>
+                            </tr>
+                            <tr>
+                                <td>Proveedores</td>
+                                <td>id_proveedor (PK)</td>
+                                <td>1:N con Sitios Turísticos y Servicios</td>
+                            </tr>
+                            <tr>
+                                <td>Sitios Turísticos</td>
+                                <td>id_sitio (PK)</td>
+                                <td>N:1 con Proveedores, 1:N con Imágenes</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Costos y Presupuesto -->
+        <section id="costos" class="content-section">
+            <h2><i class="fa-solid fa-coins"></i> Presupuesto Estimado</h2>
+            <div class="cost-summary">
+                <div class="cost-card">
+                    <h3>Hardware</h3>
+                    <p class="price">$9.400.000 - $13.000.000 COP</p>
+                    <small>Equipos de desarrollo</small>
+                </div>
+                <div class="cost-card">
+                    <h3>Recursos Humanos</h3>
+                    <p class="price">$18.080.000 COP</p>
+                    <small>5 perfiles x 8 semanas</small>
+                </div>
+                <div class="cost-card highlight-cost">
+                    <h3>Costo Total Estimado</h3>
+                    <p class="price-total">$30.228.000 – $34.188.000 COP</p>
+                    <small>Incluye 10% de imprevistos/operatividad</small>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JS de la aplicación -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
