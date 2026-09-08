@@ -1,0 +1,303 @@
+/* Variables alineadas con styles.css */
+:root {
+    --primary-color: #33a32b;
+    --secondary-color: #2D5A27;
+    --bg-color: #F9F8F6;
+    --card-bg: #FFFFFF;
+    --text-color: #2C3E50;
+    --border-color: #E2E8F0;
+    --accent-color: #227ae6;
+    --pk-color: #D97706;
+    --fk-color: #2563EB;
+}
+
+
+/* Encabezado de la Sección */
+.section-header {
+    margin-bottom: 25px;
+}
+.data-modeling-container{
+    margin-left: 2rem; /* Ajuste para el ancho del sidebar */
+    padding: 1rem;
+}
+.section-header h1 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #64748B;
+    font-size: 1rem;
+}
+
+/* Sub-navegación por Pestañas Internas */
+.subnav-tabs {
+    display: flex;
+    gap: 12px;
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.subtab-btn {
+    padding: 12px 20px;
+    background: transparent;
+    border: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #64748B;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.subtab-btn:hover {
+    color: var(--primary-color);
+}
+
+.subtab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+/* Pestañas de Contenido */
+.data-tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.data-tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.data-tab-content h2 {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    margin: 25px 0 10px 0;
+    border-left: 4px solid var(--secondary-color);
+    padding-left: 10px;
+}
+
+.section-desc {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* Grilla para Diagramas */
+.diagrams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* Tarjetas para Imágenes y Diagramas */
+.image-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-bottom: 20px;
+}
+
+.image-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.08);
+}
+
+.image-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+/* Contenedor y Placeholder de las Imágenes */
+.img-placeholder {
+    width: 100%;
+    min-height: 280px;
+    background-color: #F1F5F9;
+    border: 2px dashed #CBD5E1;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-placeholder.tall {
+    min-height: 420px;
+}
+
+.diagram-img {
+    width: 100%;
+    height: auto;
+    max-height: 550px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Fallback si aún no hay imagen cargada */
+.placeholder-fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: #94A3B8;
+    text-align: center;
+    padding: 20px;
+}
+
+.placeholder-fallback i {
+    font-size: 3rem;
+    color: #CBD5E1;
+}
+
+.placeholder-fallback span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.card-caption {
+    margin-top: 12px;
+    font-size: 0.85rem;
+    color: #64748B;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Control de Filtros (Diagramas de Actividades) */
+.filter-controls {
+    margin-bottom: 25px;
+    background: var(--card-bg);
+    padding: 16px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.filter-controls label {
+    font-size: 0.95rem;
+    color: var(--text-color);
+}
+
+.filter-controls select {
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #CBD5E1;
+    background-color: #FFFFFF;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.filter-controls select:focus {
+    border-color: var(--primary-color);
+}
+
+/* Tabla del Esquema Físico */
+.table-responsive {
+    overflow-x: auto;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    margin-top: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.db-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.db-table th, .db-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.92rem;
+}
+
+.db-table th {
+    background-color: #F1F5F9;
+    color: #334155;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.table-entity {
+    background-color: #F8FAFC;
+    border-right: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
+.table-entity strong {
+    color: var(--primary-color);
+}
+
+.db-table code {
+    background-color: #F1F5F9;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    color: #0F172A;
+}
+
+/* Badges de Claves PK / FK */
+.badge {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+}
+
+.badge.pk { background-color: var(--pk-color); }
+.badge.fk { background-color: var(--fk-color); }
+
+/* Adaptabilidad Móvil y Tablets */
+@media (max-width: 992px) {
+    .diagrams-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .subnav-tabs {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .subtab-btn {
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        border-left: 3px solid transparent;
+    }
+
+    .subtab-btn.active {
+        border-bottom-color: var(--border-color);
+        border-left-color: var(--primary-color);
+        background-color: #F1F5F9;
+    }
+}
