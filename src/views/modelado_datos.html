@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelado de Datos y Diagramas - HuilaTour</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/modelado_datos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+
+    <main class="main-content">
+        <!-- Encabezado de la Sección -->
+        <header class="section-header">
+            <h1><i class="fa-solid fa-diagram-project"></i> Modelado de Datos y Procesos</h1>
+            <p>Estructura de base de datos, diagrama entidad-relación y flujos de actividades del sistema HuilaTour Conecta[cite: 1].</p>
+        </header>
+
+        <!-- Navegación por Pestañas Internas -->
+        <nav class="subnav-tabs">
+            <button class="subtab-btn active" onclick="switchDataTab('der')"><i class="fa-solid fa-database"></i> Modelo DER y Esquema Físico</button>
+            <button class="subtab-btn" onclick="switchDataTab('casos-uso')"><i class="fa-solid fa-users-gear"></i> Diagramas de Casos de Uso</button>
+            <button class="subtab-btn" onclick="switchDataTab('actividades')"><i class="fa-solid fa-network-wired"></i> Diagramas de Actividades</button>
+        </nav>
+
+        <!-- PESTAÑA 1: MODELO ENTIDAD RELACIÓN Y ESQUEMA FÍSICO -->
+        <section id="tab-der" class="data-tab-content active">
+            <h2>Diagrama Entidad-Relación (DER)</h2>
+            <p class="section-desc">El modelado de datos permite representar la información que manejará el sistema, identificando entidades, atributos y relaciones clave[cite: 1].</p>
+
+            <!-- Espacio para la imagen del DER -->
+            <div class="image-card">
+                <div class="img-placeholder">
+                    <!-- REEMPLAZA ESTA ETIQUETA IMG CON TU ARCHIVO REAL -->
+                    <img src="../assets/img/diagrama_der.png" alt="Diagrama Entidad Relación HuilaTour" class="diagram-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="placeholder-fallback">
+                        <i class="fa-regular fa-image"></i>
+                        <span>Inserta aquí la imagen del Diagrama DER (diagrama_der.png)</span>
+                    </div>
+                </div>
+                <div class="card-caption">
+                    <strong>Figura 1:</strong> Modelo Entidad-Relación (DER) para la gestión turística del Huila[cite: 1].
+                </div>
+            </div>
+
+            <h2>Esquema Físico de la Base de Datos</h2>
+            <div class="table-responsive">
+                <table class="db-table">
+                    <thead>
+                        <tr>
+                            <th>Tabla</th>
+                            <th>Campo</th>
+                            <th>Tipo de Dato</th>
+                            <th>Clave / Restricción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Turistas -->
+                        <tr>
+                            <td rowspan="4" class="table-entity"><strong>Turistas</strong></td>
+                            <td><code>n_documento</code></td>
+                            <td>INT</td>
+                            <td><span class="badge pk">PK</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>nombre</code></td>
+                            <td>VARCHAR(100)</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><code>correo</code></td>
+                            <td>VARCHAR(200)</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><code>password</code></td>
+                            <td>VARCHAR(200)</td>
+                            <td>-</td>
+                        </tr>
+
+                        <!-- Sitios Turísticos -->
+                        <tr>
+                            <td rowspan="4" class="table-entity"><strong>Sitios_Turisticos</strong></td>
+                            <td><code>id_sitio</code></td>
+                            <td>INT</td>
+                            <td><span class="badge pk">PK</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>id_proveedor</code></td>
+                            <td>INT</td>
+                            <td><span class="badge fk">FK</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>nombre</code></td>
+                            <td>VARCHAR(200)</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><code>precio_ingreso</code></td>
+                            <td>INT</td>
+                            <td>-</td>
+                        </tr>
+
+                        <!-- Proveedores -->
+                        <tr>
+                            <td rowspan="3" class="table-entity"><strong>Proveedores</strong></td>
+                            <td><code>id_proveedor</code></td>
+                            <td>INT</td>
+                            <td><span class="badge pk">PK</span></td>
+                        </tr>
+                        <tr>
+                            <td><code>nombre_empresa</code></td>
+                            <td>VARCHAR(125)</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td><code>nit</code></td>
+                            <td>VARCHAR(50)</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 2: DIAGRAMAS DE CASOS DE USO -->
+        <section id="tab-casos-uso" class="data-tab-content">
+            <h2>Diagramas de Casos de Uso</h2>
+            <p class="section-desc">Representación de los diferentes actores del sistema (Turista, Operador, Administrador) y sus interacciones con los módulos de HuilaTour[cite: 1].</p>
+
+            <div class="diagrams-grid">
+                <!-- Tarjeta para Caso de Uso General -->
+                <div class="image-card">
+                    <h3>Caso de Uso General del Sistema</h3>
+                    <div class="img-placeholder">
+                        <img src="../assets/img/caso_uso_general.png" alt="Caso de Uso General" class="diagram-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Inserta aquí la imagen del Caso de Uso General</span>
+                        </div>
+                    </div>
+                    <div class="card-caption">Visión global de interacciones de usuarios con el sistema[cite: 1].</div>
+                </div>
+
+                <!-- Tarjeta para Caso de Uso de Autenticación / Módulos -->
+                <div class="image-card">
+                    <h3>Caso de Uso - Gestión de Reservas y Operadores</h3>
+                    <div class="img-placeholder">
+                        <img src="../assets/img/caso_uso_reservas.png" alt="Caso de Uso Reservas" class="diagram-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Inserta aquí la imagen del Caso de Uso Especifico</span>
+                        </div>
+                    </div>
+                    <div class="card-caption">Interacción entre turistas y proveedores para reservas de tours[cite: 1].</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PESTAÑA 3: DIAGRAMAS DE ACTIVIDADES -->
+        <section id="tab-actividades" class="data-tab-content">
+            <h2>Diagramas de Actividades</h2>
+            <p class="section-desc">Flujo detallado de decisiones y secuencias operativas por cada Requerimiento Funcional (RF)[cite: 1].</p>
+
+            <!-- Filtro de Diagramas por Requerimiento -->
+            <div class="filter-controls">
+                <label for="rf-filter"><strong>Seleccionar Flujo / RF:</strong></label>
+                <select id="rf-filter" onchange="filterActivityDiagram(this.value)">
+                    <option value="all">Mostrar Todos</option>
+                    <option value="general">Diagrama General de Actividades</option>
+                    <option value="rf01">RF-01: Gestión de Destinos</option>
+                    <option value="rf02">RF-02: Autenticación y Usuarios</option>
+                    <option value="rf03">RF-03: Reservas y Chatbot</option>
+                    <option value="rf04">RF-04: Mapas y Geolocalización</option>
+                    <option value="rf06">RF-06: Seguridad y Datos</option>
+                </select>
+            </div>
+
+            <div class="diagrams-grid">
+                <!-- Diagrama General -->
+                <div class="image-card activity-card" data-rf="general">
+                    <h3>Diagrama General de Actividades</h3>
+                    <div class="img-placeholder tall">
+                        <img src="../assets/img/actividad_general.png" alt="Diagrama de Actividad General" class="diagram-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Inserta la imagen del Diagrama General (actividad_general.png)</span>
+                        </div>
+                    </div>
+                    <div class="card-caption">Contacto con proveedores e interacción entre roles[cite: 1].</div>
+                </div>
+
+                <!-- RF-01 -->
+                <div class="image-card activity-card" data-rf="rf01">
+                    <h3>RF-01: Gestión de Destinos y Contenido</h3>
+                    <div class="img-placeholder">
+                        <img src="../assets/img/actividad_rf01.png" alt="Diagrama RF-01" class="diagram-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Inserta la imagen de Actividades RF-01</span>
+                        </div>
+                    </div>
+                    <div class="card-caption">Proceso de consulta de destinos por turista y gestión CMS por el operador[cite: 1].</div>
+                </div>
+
+                <!-- RF-02 -->
+                <div class="image-card activity-card" data-rf="rf02">
+                    <h3>RF-02: Gestión de Usuarios y Autenticación</h3>
+                    <div class="img-placeholder">
+                        <img src="../assets/img/actividad_rf02.png" alt="Diagrama RF-02" class="diagram-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Inserta la imagen de Actividades RF-02</span>
+                        </div>
+                    </div>
+                    <div class="card-caption">Flujo de registro, validación, asignación de roles y generación de JWT[cite: 1].</div>
+                </div>
+
+                <!-- RF-03 -->
+                <div class="image-card activity-card" data-rf="rf03">
+                    <h3>RF-03: Chatbot y Reservas</h3>
+                    <div class="img-placeholder">
+                        <img src="../assets/img/actividad_rf03.png" alt="Diagrama RF-03" class="diagram-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="placeholder-fallback">
+                            <i class="fa-regular fa-image"></i>
+                            <span>Inserta la imagen de Actividades RF-03</span>
+                        </div>
+                    </div>
+                    <div class="card-caption">Flujo interactivo con el asistente virtual y confirmación de reservas[cite: 1].</div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../assets/js/load-sidebar.js"></script>
+    <script src="../assets/js/modelado_datos.js"></script>
+</body>
+</html>
