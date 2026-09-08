@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sección 10 - Evaluación frente a Normas</title>
+ <link rel="stylesheet" href="../assets/css/normas.css">
+</head>
+<body>
+
+  <section class="section-block">
+    
+    <div class="nav-back-container">
+      <a href="index.html" class="btn-back">
+        ← Volver al Índice Principal
+      </a>
+    </div>
+
+    <div class="section-header">
+      <div class="section-header-title">
+        <span>🎯</span>
+        <h2>Evaluación frente a Normas y Modelos de Calidad</h2>
+      </div>
+    </div>
+
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 22%;">Norma / Modelo</th>
+            <th style="width: 20%;">Enfoque de la Norma</th>
+            <th style="width: 25%;">Cómo se Aplicó en HuilaTour</th>
+            <th style="width: 13%;">¿Aplicación Estricta?</th>
+            <th style="width: 20%;">Cambios Realizados y Motivo</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr>
+            <td>
+              <span class="norma-title">ISO/IEC/IEEE 29148:2018</span>
+              <span class="norma-sub">(Sucesora de IEEE 830)</span>
+            </td>
+            <td>Ingeniería de requisitos: estructura y verificabilidad del SRS.</td>
+            <td>
+              SRS estructurado en 9 RF (RF‑01 a RF‑09) desagregados en ERF con entrada/salida/criterio de aceptación; validados con Historias de Usuario, Casos de Uso y matriz de trazabilidad.
+              
+              <details class="aclaracion-details">
+                <summary class="aclaracion-summary">
+                  <span class="summary-icon">▶</span> 📌 Aclaración importante
+                </summary>
+                <div class="aclaracion-content">
+                  Al inicio distribuimos los requisitos considerando criterios de ISO 9001. Posteriormente identificamos que nuestra forma de organizarlos corresponde principalmente a ISO/IEC/IEEE 29148.
+                </div>
+              </details>
+            </td>
+            <td><span class="tag tag-si">✓ Sí — norma vigente</span></td>
+            <td>
+              No se usó IEEE 830 porque fue <span class="highlight">reemplazada por la 29148</span>. El equipo aplicó la norma actualizada y vigente.
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="norma-title">ISO/IEC 25010</span>
+            </td>
+            <td>Modelo de calidad del producto (8 características principales).</td>
+            <td>17 RNF agrupados en 6 categorías: Seguridad, Rendimiento, Disponibilidad, Usabilidad, Portabilidad y Localización Geográfica.</td>
+            <td><span class="tag tag-parcial">⚡ Parcial</span></td>
+            <td>
+              Se creó la categoría <span class="highlight">"Localización y Contexto Geográfico"</span> por requerimiento del dominio turístico regional (cobertura GPS y baja conectividad rural).
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="norma-title">ISO 9001</span>
+            </td>
+            <td>Sistema de Gestión de la Calidad organizacional (control documental).</td>
+            <td>Control de versiones del SRS (V0.0) e informe de análisis; matriz de trazabilidad usada para detectar no conformidades.</td>
+            <td><span class="tag tag-parcial">⚡ Parcial — principios</span></td>
+            <td>No se documentó política de calidad ni objetivos medibles formalizados por ser un proyecto de carácter <span class="highlight">académico/formativo</span>.</td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="norma-title">ISO/IEC/IEEE 12207</span>
+            </td>
+            <td>Procesos del ciclo de vida del software.</td>
+            <td>Se cubrieron los procesos de <span class="highlight">Análisis de Requisitos</span>, Diseño de Arquitectura (parcial) y Verificación/Validación (prototipos Figma).</td>
+            <td><span class="tag tag-parcial">⚡ Parcial</span></td>
+            <td>No se documentaron Operación ni Mantenimiento por estar únicamente en <span class="highlight">fase de análisis y diseño</span>.</td>
+          </tr>
+
+          <tr>
+            <td>
+              <span class="norma-title">CMMI</span>
+            </td>
+            <td>Modelo de madurez de procesos organizacionales.</td>
+            <td>Prácticas informales de <span class="highlight">Requirements Management</span> y revisión continua de prototipos con el modelo conceptual.</td>
+            <td><span class="tag tag-informal">⚠ Informal — nivel 2</span></td>
+            <td>No se realizó evaluación de madurez formal ni institucionalización de procesos (niveles 3-5) por ser un equipo estudiantil formativo.</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+  </section>
+
+</body>
+</html>
