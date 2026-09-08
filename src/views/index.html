@@ -12,20 +12,7 @@
 <body>
 
     <!-- Navegación Lateral / Header -->
-    <header class="navbar">
-        <div class="logo">
-            <h2>HuilaTour <span>Conecta</span></h2>
-            <small>Informe Técnico de Software</small>
-        </div>
-        <nav class="nav-links">
-            <a href="#resumen" class="active"><i class="fa-solid fa-file-contract"></i> Resumen</a>
-            <a href="#objetivos"><i class="fa-solid fa-bullseye"></i> Objetivos</a>
-            <a href="#requisitos"><i class="fa-solid fa-list-check"></i> Requisitos</a>
-            <a href="#arquitectura"><i class="fa-solid fa-sitemap"></i> Arquitectura</a>
-            <a href="#der"><i class="fa-solid fa-database"></i> Modelo DER</a>
-            <a href="#costos"><i class="fa-solid fa-coins"></i> Presupuesto</a>
-        </nav>
-    </header>
+    <div id="sidebar-container"></div>
 
     <main class="main-content">
 
@@ -221,6 +208,7 @@
     </main>
 
     <!-- JS de la aplicación -->
+     <script src="../assets/js/load-sidebar.js"></script>
     <script src="../assets/js/main.js"></script>
 </body>
 </html>
