@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requerimientos - HuilaTour Conecta</title>
+    <link rel="stylesheet" href="../assets/css/requerimientos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>HuilaTour <span>Conecta</span></h2>
+            <small>Panel Técnico</small>
+        </div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="requerimientos.html" class="active"><i class="fa-solid fa-list-check"></i> Requerimientos</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Matriz de Requerimientos</h1>
+            <p>Especificación detallada de requerimientos funcionales del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- CONTEXTO E INSTRUMENTOS DE RECOLECCIÓN -->
+        <section class="content-section">
+            <h2>Contexto y Fuentes de Información</h2>
+            <p>Los requerimientos funcionales presentados a continuación fueron obtenidos a partir de los diferentes métodos de recolección de información utilizados durante el análisis[cite: 6]. Puedes consultar los documentos oficiales de soporte:</p>
+            
+            <div class="context-grid">
+                <!-- Tarjeta 1 -->
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-video"></i></div>
+                        <h3>Entrevistas en Video</h3>
+                        <p>Registros audiovisuales de las entrevistas técnicas y de expertos</p>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1QdaHSh0Hy_xUFAlm0gl4CFJL4Ign8tnQ/view?usp=sharing" target="_blank" class="btn-card-action">
+                        <i class="fa-solid fa-cloud-arrow-down"></i> Ver Entrevistas
+                    </a>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-file-pdf"></i></div>
+                        <h3>Historias de Usuario</h3>
+                        <p>Definición y especificación de historias de usuario del sistema.</p>
+                    </div>
+                    <a href="https://drive.google.com/file/d/175QYNqDRD_pjbSYRJBtKvejl58WLOnmQ/view?usp=sharing" target="_blank" class="btn-card-action">
+                        <i class="fa-solid fa-file-arrow-down"></i> Historias de Usuario
+                    </a>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-file-excel"></i></div>
+                        <h3>Respuestas de Encuesta</h3>
+                        <p>Tabulación y datos de la encuesta para la plataforma HuilaTour Conecta</p>
+                    </div>
+                    <a href="https://docs.google.com/spreadsheets/d/1dZ6H6lT9e6W25uZvpq84kwqSjyTzDdDi/edit?usp=sharing&ouid=111283372708387258215&rtpof=true&sd=true" target="_blank" class="btn-card-action">
+                        <i class="fa-solid fa-table"></i> Encuesta HuilaTour
+                    </a>
+                </div>
+
+                <!-- Tarjeta 4 -->
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-file-lines"></i></div>
+                        <h3>Informe General</h3>
+                        <p>Documento de análisis general y conclusiones de la fase previa</p>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1dfrDfXLMwSTGb3vbOeywTU8boSv65QR8/view?usp=sharing" target="_blank" class="btn-card-action">
+                        <i class="fa-solid fa-eye"></i> Informe General
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: REQUERIMIENTOS FUNCIONALES -->
+        <section class="content-section">
+            <h2>1. Requerimientos Funcionales (RF) y Mockups</h2>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(event, 'rf-1')">RF-01: Destinos</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-2')">RF-02: Usuarios</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-3')">RF-03: Reservas</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-4')">RF-04: Mapas</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-5')">RF-05: Calidad</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-6')">RF-06: Seguridad</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-7')">RF-07: Accesibilidad</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-8')">RF-08: Analítica</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rf-9')">RF-09: Admin</button>
+            </div>
+
+            <!-- RF-01 -->
+            <div id="rf-1" class="tab-content active">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Gestión de destinos y contenido turístico</h4>
+                        </div>
+                        <p>Este mockup representa las funcionalidades relacionadas con la consulta y gestión de la información turística. Incluye elementos para mostrar destinos, fotografías, precios, tarifas, información del clima, rutas y otros datos de interés para los turistas.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/HD3v9a2zrlr7DMW5fFOrGE/Mockup-web-HuilaTour-Conecta?t=x4zkb4SF5tGK5s9p-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-01.1: Registrar destinos turísticos</div>
+                    <p><strong>Descripción:</strong> Permite al administrador u operador ingresar la información básica y detallada de un nuevo punto de interés turístico.</p>
+                    <p><strong>Entrada:</strong> Nombre, descripción, ubicación geográfica (coordenadas), categoría y datos de contacto.</p>
+                    <p><strong>Salida:</strong> Confirmación de registro exitoso y visualización del destino en el listado administrativo.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El sistema debe validar que el nombre no esté duplicado y que las coordenadas sean geográficamente válidas.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.2: Gestionar galería fotográfica</div>
+                    <p><strong>Descripción:</strong> Herramienta para subir, organizar y eliminar imágenes asociadas a un destino específico.</p>
+                    <p><strong>Entrada:</strong> Archivos de imagen (JPG, PNG), títulos de imagen y orden de visualización.</p>
+                    <p><strong>Salida:</strong> Galería actualizada visualmente en el perfil del destino.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El sistema debe soportar carga masiva y optimizar automáticamente el peso de las imágenes sin perder calidad crítica.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.3: Registrar precios y tarifas</div>
+                    <p><strong>Descripción:</strong> Definición de los costos de entrada o servicios asociados al destino.</p>
+                    <p><strong>Entrada:</strong> Tipo de tarifa (niños, adultos, extranjeros), moneda y valor numérico.</p>
+                    <p><strong>Salida:</strong> Tabla de precios actualizada en la ficha del destino.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El sistema debe permitir valores decimales y asegurar que los precios sean mayores a cero.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.4: Mostrar estado de vías y condiciones de acceso</div>
+                    <p><strong>Descripción:</strong> Información actualizada sobre la viabilidad de las rutas de llegada al destino.</p>
+                    <p><strong>Entrada:</strong> Estado (Abierta, cerrada, restringida) y notas de observación.</p>
+                    <p><strong>Salida:</strong> Indicador visual (tipo semáforo) y texto informativo para el usuario.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El estado de las vías debe mostrar la fecha y hora de la última actualización.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.5: Mostrar clima en tiempo real</div>
+                    <p><strong>Descripción:</strong> Integración con API meteorológica para mostrar las condiciones actuales en la ubicación del destino.</p>
+                    <p><strong>Entrada:</strong> Coordenadas del destino (automático) o código de ciudad.</p>
+                    <p><strong>Salida:</strong> Temperatura, humedad y estado del cielo.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Los datos deben actualizarse con un margen de error no mayor a 30 minutos respecto a la fuente oficial.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.6: Categorizar y etiquetar destinos</div>
+                    <p><strong>Descripción:</strong> Clasificación de destinos mediante etiquetas (tags) y categorías padre para facilitar la navegación.</p>
+                    <p><strong>Entrada:</strong> Nombre de categoría y etiquetas.</p>
+                    <p><strong>Salida:</strong> Árbol de categorías actualizado y filtros funcionales.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Un destino debe poder pertenecer a múltiples etiquetas pero a una categoría principal.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.7: Gestionar temporadas turísticas</div>
+                    <p><strong>Descripción:</strong> Configuración de periodos de tiempo (Alta, Baja, Media) para ajustar disponibilidad o precios.</p>
+                    <p><strong>Entrada:</strong> Rango de fechas y nombre de la temporada.</p>
+                    <p><strong>Salida:</strong> Calendario de temporadas configurado en el sistema.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El sistema debe alertar si hay solapamiento de fechas entre temporadas del mismo tipo.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.8: Crear rutas turísticas organizadas</div>
+                    <p><strong>Descripción:</strong> Agrupación de varios destinos en un itinerario lógico sugerido.</p>
+                    <p><strong>Entrada:</strong> Selección de destinos, orden de visita y tiempo estimado.</p>
+                    <p><strong>Salida:</strong> Mapa de ruta trazado y lista de paradas secuencial.</p>
+                    <p><strong>Criterio de Aceptación:</strong> La ruta debe calcular la distancia total en kilómetros de forma automática.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.9: Gestionar contenido por operador (CMS)</div>
+                    <p><strong>Descripción:</strong> Panel de control independiente para que los operadores turísticos editen solo su propio contenido.</p>
+                    <p><strong>Entrada:</strong> Credenciales de operador, textos descriptivos y actualizaciones.</p>
+                    <p><strong>Salida:</strong> Contenido publicado bajo la autoría del operador específico.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Un operador no debe tener permisos para editar o eliminar contenido de otros operadores.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.10: Registrar historial de cambios de contenido</div>
+                    <p><strong>Descripción:</strong> Auditoría de todas las modificaciones realizadas sobre la información de los destinos.</p>
+                    <p><strong>Entrada:</strong> Usuario, fecha/hora, campo modificado, valor anterior y nuevo.</p>
+                    <p><strong>Salida:</strong> Log de auditoría consultable por administradores.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El historial debe ser de "solo lectura" y no permitir borrado manual.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-01.11: Buscar contenido con autocompletado</div>
+                    <p><strong>Descripción:</strong> Barra de búsqueda predictiva que sugiere destinos o categorías mientras el usuario escribe.</p>
+                    <p><strong>Entrada:</strong> Cadena de texto (mínimo 3 caracteres).</p>
+                    <p><strong>Salida:</strong> Lista desplegable de sugerencias coincidentes.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El tiempo de respuesta de las sugerencias debe ser inferior a 300ms.</p>
+                </div>
+            </div>
+
+            <!-- RF-02 -->
+            <div id="rf-2" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Gestión de usuarios, roles y autenticación</h4>
+                        </div>
+                        <p>Este diseño representa las pantallas relacionadas con el registro e inicio de sesión de los usuarios, la gestión de perfiles y el acceso según los diferentes roles definidos en la plataforma.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/Kxo5PbsceK78wClKipXmNH/HuilaTour-Conecta-Platform-Design?t=2wW3AkJn18HeOsGL-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-02.1: Registrar turistas</div>
+                    <p><strong>Descripción:</strong> Permite a los visitantes crear una cuenta personal para acceder a funciones interactivas.</p>
+                    <p><strong>Entrada:</strong> Nombre completo, correo, país, idioma y contraseña.</p>
+                    <p><strong>Salida:</strong> Cuenta creada y correo de verificación enviado.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Validar correo único y complejidad de contraseña.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-02.2: Registrar operadores turísticos</div>
+                    <p><strong>Descripción:</strong> Registro especializado para empresas o guías que desean publicar contenido y servicios.</p>
+                    <p><strong>Entrada:</strong> Nombre de empresa, NIT, teléfono, dirección y documentos de soporte.</p>
+                    <p><strong>Salida:</strong> Solicitud de registro en estado "Pendiente de aprobación".</p>
+                    <p><strong>Criterio de Aceptación:</strong> Permitir carga de archivos (PDF/JPG) para validación legal.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-02.3: Gestionar autenticación con JWT</div>
+                    <p><strong>Descripción:</strong> Implementación de seguridad mediante JSON Web Tokens para manejar sesiones.</p>
+                    <p><strong>Entrada:</strong> Credenciales de usuario.</p>
+                    <p><strong>Salida:</strong> Access Token y Refresh Token.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Expiración tras inactividad y obligatorio para APIs privadas.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-02.4: Recuperar y cambiar contraseña</div>
+                    <p><strong>Descripción:</strong> Flujo para restablecer acceso por olvido o seguridad.</p>
+                    <p><strong>Entrada:</strong> Correo registrado, nueva contraseña y código de verificación.</p>
+                    <p><strong>Salida:</strong> Contraseña actualizada exitosamente.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Enlace válido por máximo 1 hora y un solo uso.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-02.5: Gestionar roles y permisos (RBAC)</div>
+                    <p><strong>Descripción:</strong> Control de acceso basado en roles para definir qué puede hacer cada usuario.</p>
+                    <p><strong>Entrada:</strong> Nombre del rol y matriz de permisos.</p>
+                    <p><strong>Salida:</strong> Configuración guardada en base de datos.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Retorna error 403 Forbidden si no está autorizado.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-02.6: Gestionar perfil de turista</div>
+                    <p><strong>Descripción:</strong> Espacio personal donde el turista actualiza su información y actividad.</p>
+                    <p><strong>Entrada:</strong> Foto de perfil, intereses, datos biográficos.</p>
+                    <p><strong>Salida:</strong> Perfil actualizado.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Permitir eliminar cuenta cumpliendo normativas de protección de datos.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-02.7: Gestionar perfil de operador</div>
+                    <p><strong>Descripción:</strong> Panel de administración del operador para mostrar marca y servicios.</p>
+                    <p><strong>Entrada:</strong> Logo, descripción, redes sociales y horarios.</p>
+                    <p><strong>Salida:</strong> Perfil público actualizado.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Notificar cambios en campos críticos al administrador general.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-02.8: Administrar usuarios</div>
+                    <p><strong>Descripción:</strong> Módulo exclusivo del administrador para supervisar a todos los usuarios.</p>
+                    <p><strong>Entrada:</strong> Filtros de búsqueda, opciones de Bloquear o Activar.</p>
+                    <p><strong>Salida:</strong> Lista de usuarios actualizada y logs.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Suspensión de cuentas con bloqueo de sesión inmediato.</p>
+                </div>
+            </div>
+
+            <!-- RF-03 -->
+            <div id="rf-3" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Contacto y comunicación</h4>
+                        </div>
+                        <p>El mockup muestra las opciones disponibles para facilitar la comunicación entre los turistas y los proveedores de servicios turísticos. La plataforma Huila Tour permite el contacto con el proveedor, por ejemplo, mediante WhatsApp, sin realizar directamente la reserva dentro de la plataforma.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/Vhm5Bnvaxqnvcq66LKsWf8/Centro-de-Contacto-HuilaTour?t=y4DUcwpQY6lTT3UP-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-03.1: Contactar operador por WhatsApp</div>
+                    <p><strong>Descripción:</strong> Botón de acción rápida que redirige al chat de WhatsApp del operador.</p>
+                    <p><strong>Entrada:</strong> Clic en el botón; número de teléfono.</p>
+                    <p><strong>Salida:</strong> Apertura de WhatsApp con mensaje predefinido.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Uso dinámico de API wa.me en pestaña nueva.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-03.2: Enviar solicitud de reserva</div>
+                    <p><strong>Descripción:</strong> Formulario mediante el cual el turista solicita un cupo o servicio.</p>
+                    <p><strong>Entrada:</strong> Fecha, número de personas, servicios adicionales y comentarios.</p>
+                    <p><strong>Salida:</strong> Registro en base de datos y notificación al operador.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Validar que la fecha sea igual o posterior a la actual.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-03.3: Enviar confirmación de reserva por correo</div>
+                    <p><strong>Descripción:</strong> Envío automatizado de comprobante detallado tras aprobar la reserva.</p>
+                    <p><strong>Entrada:</strong> Estado Confirmada y datos del turista/destino.</p>
+                    <p><strong>Salida:</strong> Correo HTML con ID, costos y código QR.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Enviado en un tiempo menor a 2 minutos.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-03.4: Gestionar estados de reserva</div>
+                    <p><strong>Descripción:</strong> Flujo de trabajo para controlar el ciclo de vida de la solicitud.</p>
+                    <p><strong>Entrada:</strong> Selección de nuevo estado (Pendiente, Confirmada, Cancelada, Completada).</p>
+                    <p><strong>Salida:</strong> Actualización en base de datos y aviso.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Exigir motivo obligatorio si se marca como Cancelada.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-03.5: Consultar historial de reservas</div>
+                    <p><strong>Descripción:</strong> Listado cronológico de interacciones de reserva.</p>
+                    <p><strong>Entrada:</strong> Filtros de fecha y estado.</p>
+                    <p><strong>Salida:</strong> Tabla o lista detallada.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Turista solo ve sus reservas; operador las de sus destinos.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-03.6: Atender consultas con chatbot</div>
+                    <p><strong>Descripción:</strong> Asistente virtual automatizado 24/7 para preguntas frecuentes.</p>
+                    <p><strong>Entrada:</strong> Mensaje de texto en lenguaje natural.</p>
+                    <p><strong>Salida:</strong> Respuesta automática o transferencia a humano.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Tiempo de respuesta inferior a 2 segundos.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-03.7: Enviar notificaciones push y correo</div>
+                    <p><strong>Descripción:</strong> Sistema de alertas sobre cambios, promociones o recordatorios.</p>
+                    <p><strong>Entrada:</strong> Evento del sistema o campaña de marketing.</p>
+                    <p><strong>Salida:</strong> Notificación móvil y/o correo.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Opción para activar o desactivar desde el perfil.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-03.8: Gestionar mensajería interna</div>
+                    <p><strong>Descripción:</strong> Canal de chat centralizado entre turista y operador.</p>
+                    <p><strong>Entrada:</strong> Mensajes de texto y archivos adjuntos.</p>
+                    <p><strong>Salida:</strong> Interfaz de chat en tiempo real con historial.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Indicar visualmente estado (Enviado, Leído) y hora.</p>
+                </div>
+            </div>
+
+            <!-- RF-04 -->
+            <div id="rf-4" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Mapas y geolocalización</h4>
+                        </div>
+                        <p>Este mockup representa la visualización de destinos turísticos mediante mapas y herramientas de ubicación. Permite orientar al usuario para encontrar lugares de interés y consultar rutas o ubicaciones relacionadas con los destinos turísticos.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/8kNNVVa8XkLmQeTOACqEV9/Interactive-Map-Module?t=fMmUXJhlNwUtZGsr-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-04.1: Mostrar mapa interactivo de destinos</div>
+                    <p><strong>Descripción:</strong> Visualización global o regional con pines interactivos.</p>
+                    <p><strong>Entrada:</strong> Filtros de categoría, precio o etiquetas.</p>
+                    <p><strong>Salida:</strong> Mapa con marcadores y pop-up de resumen.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Zoom/pan fluido y clustering de marcadores.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-04.2: Recomendar destinos por geolocalización</div>
+                    <p><strong>Descripción:</strong> Sugiere lugares basados en la proximidad GPS del dispositivo.</p>
+                    <p><strong>Entrada:</strong> Coordenadas GPS del usuario.</p>
+                    <p><strong>Salida:</strong> Listado ordenado por distancia.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Configurar radio de búsqueda (5km, 10km, 50km).</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-04.3: Visualizar rutas en el mapa</div>
+                    <p><strong>Descripción:</strong> Representación gráfica de trayectos o caminos.</p>
+                    <p><strong>Entrada:</strong> Coordenadas de origen y destino.</p>
+                    <p><strong>Salida:</strong> Polilínea con indicaciones de giro.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Distinción visual peatonal, vehicular y senderos.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-04.4: Integrar mapas (Google Maps / Leaflet)</div>
+                    <p><strong>Descripción:</strong> Implementación técnica de la capa de mapas.</p>
+                    <p><strong>Entrada:</strong> API Key y configuración de estilos.</p>
+                    <p><strong>Salida:</strong> Mapa renderizado.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Carga asíncrona para no penalizar el inicio.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-04.5: Sugerir destinos cercanos</div>
+                    <p><strong>Descripción:</strong> Puntos de interés cercanos al consultar un destino.</p>
+                    <p><strong>Entrada:</strong> Coordenadas del destino actual.</p>
+                    <p><strong>Salida:</strong> Carrusel de alternativas en radio de 20 km.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Priorizar misma categoría o alta calificación.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-04.6: Precargar mapas para uso offline</div>
+                    <p><strong>Descripción:</strong> Capacidad de descargar cartografía para zonas de baja conectividad.</p>
+                    <p><strong>Entrada:</strong> Selección de área o ruta.</p>
+                    <p><strong>Salida:</strong> Paquete almacenado localmente en caché.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Navegar el mapa y ver info básica sin datos móviles.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-04.7: Gestionar permisos de geolocalización</div>
+                    <p><strong>Descripción:</strong> Control de privacidad para acceso a ubicación.</p>
+                    <p><strong>Entrada:</strong> Solicitud de permiso del navegador/SO.</p>
+                    <p><strong>Salida:</strong> Estado (Concedido, Denegado).</p>
+                    <p><strong>Criterio de Aceptación:</strong> Si se deniega, permitir entrada manual de ciudad.</p>
+                </div>
+            </div>
+
+            <!-- RF-05 -->
+            <div id="rf-5" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Confianza, reseñas y verificación</h4>
+                        </div>
+                        <p>El diseño representa las funcionalidades destinadas a fortalecer la confianza de los usuarios, como la visualización de reseñas, calificaciones y elementos de verificación de los proveedores o servicios turísticos.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/ZWRHjlc3Dwx5VvDhiq6ACJ/HuilaTour-Conecta-UI-UX-Mockups?t=mJk6hOCexrn6cUmd-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-05.1: Validar RNT de operadores</div>
+                    <p><strong>Descripción:</strong> Verificación del Registro Nacional de Turismo.</p>
+                    <p><strong>Entrada:</strong> Número RNT y documento legal.</p>
+                    <p><strong>Salida:</strong> Estado (Verificado / Rechazado / Pendiente).</p>
+                    <p><strong>Criterio de Aceptación:</strong> Válido solo tras revisión manual o integración oficial.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-05.2: Mostrar distintivo de operador verificado</div>
+                    <p><strong>Descripción:</strong> Elemento visual que indica filtros de seguridad superados.</p>
+                    <p><strong>Entrada:</strong> Estado Verificado.</p>
+                    <p><strong>Salida:</strong> Icono distintivo junto al nombre.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Desaparece si el perfil se suspende o expira el RNT.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-05.3: Gestionar reseñas verificadas</div>
+                    <p><strong>Descripción:</strong> Sistema que etiqueta comentarios de reservas completadas.</p>
+                    <p><strong>Entrada:</strong> Comentario y ID de reserva completada.</p>
+                    <p><strong>Salida:</strong> Reseña con etiqueta "Comprador verificado".</p>
+                    <p><strong>Criterio de Aceptación:</strong> Solo usuarios con reserva completada reciben el estatus.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-05.4: Calificar con estrellas</div>
+                    <p><strong>Descripción:</strong> Sistema de puntuación numérica visual del 1 al 5.</p>
+                    <p><strong>Entrada:</strong> Selección de estrellas.</p>
+                    <p><strong>Salida:</strong> Promedio general mostrado en la ficha.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Recálculo en tiempo real con cada nueva valoración.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-05.5: Moderar reseñas y permitir respuestas</div>
+                    <p><strong>Descripción:</strong> Control de contenidos y respuesta del operador.</p>
+                    <p><strong>Entrada:</strong> Texto de respuesta u opción Ocultar.</p>
+                    <p><strong>Salida:</strong> Hilo de conversación visible.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El operador solo puede responder una vez por reseña.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-05.6: Reportar contenido inapropiado</div>
+                    <p><strong>Descripción:</strong> Botón de denuncia comunitaria.</p>
+                    <p><strong>Entrada:</strong> Motivo y descripción opcional.</p>
+                    <p><strong>Salida:</strong> Notificación inmediata al administrador.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Más de 5 reportes en 24h ocultan el contenido automáticamente.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-05.7: Detectar incoherencias en precios</div>
+                    <p><strong>Descripción:</strong> Alerta ante variaciones extremas o errores en tarifas.</p>
+                    <p><strong>Entrada:</strong> Valores de precios registrados.</p>
+                    <p><strong>Salida:</strong> Alerta si varía un 80% respecto al promedio.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Mensaje "Doble Check" ante precios sospechosamente bajos.</p>
+                </div>
+            </div>
+
+            <!-- RF-06 -->
+            <div id="rf-6" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Seguridad y privacidad</h4>
+                        </div>
+                        <p>Este mockup representa los elementos de la interfaz relacionados con la seguridad de la plataforma y la protección de la información de los usuarios, incluyendo acciones relacionadas con el acceso y manejo seguro de los datos.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/Kqg4d675EkDtBCSHxQnE2b/UI-UX-Mockups-Seguridad-HuilaTour?t=zV4aMKX3I9zBLrcZ-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-06.1: Proteger endpoints con JWT</div>
+                    <p><strong>Descripción:</strong> Middleware que valida identidad antes de acceder a la API.</p>
+                    <p><strong>Entrada:</strong> Bearer Token en encabezados HTTP.</p>
+                    <p><strong>Salida:</strong> Acceso concedido o error 401 Unauthorized.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Ningún endpoint sensible accesible sin JWT válido.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-06.2: Mitigar ataques (DDoS y fuerza bruta)</div>
+                    <p><strong>Descripción:</strong> Defensas contra tráfico malintencionado y robo de cuentas.</p>
+                    <p><strong>Entrada:</strong> Frecuencia por IP e intentos fallidos.</p>
+                    <p><strong>Salida:</strong> Bloqueo temporal o CAPTCHA.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Rate Limiting por usuario único.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-06.3: Cifrar datos en tránsito y reposo</div>
+                    <p><strong>Descripción:</strong> Garantizar protección en tránsito y base de datos.</p>
+                    <p><strong>Entrada:</strong> Datos sensibles (contraseñas, documentos, teléfonos).</p>
+                    <p><strong>Salida:</strong> Hash (BCrypt) y HTTPS/TLS.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Contraseñas nunca visibles en texto plano.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-06.4: Cumplir Ley 1581 de protección de datos</div>
+                    <p><strong>Descripción:</strong> Adaptación al marco legal colombiano (Habeas Data).</p>
+                    <p><strong>Entrada:</strong> Consentimiento por checkbox.</p>
+                    <p><strong>Salida:</strong> Registro de autorización y política.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Permitir descarga o supresión de datos del usuario.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-06.5: Almacenar documentos de forma segura</div>
+                    <p><strong>Descripción:</strong> Gestión protegida de archivos subidos por operadores.</p>
+                    <p><strong>Entrada:</strong> Archivos subidos a cloud/servidor.</p>
+                    <p><strong>Salida:</strong> Enlaces firmados temporalmente.</p>
+                    <p><strong>Criterio de Aceptación:</strong> No indexables por Google ni URL pública directa.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-06.6: Auditar acciones críticas</div>
+                    <p><strong>Descripción:</strong> Registros detallados de eventos de alta sensibilidad.</p>
+                    <p><strong>Entrada:</strong> Cambios de permisos, borrado de usuarios, tarifas.</p>
+                    <p><strong>Salida:</strong> Log inalterable (ID, acción, timestamp, IP).</p>
+                    <p><strong>Criterio de Aceptación:</strong> Persistencia mínima de 6 meses protegidos contra modificación.</p>
+                </div>
+            </div>
+
+            <!-- RF-07 -->
+            <div id="rf-7" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Accesibilidad, internacionalización y usabilidad</h4>
+                        </div>
+                        <p>El mockup presenta opciones orientadas a facilitar el uso de la plataforma por diferentes tipos de usuarios. Puede incluir selección de idioma, opciones de accesibilidad, navegación sencilla, textos claros y mensajes de validación comprensibles.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/R3v6r0NLFHRqgYtKwQ6XZP/Accessibility-Panel-Mockup?t=6Aod80DkwcqTf9IJ-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-07.1: Soportar múltiples idiomas</div>
+                    <p><strong>Descripción:</strong> Interfaz multi-lengua para turistas extranjeros.</p>
+                    <p><strong>Entrada:</strong> Selección de idioma o detección de navegador.</p>
+                    <p><strong>Salida:</strong> Textos y mensajes traducidos.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Cambio instantáneo sin cerrar sesión.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-07.2: Cumplir estándares de accesibilidad (WCAG)</div>
+                    <p><strong>Descripción:</strong> Pautas de accesibilidad nivel AA.</p>
+                    <p><strong>Entrada:</strong> HTML semántico, contrastes y alt text.</p>
+                    <p><strong>Salida:</strong> Compatibilidad con lectores de pantalla.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Contraste texto/fondo de al menos 4.5:1.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-07.3: Permitir navegación por teclado</div>
+                    <p><strong>Descripción:</strong> Recorrer opciones sin uso de ratón.</p>
+                    <p><strong>Entrada:</strong> Uso de Tab, Enter y flechas.</p>
+                    <p><strong>Salida:</strong> Indicador visual de foco.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Completar una reserva desde cero usando exclusivamente teclado.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-07.4: Ofrecer modo de texto simplificado</div>
+                    <p><strong>Descripción:</strong> Tipografías legibles y frases sencillas.</p>
+                    <p><strong>Entrada:</strong> Activación de Modo Lectura.</p>
+                    <p><strong>Salida:</strong> Interfaz limpia y espaciada.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Aumentar fuente hasta 200% sin romper diseño.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-07.5: Implementar diseño inclusivo</div>
+                    <p><strong>Descripción:</strong> Consideración de diversidad humana en el diseño.</p>
+                    <p><strong>Entrada:</strong> Iconografía intuitiva y colores daltónicos.</p>
+                    <p><strong>Salida:</strong> Experiencia coherente.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Iconos acompañados de texto o etiquetas aria-label.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-07.6: Mostrar mensajes de validación claros</div>
+                    <p><strong>Descripción:</strong> Notificaciones explicativas de éxito/error.</p>
+                    <p><strong>Entrada:</strong> Acción del usuario (ej. campo vacío).</p>
+                    <p><strong>Salida:</strong> Mensaje descriptivo sin códigos técnicos.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Mensajes cerca del campo afectado con lenguaje positivo.</p>
+                </div>
+            </div>
+
+            <!-- RF-08 -->
+            <div id="rf-8" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Analítica y reportes</h4>
+                        </div>
+                        <p>Este diseño representa el área donde se pueden consultar estadísticas e información generada por el uso de la plataforma. Puede incluir paneles, indicadores y reportes útiles para el seguimiento de la actividad turística.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/0emcFIJzzZ90DLkDkXhfza/Analytics-and-Reporting-Module?t=VLJ2WmptM34Q5Du7-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-08.1: Mostrar estadísticas al operador</div>
+                    <p><strong>Descripción:</strong> Panel visual de rendimiento de destinos.</p>
+                    <p><strong>Entrada:</strong> Datos de interacción por ID de operador.</p>
+                    <p><strong>Salida:</strong> Gráficos de barras y líneas.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Filtrado por rangos de tiempo (semanal, mensual, anual).</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-08.2: Exportar reportes</div>
+                    <p><strong>Descripción:</strong> Descarga de información en formatos procesables.</p>
+                    <p><strong>Entrada:</strong> Tipo de reporte y formato.</p>
+                    <p><strong>Salida:</strong> Archivo PDF o Excel (XLSX).</p>
+                    <p><strong>Criterio de Aceptación:</strong> Incluir encabezado con fecha y filtros.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-08.3: Mostrar dashboard global</div>
+                    <p><strong>Descripción:</strong> Panel centralizado de KPIs para el administrador.</p>
+                    <p><strong>Entrada:</strong> Datos agregados de la plataforma.</p>
+                    <p><strong>Salida:</strong> Resumen ejecutivo con métricas.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Actualización automática al iniciar sesión.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-08.4: Registrar eventos de analítica</div>
+                    <p><strong>Descripción:</strong> Captura de comportamiento de navegación.</p>
+                    <p><strong>Entrada:</strong> Interacciones en frontend.</p>
+                    <p><strong>Salida:</strong> Registros almacenados en BD analítica.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Registro estrictamente anónimo por privacidad.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-08.5: Generar recomendaciones por IA</div>
+                    <p><strong>Descripción:</strong> Motor inteligente basado en historial de usuario.</p>
+                    <p><strong>Entrada:</strong> Historial de búsquedas, favoritos y categorías.</p>
+                    <p><strong>Salida:</strong> Sección "Recomendados para ti" (mínimo 3).</p>
+                    <p><strong>Criterio de Aceptación:</strong> Actualizar al agregar un nuevo destino favorito.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-08.6: Gestionar destinos favoritos</div>
+                    <p><strong>Descripción:</strong> Guardar destinos en lista personalizada.</p>
+                    <p><strong>Entrada:</strong> Clic en icono de favorito.</p>
+                    <p><strong>Salida:</strong> Lista persistente en perfil de usuario.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Agregar/eliminar con un clic sin recargar página.</p>
+                </div>
+            </div>
+
+            <!-- RF-09 -->
+            <div id="rf-9" class="tab-content">
+                <div class="mockup-card-fancy">
+                    <div>
+                        <div class="mockup-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <h4>Mockup: Administración de la plataforma y gobernanza</h4>
+                        </div>
+                        <p>El mockup representa las funciones disponibles para la administración de Huila Tour. Incluye opciones para gestionar usuarios y proveedores, revisar información, administrar categorías, atender alertas y realizar acciones de control sobre la plataforma.</p>
+                    </div>
+                    <a href="https://www.figma.com/make/KIJsuLwsLa0G9C40HvRUoI/Prototipo-panel-administrativo-HuilaTour?t=PoY3alVREW1MgkO0-1" target="_blank" class="btn-figma-fancy">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Abrir Prototipo en Figma
+                    </a>
+                </div>
+
+                <div class="card-req">
+                    <div class="req-title">ERF-09.1: Aprobar o rechazar operadores</div>
+                    <p><strong>Descripción:</strong> Curaduría de documentación de nuevos operadores.</p>
+                    <p><strong>Entrada:</strong> Solicitud y documentos adjuntos (RNT, RUT).</p>
+                    <p><strong>Salida:</strong> Estado "Activo" o "Rechazado".</p>
+                    <p><strong>Criterio de Aceptación:</strong> Impedir publicación de destinos hasta ser aprobado.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-09.2: Controlar tiempos de revisión</div>
+                    <p><strong>Descripción:</strong> Medición de tiempo de respuesta administrativo.</p>
+                    <p><strong>Entrada:</strong> Fechas de creación y acción.</p>
+                    <p><strong>Salida:</strong> Indicador de tiempo promedio.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Resaltar en rojo solicitudes que superen 48 horas.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-09.3: Gestionar categorías y taxonomía</div>
+                    <p><strong>Descripción:</strong> Control de clasificaciones del sistema.</p>
+                    <p><strong>Entrada:</strong> Creación, edición o eliminación de categorías.</p>
+                    <p><strong>Salida:</strong> Actualización inmediata de filtros.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Solicitar reasignación de destinos si se elimina una categoría.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-09.4: Gestionar alertas internas</div>
+                    <p><strong>Descripción:</strong> Disparadores de notificación por eventos críticos.</p>
+                    <p><strong>Entrada:</strong> Reglas de alerta.</p>
+                    <p><strong>Salida:</strong> Push o correo a personal técnico/admin.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Categorizar por severidad: Baja, Media, Crítica.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-09.5: Gestionar páginas institucionales</div>
+                    <p><strong>Descripción:</strong> CMS simplificado para contenido estático.</p>
+                    <p><strong>Entrada:</strong> Editor de texto enriquecido.</p>
+                    <p><strong>Salida:</strong> Páginas actualizadas en footer/menú.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Previsualización obligatoria antes de producción.</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">ERF-09.6: Registrar incidencias y caídas del sistema</div>
+                    <p><strong>Descripción:</strong> Bitácora técnica de inactividad o fallos.</p>
+                    <p><strong>Entrada:</strong> Fecha, duración, causa raíz y solución.</p>
+                    <p><strong>Salida:</strong> Reporte mensual de estabilidad.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Generar ticket único y permitir adjuntar logs.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: REQUERIMIENTOS NO FUNCIONALES -->
+        <section class="content-section">
+            <h2>2. Requerimientos No Funcionales (RNF)</h2>
+            
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab(event, 'rnf-1')">1. Seguridad y Privacidad</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rnf-2')">2. Rendimiento y Escalabilidad</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rnf-3')">3. Disponibilidad y Robustez</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rnf-4')">4. Usabilidad y Accesibilidad</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rnf-5')">5. Portabilidad y Mantenibilidad</button>
+                <button class="tab-btn" onclick="switchTab(event, 'rnf-6')">6. Localización y Geografía</button>
+            </div>
+
+            <!-- RNF-1 -->
+            <div id="rnf-1" class="tab-content active">
+                <div class="card-req">
+                    <div class="req-title">RNF-01: Protección de Datos (Habeas Data)</div>
+                    <p><strong>Descripción:</strong> El sistema debe cumplir estrictamente con la Ley 1581 de 2012 de Colombia, asegurando el cifrado de datos sensibles y el consentimiento explícito para el tratamiento de información personal[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-02: Cifrado de Comunicaciones</div>
+                    <p><strong>Descripción:</strong> Toda la transferencia de datos entre el cliente (web/app) y el servidor debe realizarse mediante protocolos seguros HTTPS/TLS 1.3[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-03: Seguridad de Contraseñas</div>
+                    <p><strong>Descripción:</strong> Las credenciales de acceso deben ser almacenadas utilizando algoritmos de hash robustos (como Argon2 o BCrypt) con "sal" aleatoria[cite: 7].</p>
+                </div>
+            </div>
+
+            <!-- RNF-2 -->
+            <div id="rnf-2" class="tab-content">
+                <div class="card-req">
+                    <div class="req-title">RNF-04: Tiempo de Respuesta</div>
+                    <p><strong>Descripción:</strong> El sistema debe responder a las consultas de búsqueda en menos de 2 segundos bajo condiciones normales de carga[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-05: Capacidad de Usuarios Concurrentes</div>
+                    <p><strong>Descripción:</strong> La infraestructura debe soportar al menos 100 usuarios simultáneos sin degradación del servicio, con capacidad de escalado automático en temporadas altas (ej. San Pedro)[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-06: Optimización de Activos</div>
+                    <p><strong>Descripción:</strong> Las imágenes deben servirse en formatos de última generación (WebP/Avif) y estar optimizadas para reducir el consumo de datos móviles en zonas rurales[cite: 7].</p>
+                </div>
+            </div>
+
+            <!-- RNF-3 -->
+            <div id="rnf-3" class="tab-content">
+                <div class="card-req">
+                    <div class="req-title">RNF-07: Disponibilidad (Uptime)</div>
+                    <p><strong>Descripción:</strong> La plataforma debe garantizar una disponibilidad del 99.9% anual, minimizando las ventanas de mantenimiento programado a horas de bajo tráfico[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-08: Tolerancia a Fallos</div>
+                    <p><strong>Descripción:</strong> En caso de caída de un nodo del servidor, el sistema debe ser capaz de redirigir el tráfico a un nodo de respaldo sin pérdida de sesiones activas[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-09: Recuperación ante Desastres (DRP)</div>
+                    <p><strong>Descripción:</strong> El tiempo objetivo de recuperación (RTO) ante un fallo total no debe exceder las 4 horas[cite: 7].</p>
+                </div>
+            </div>
+
+            <!-- RNF-4 -->
+            <div id="rnf-4" class="tab-content">
+                <div class="card-req">
+                    <div class="req-title">RNF-10: Estándar de Accesibilidad</div>
+                    <p><strong>Descripción:</strong> La interfaz debe cumplir con las pautas WCAG 2.1 Nivel AA, permitiendo que personas con discapacidades visuales o motoras naveguen la oferta turística[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-11: Diseño Mobile-First</div>
+                    <p><strong>Descripción:</strong> Debido a que el turista usa el sistema "en campo", la experiencia de usuario debe estar optimizada prioritariamente para dispositivos móviles antes que para escritorio[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-12: Facilidad de Aprendizaje</div>
+                    <p><strong>Descripción:</strong> Un usuario nuevo debe ser capaz de encontrar un destino y contactar a un operador en menos de 3 minutos sin necesidad de tutoriales externos[cite: 7].</p>
+                </div>
+            </div>
+
+            <!-- RNF-5 -->
+            <div id="rnf-5" class="tab-content">
+                <div class="card-req">
+                    <div class="req-title">RNF-13: Compatibilidad de Navegadores</div>
+                    <p><strong>Descripción:</strong> El sistema debe ser compatible con las últimas dos versiones de los navegadores más usados (Chrome, Safari, Firefox, Edge)[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-14: Modularidad del Código</div>
+                    <p><strong>Descripción:</strong> El software debe estar construido bajo una arquitectura hexagonal, facilitando la actualización de módulos individuales (ej. el chatbot) sin afectar al resto[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-15: Internacionalización (i18n)</div>
+                    <p><strong>Descripción:</strong> La arquitectura debe permitir la adición de nuevos idiomas mediante archivos de recursos externos, sin modificar el código fuente[cite: 7].</p>
+                </div>
+            </div>
+
+            <!-- RNF-6 -->
+            <div id="rnf-6" class="tab-content">
+                <div class="card-req">
+                    <div class="req-title">RNF-16: Precisión de GPS</div>
+                    <p><strong>Descripción:</strong> El sistema debe manejar una precisión geográfica de al menos 10 metros para asegurar que las rutas y destinos en el Huila sean localizados correctamente[cite: 7].</p>
+                </div>
+                <div class="card-req">
+                    <div class="req-title">RNF-17: Funcionamiento en Baja Conectividad</div>
+                    <p><strong>Descripción:</strong> La aplicación móvil debe implementar estrategias de caché agresiva para permitir la visualización de datos previamente cargados cuando el turista entre a zonas con poca señal (cañones o áreas rurales)[cite: 7].</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Script externo JS -->
+    <script src="../assets/js/requerimientos.js"></script>
+</body>
+</html>
