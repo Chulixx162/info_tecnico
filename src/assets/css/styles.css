@@ -24,7 +24,7 @@ body {
     min-height: 100vh;
 }
 /* Botón Hamburguesa Flotante */
-.hamburger-btn {
+/* .hamburger-btn {
     position: fixed;
     top: 15px;
     left: 15px;
@@ -42,7 +42,7 @@ body {
 
 .hamburger-btn:hover {
     background-color: var(--secondary-color);
-}
+} */
 
 /* Comportamiento del Sidebar Desplegable */
 .navbar {

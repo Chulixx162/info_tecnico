@@ -20,30 +20,30 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-function initHamburgerMenu() {
-    const toggleBtn = document.getElementById("toggle-sidebar-btn");
-    const navbar = document.getElementById("sidebar-navbar");
-    const mainContent = document.querySelector(".main-content");
+// function initHamburgerMenu() {
+//     const toggleBtn = document.getElementById("toggle-sidebar-btn");
+//     const navbar = document.getElementById("sidebar-navbar");
+//     const mainContent = document.querySelector(".main-content");
 
-    if (toggleBtn && navbar) {
-        toggleBtn.addEventListener("click", function () {
-            navbar.classList.toggle("collapsed");
-            if (mainContent) {
-                mainContent.classList.toggle("expanded");
-            }
+//     if (toggleBtn && navbar) {
+//         toggleBtn.addEventListener("click", function () {
+//             navbar.classList.toggle("collapsed");
+//             if (mainContent) {
+//                 mainContent.classList.toggle("expanded");
+//             }
             
-            // Cambiar el icono del botón (Hamburguesa <-> X)
-            const icon = toggleBtn.querySelector("i");
-            if (navbar.classList.contains("collapsed")) {
-                icon.classList.remove("fa-xmark");
-                icon.classList.add("fa-bars");
-            } else {
-                icon.classList.remove("fa-bars");
-                icon.classList.add("fa-xmark");
-            }
-        });
-    }
-}
+//             // Cambiar el icono del botón (Hamburguesa <-> X)
+//             const icon = toggleBtn.querySelector("i");
+//             if (navbar.classList.contains("collapsed")) {
+//                 icon.classList.remove("fa-xmark");
+//                 icon.classList.add("fa-bars");
+//             } else {
+//                 icon.classList.remove("fa-bars");
+//                 icon.classList.add("fa-xmark");
+//             }
+//         });
+//     }
+// }
 
 function highlightActiveLink() {
     const currentPath = window.location.pathname.split("/").pop();
