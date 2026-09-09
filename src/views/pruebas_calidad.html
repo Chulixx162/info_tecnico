@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plan de Pruebas y Aseguramiento de la Calidad (QA) - HuilaTour</title>
+<link rel="stylesheet" href="../assets/css/pruebas_calidad.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <main class="main-container">
+    
+    <div class="nav-back-container">
+      <a href="index.html" class="btn-back">
+        ← Volver al Índice Principal
+      </a>
+    </div>
+
+    <header class="hero-header">
+      <div class="hero-header-title">
+        <img src="https://cdn-icons-png.flaticon.com/512/1570/1570887.png" alt="Icono QA">
+        <h1>Pruebas y Aseguramiento de la Calidad (QA)</h1>
+      </div>
+      <p>El plan de QA establece las pruebas necesarias para verificar el funcionamiento de <strong>HuilaTour Conecta</strong>, con base en los requisitos del SRS, con el fin de detectar errores, validar funcionalidades y garantizar la máxima calidad del sistema.</p>
+    </header>
+
+    <nav class="sections-nav">
+      <button class="nav-btn active" onclick="showSection('sec-objetivos', this)">
+        🎯 Objetivos
+      </button>
+      <button class="nav-btn" onclick="showSection('sec-alcance', this)">
+        🔍 Alcance y Estrategia
+      </button>
+      <button class="nav-btn" onclick="showSection('sec-criterios', this)">
+        🚪 Criterios Entrada/Salida
+      </button>
+      <button class="nav-btn" onclick="showSection('sec-casos', this)">
+        🧪 Casos de Prueba
+      </button>
+      <button class="nav-btn" onclick="showSection('sec-riesgos', this)">
+        ⚠️ Matriz de Riesgos
+      </button>
+      <button class="nav-btn" onclick="showSection('sec-incidencias', this)">
+        📋 Incidencias y Aceptación
+      </button>
+    </nav>
+
+    <div id="sec-objetivos" class="section-content active">
+      <section class="section-card">
+        <h2 class="section-title">🎯 Objetivos Principales de QA</h2>
+        <div class="goals-grid">
+          <div class="goal-card">
+            <div class="goal-icon">1</div>
+            <div class="goal-text">Verificar el cumplimiento de los requisitos funcionales y criterios de aceptación definidos en el SRS.</div>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon">2</div>
+            <div class="goal-text">Detectar defectos mediante pruebas unitarias, de integración y funcionales.</div>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon">3</div>
+            <div class="goal-text">Validar seguridad, rendimiento, disponibilidad, usabilidad, compatibilidad y funcionamiento en baja conectividad.</div>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon">4</div>
+            <div class="goal-text">Priorizar las pruebas según la matriz de riesgos del proyecto.</div>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon">5</div>
+            <div class="goal-text">Registrar incidencias, severidad, correcciones y evidencias de cierre.</div>
+          </div>
+          <div class="goal-card">
+            <div class="goal-icon">6</div>
+            <div class="goal-text">Mantener trazabilidad entre requisitos, casos de prueba, resultados e incidencias.</div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="sec-alcance" class="section-content">
+      <section class="section-card">
+        <h2 class="section-title">🔍 Alcance y Estrategia de Pruebas</h2>
+        
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--secondary-color);">Estrategia de Pruebas Definida</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Tipo de Prueba</th>
+                <th>Objetivo Principal</th>
+                <th>Momento de Ejecución</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Unitarias</strong></td><td>Validar funciones/componentes aislados</td><td><span class="badge badge-info">Durante desarrollo</span></td></tr>
+              <tr><td><strong>Integración</strong></td><td>Verificar interacción entre módulos, BD y APIs</td><td><span class="badge badge-info">Al integrar componentes</span></td></tr>
+              <tr><td><strong>Funcionales</strong></td><td>Comprobar criterios de aceptación</td><td><span class="badge badge-info">Por cada incremento</span></td></tr>
+              <tr><td><strong>Seguridad</strong></td><td>Autenticación, autorización, protección de datos</td><td><span class="badge badge-info">Antes de cierre</span></td></tr>
+              <tr><td><strong>Rendimiento</strong></td><td>Tiempos de respuesta y concurrencia</td><td><span class="badge badge-info">Antes de cierre</span></td></tr>
+              <tr><td><strong>Usabilidad / Compatibilidad</strong></td><td>Responsive, accesibilidad, navegadores</td><td><span class="badge badge-info">Antes de aceptación</span></td></tr>
+              <tr><td><strong>Regresión</strong></td><td>Confirmar que una corrección no rompe funcionalidades</td><td><span class="badge badge-info">Tras cada corrección</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--secondary-color); margin-top: 10px;">Alcance por Áreas del Sistema</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th style="width: 28%;">Área</th>
+                <th>Elementos a verificar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Usuarios y autenticación</strong></td><td>Registro de turistas/operadores, login, JWT, recuperación de contraseña, roles/permisos.</td></tr>
+              <tr><td><strong>Gestión de contenidos</strong></td><td>Registro, edición y publicación de destinos, servicios, precios, reseñas.</td></tr>
+              <tr><td><strong>Mapas y geolocalización</strong></td><td>Mapa interactivo, rutas, destinos cercanos, GPS.</td></tr>
+              <tr><td><strong>Búsqueda</strong></td><td>Autocompletado desde 3 caracteres, respuesta &lt;300 ms.</td></tr>
+              <tr><td><strong>Seguridad</strong></td><td>HTTPS, protección de endpoints, hashing, rate limiting, auditoría.</td></tr>
+              <tr><td><strong>Rendimiento</strong></td><td>Carga concurrente de hasta 100 usuarios, comportamiento bajo degradación.</td></tr>
+              <tr><td><strong>Disponibilidad y recuperación</strong></td><td>Uptime, respaldo, logs, mecanismos de contingencia.</td></tr>
+              <tr><td><strong>Usabilidad y compatibilidad</strong></td><td>Mobile-first, accesibilidad, navegadores.</td></tr>
+              <tr><td><strong>Baja conectividad</strong></td><td>Caché y disponibilidad de información previamente cargada.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div id="sec-criterios" class="section-content">
+      <section class="section-card">
+        <h2 class="section-title">🚪 Criterios de Entrada y Salida</h2>
+        <div class="inout-container">
+          <div class="inout-box entrada">
+            <h3>📥 Criterios de Entrada</h3>
+            <ul>
+              <li>Requisito o funcionalidad disponible en un ambiente de prueba.</li>
+              <li>Datos de prueba preparados.</li>
+              <li>Caso de prueba definido con resultado esperado.</li>
+              <li>Dependencias externas disponibles o simuladas cuando sea necesario.</li>
+              <li>Versión del sistema identificada para asegurar trazabilidad.</li>
+            </ul>
+          </div>
+          <div class="inout-box salida">
+            <h3>📤 Criterios de Salida</h3>
+            <ul>
+              <li>Todos los casos críticos y altos ejecutados.</li>
+              <li>No existen defectos críticos o altos abiertos sin decisión formal de aceptación.</li>
+              <li>Los defectos corregidos cuentan con prueba de regresión.</li>
+              <li>Las evidencias de ejecución están almacenadas.</li>
+              <li>Se documenta el estado final de cada caso (aprobado, fallido, bloqueado o no ejecutado).</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div id="sec-casos" class="section-content">
+      <section class="section-card">
+        <h2 class="section-title">🧪 Casos de Prueba Diseñados</h2>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Referencia</th>
+                <th>Escenario</th>
+                <th>Resultado esperado</th>
+                <th>Prioridad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>CP-01</strong></td><td>Funcional</td><td>ERF-02.1</td><td>Registro turista válido</td><td>Cuenta creada, correo de verificación</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-02</strong></td><td>Funcional</td><td>ERF-02.1</td><td>Registro correo duplicado</td><td>Rechazo por correo existente</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-03</strong></td><td>Funcional</td><td>ERF-02.1</td><td>Contraseña sin complejidad</td><td>Rechazo (&lt;8 car., sin núm./símb.)</td><td><span class="badge badge-medio">Media</span></td></tr>
+              <tr><td><strong>CP-04</strong></td><td>Funcional</td><td>ERF-02.2</td><td>Registro operador con docs PDF/JPG</td><td>Solicitud "pendiente de aprobación"</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-05</strong></td><td>Seguridad</td><td>ERF-02.3/06.1</td><td>Acceso API sin JWT</td><td>401 Unauthorized</td><td><span class="badge badge-critico">Crítica</span></td></tr>
+              <tr><td><strong>CP-06</strong></td><td>Seguridad</td><td>ERF-02.5</td><td>Función no autorizada</td><td>403 Forbidden</td><td><span class="badge badge-critico">Crítica</span></td></tr>
+              <tr><td><strong>CP-07</strong></td><td>Funcional</td><td>ERF-02.4</td><td>Recuperación de contraseña</td><td>Enlace válido, un solo uso</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-08</strong></td><td>Funcional</td><td>ERF-01.11</td><td>Autocompletado desde 3 caracteres</td><td>Sugerencias coincidentes</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-09</strong></td><td>Rendimiento</td><td>ERF-01.11</td><td>Tiempo de respuesta autocompletado</td><td>&lt;300 ms</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-10</strong></td><td>Funcional</td><td>ERF-04.1</td><td>Mapa interactivo</td><td>Zoom, desplazamiento, marcadores</td><td><span class="badge badge-medio">Media</span></td></tr>
+              <tr><td><strong>CP-11</strong></td><td>Integración</td><td>ERF-04.4</td><td>Carga del proveedor de mapas</td><td>Carga sin bloquear inicio</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-12</strong></td><td>Funcional</td><td>ERF-04.2/HU-20</td><td>Destinos cercanos</td><td>Ordenados por distancia</td><td><span class="badge badge-medio">Media</span></td></tr>
+              <tr><td><strong>CP-13</strong></td><td>Funcional</td><td>ERF-01.8/04.5</td><td>Cálculo de ruta y distancia</td><td>Coincide con coordenadas</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-14</strong></td><td>Integración</td><td>ERF-01.5</td><td>Falla de API de clima</td><td>Mensaje degradado/último dato válido</td><td><span class="badge badge-medio">Media</span></td></tr>
+              <tr><td><strong>CP-15</strong></td><td>Seguridad</td><td>ERF-06.2</td><td>Intentos repetidos de login</td><td>Bloqueo/CAPTCHA o rate limiting</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-16</strong></td><td>Seguridad</td><td>ERF-06.3/RNF-03</td><td>Contraseñas almacenadas</td><td>Hash robusto, sin texto plano</td><td><span class="badge badge-critico">Crítica</span></td></tr>
+              <tr><td><strong>CP-17</strong></td><td>Seguridad</td><td>ERF-06.5</td><td>Acceso a documentos de operador</td><td>Solo roles autorizados</td><td><span class="badge badge-critico">Crítica</span></td></tr>
+              <tr><td><strong>CP-18</strong></td><td>Rendimiento</td><td>RNF-05</td><td>100 usuarios simultáneos</td><td>Sin degradación no aceptable</td><td><span class="badge badge-alto">Alta</span></td></tr>
+              <tr><td><strong>CP-19</strong></td><td>Usabilidad</td><td>RNF-10/11/13</td><td>Responsive, accesibilidad, navegadores</td><td>Funciona en móvil y navegadores objetivo</td><td><span class="badge badge-medio">Media</span></td></tr>
+              <tr><td><strong>CP-20</strong></td><td>Robustez</td><td>RNF-17/ERF-04.6</td><td>Baja conectividad</td><td>Info previa disponible vía caché</td><td><span class="badge badge-alto">Alta</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div id="sec-riesgos" class="section-content">
+      <section class="section-card">
+        <h2 class="section-title">⚠️ Matriz de Riesgos y Pruebas Priorizadas</h2>
+        <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.5;">
+          <strong>VR (Valor de Riesgo) = Probabilidad × Impacto (escala 1–5).</strong> Rangos: 1–4 Bajo · 5–9 Medio · 10–14 Alto · 15–25 Crítico.<br>
+          <span style="color: var(--secondary-color); font-weight: 700;">Totales: 15 medios, 12 altos, 2 críticos (sin riesgos bajos).</span>
+        </p>
+
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--secondary-color);">Pruebas Priorizadas por Nivel de Riesgo</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Riesgo (Nivel)</th>
+                <th>Pruebas relacionadas</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="badge badge-critico">RN-01 (Crítico)</span></td><td>Validación con usuarios/prestadores, usabilidad y aceptación</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-critico">RP-03 (Crítico)</span></td><td>Trazabilidad requisito → caso → resultado → incidencia</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RT-01 (Alto)</span></td><td>CP-10, CP-11 y pruebas de contingencia</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RT-06 (Alto)</span></td><td>Disponibilidad, monitoreo y recuperación</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RT-07 (Alto)</span></td><td>CP-20 y pruebas en baja conectividad</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RT-09 (Alto)</span></td><td>Prueba de ejecución/restauración de backup</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RS-01/RS-02 (Alto)</span></td><td>CP-16, CP-17</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RS-03 (Alto)</span></td><td>CP-15</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RN-02 (Alto)</span></td><td>Pruebas de actualización, alertas y validación de contenido</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+              <tr><td><span class="badge badge-alto">RP-01/02/05 (Alto)</span></td><td>Seguimiento de alcance, validación con usuarios, aceptación</td><td><span class="badge badge-info">Planificadas / Diseñadas</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+    <div id="sec-incidencias" class="section-content">
+      <section class="section-card">
+        <h2 class="section-title">📋 Registro de Incidencias, Trazabilidad y Aceptación</h2>
+        
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--secondary-color);">Registro de Incidencias</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Ticket</th>
+                <th>Fecha</th>
+                <th>Caso</th>
+                <th>Descripción</th>
+                <th>Severidad</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>INC-001</strong></td>
+                <td>—</td>
+                <td>—</td>
+                <td>No se registran resultados de ejecución en las fuentes disponibles</td>
+                <td>—</td>
+                <td><span class="badge badge-alto">Pendiente de ejecución y registro</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note-box">
+          📌 <strong>Nota:</strong> La fila anterior indica que aún no hay evidencia de ejecución. Debe reemplazarse por incidencias reales al ejecutar las pruebas.
+        </div>
+
+        <h3 style="font-size: 1rem; font-weight: 700; color: var(--secondary-color); margin-top: 15px;">Muestra de Trazabilidad QA</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Referencia SRS</th>
+                <th>Caso(s) de Prueba</th>
+                <th>Evidencia esperada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>ERF-02.1</strong></td><td>CP-01, CP-02, CP-03</td><td>Capturas y resultados de registro</td></tr>
+              <tr><td><strong>ERF-02.3/06.1</strong></td><td>CP-05</td><td>Respuesta 401</td></tr>
+              <tr><td><strong>ERF-06.3/RNF-03</strong></td><td>CP-16</td><td>Verificación de hash</td></tr>
+              <tr><td><strong>RNF-05</strong></td><td>CP-18</td><td>Reporte de carga con 100 usuarios</td></tr>
+              <tr><td><strong>RNF-17/ERF-04.6</strong></td><td>CP-20</td><td>Evidencia en baja conectividad</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="inout-container" style="margin-top: 15px;">
+          <div class="inout-box" style="background: #FAFBFD;">
+            <h3 style="color: var(--text-color);">🐛 Tratamiento por Severidad</h3>
+            <ul style="list-style: none; padding: 0;">
+              <li style="margin-bottom: 8px;"><span class="badge badge-critico">Crítica</span> Corrección prioritaria antes de aceptación.</li>
+              <li style="margin-bottom: 8px;"><span class="badge badge-alto">Alta</span> Corregir y ejecutar regresión antes del cierre.</li>
+              <li style="margin-bottom: 8px;"><span class="badge badge-medio">Media</span> Programar corrección según prioridad.</li>
+              <li><span class="badge badge-info">Baja</span> Corregir según disponibilidad.</li>
+            </ul>
+          </div>
+
+          <div class="inout-box salida">
+            <h3>✅ Criterios de Aceptación Final</h3>
+            <ul>
+              <li>Requisitos con casos de prueba asociados.</li>
+              <li>Riesgos críticos con pruebas/validación.</li>
+              <li>Casos críticos y altos ejecutados con evidencia.</li>
+              <li>Defectos críticos/altos cerrados o aceptados formalmente.</li>
+              <li>Correcciones con prueba de regresión aprobada.</li>
+              <li>Matriz de trazabilidad totalmente actualizada.</li>
+              <li>Validación funcional y de usuarios completada.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <script>
+    function showSection(sectionId, btnElement) {
+      const sections = document.querySelectorAll('.section-content');
+      sections.forEach(sec => sec.classList.remove('active'));
+
+      const buttons = document.querySelectorAll('.nav-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(sectionId).classList.add('active');
+      btnElement.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
