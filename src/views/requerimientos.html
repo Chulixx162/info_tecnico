@@ -4,22 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Requerimientos - HuilaTour Conecta</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/requerimientos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Navbar Lateral -->
-    <nav class="navbar">
-        <div class="logo">
-            <h2>HuilaTour <span>Conecta</span></h2>
-            <small>Panel Técnico</small>
-        </div>
-        <div class="nav-links">
-            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-            <a href="requerimientos.html" class="active"><i class="fa-solid fa-list-check"></i> Requerimientos</a>
-        </div>
-    </nav>
+    <div id="sidebar-container"></div>
 
     <!-- Contenido Principal -->
     <main class="main-content">
@@ -32,7 +23,7 @@
         <!-- CONTEXTO E INSTRUMENTOS DE RECOLECCIÓN -->
         <section class="content-section">
             <h2>Contexto y Fuentes de Información</h2>
-            <p>Los requerimientos funcionales presentados a continuación fueron obtenidos a partir de los diferentes métodos de recolección de información utilizados durante el análisis[cite: 6]. Puedes consultar los documentos oficiales de soporte:</p>
+            <p>Los requerimientos funcionales presentados a continuación fueron obtenidos a partir de los diferentes métodos de recolección de información utilizados durante el análisis. Puedes consultar los documentos oficiales de soporte:</p>
             
             <div class="context-grid">
                 <!-- Tarjeta 1 -->
@@ -727,15 +718,15 @@
             <div id="rnf-1" class="tab-content active">
                 <div class="card-req">
                     <div class="req-title">RNF-01: Protección de Datos (Habeas Data)</div>
-                    <p><strong>Descripción:</strong> El sistema debe cumplir estrictamente con la Ley 1581 de 2012 de Colombia, asegurando el cifrado de datos sensibles y el consentimiento explícito para el tratamiento de información personal[cite: 7].</p>
+                    <p><strong>Descripción:</strong> El sistema debe cumplir estrictamente con la Ley 1581 de 2012 de Colombia, asegurando el cifrado de datos sensibles y el consentimiento explícito para el tratamiento de información personal.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-02: Cifrado de Comunicaciones</div>
-                    <p><strong>Descripción:</strong> Toda la transferencia de datos entre el cliente (web/app) y el servidor debe realizarse mediante protocolos seguros HTTPS/TLS 1.3[cite: 7].</p>
+                    <p><strong>Descripción:</strong> Toda la transferencia de datos entre el cliente (web/app) y el servidor debe realizarse mediante protocolos seguros HTTPS/TLS 1.3.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-03: Seguridad de Contraseñas</div>
-                    <p><strong>Descripción:</strong> Las credenciales de acceso deben ser almacenadas utilizando algoritmos de hash robustos (como Argon2 o BCrypt) con "sal" aleatoria[cite: 7].</p>
+                    <p><strong>Descripción:</strong> Las credenciales de acceso deben ser almacenadas utilizando algoritmos de hash robustos (como Argon2 o BCrypt) con "sal" aleatoria.</p>
                 </div>
             </div>
 
@@ -743,15 +734,15 @@
             <div id="rnf-2" class="tab-content">
                 <div class="card-req">
                     <div class="req-title">RNF-04: Tiempo de Respuesta</div>
-                    <p><strong>Descripción:</strong> El sistema debe responder a las consultas de búsqueda en menos de 2 segundos bajo condiciones normales de carga[cite: 7].</p>
+                    <p><strong>Descripción:</strong> El sistema debe responder a las consultas de búsqueda en menos de 2 segundos bajo condiciones normales de carga.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-05: Capacidad de Usuarios Concurrentes</div>
-                    <p><strong>Descripción:</strong> La infraestructura debe soportar al menos 100 usuarios simultáneos sin degradación del servicio, con capacidad de escalado automático en temporadas altas (ej. San Pedro)[cite: 7].</p>
+                    <p><strong>Descripción:</strong> La infraestructura debe soportar al menos 100 usuarios simultáneos sin degradación del servicio, con capacidad de escalado automático en temporadas altas (ej. San Pedro).</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-06: Optimización de Activos</div>
-                    <p><strong>Descripción:</strong> Las imágenes deben servirse en formatos de última generación (WebP/Avif) y estar optimizadas para reducir el consumo de datos móviles en zonas rurales[cite: 7].</p>
+                    <p><strong>Descripción:</strong> Las imágenes deben servirse en formatos de última generación (WebP/Avif) y estar optimizadas para reducir el consumo de datos móviles en zonas rurales.</p>
                 </div>
             </div>
 
@@ -759,15 +750,15 @@
             <div id="rnf-3" class="tab-content">
                 <div class="card-req">
                     <div class="req-title">RNF-07: Disponibilidad (Uptime)</div>
-                    <p><strong>Descripción:</strong> La plataforma debe garantizar una disponibilidad del 99.9% anual, minimizando las ventanas de mantenimiento programado a horas de bajo tráfico[cite: 7].</p>
+                    <p><strong>Descripción:</strong> La plataforma debe garantizar una disponibilidad del 99.9% anual, minimizando las ventanas de mantenimiento programado a horas de bajo tráfico.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-08: Tolerancia a Fallos</div>
-                    <p><strong>Descripción:</strong> En caso de caída de un nodo del servidor, el sistema debe ser capaz de redirigir el tráfico a un nodo de respaldo sin pérdida de sesiones activas[cite: 7].</p>
+                    <p><strong>Descripción:</strong> En caso de caída de un nodo del servidor, el sistema debe ser capaz de redirigir el tráfico a un nodo de respaldo sin pérdida de sesiones activas.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-09: Recuperación ante Desastres (DRP)</div>
-                    <p><strong>Descripción:</strong> El tiempo objetivo de recuperación (RTO) ante un fallo total no debe exceder las 4 horas[cite: 7].</p>
+                    <p><strong>Descripción:</strong> El tiempo objetivo de recuperación (RTO) ante un fallo total no debe exceder las 4 horas.</p>
                 </div>
             </div>
 
@@ -775,15 +766,15 @@
             <div id="rnf-4" class="tab-content">
                 <div class="card-req">
                     <div class="req-title">RNF-10: Estándar de Accesibilidad</div>
-                    <p><strong>Descripción:</strong> La interfaz debe cumplir con las pautas WCAG 2.1 Nivel AA, permitiendo que personas con discapacidades visuales o motoras naveguen la oferta turística[cite: 7].</p>
+                    <p><strong>Descripción:</strong> La interfaz debe cumplir con las pautas WCAG 2.1 Nivel AA, permitiendo que personas con discapacidades visuales o motoras naveguen la oferta turística.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-11: Diseño Mobile-First</div>
-                    <p><strong>Descripción:</strong> Debido a que el turista usa el sistema "en campo", la experiencia de usuario debe estar optimizada prioritariamente para dispositivos móviles antes que para escritorio[cite: 7].</p>
+                    <p><strong>Descripción:</strong> Debido a que el turista usa el sistema "en campo", la experiencia de usuario debe estar optimizada prioritariamente para dispositivos móviles antes que para escritorio.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-12: Facilidad de Aprendizaje</div>
-                    <p><strong>Descripción:</strong> Un usuario nuevo debe ser capaz de encontrar un destino y contactar a un operador en menos de 3 minutos sin necesidad de tutoriales externos[cite: 7].</p>
+                    <p><strong>Descripción:</strong> Un usuario nuevo debe ser capaz de encontrar un destino y contactar a un operador en menos de 3 minutos sin necesidad de tutoriales externos.</p>
                 </div>
             </div>
 
@@ -791,15 +782,15 @@
             <div id="rnf-5" class="tab-content">
                 <div class="card-req">
                     <div class="req-title">RNF-13: Compatibilidad de Navegadores</div>
-                    <p><strong>Descripción:</strong> El sistema debe ser compatible con las últimas dos versiones de los navegadores más usados (Chrome, Safari, Firefox, Edge)[cite: 7].</p>
+                    <p><strong>Descripción:</strong> El sistema debe ser compatible con las últimas dos versiones de los navegadores más usados (Chrome, Safari, Firefox, Edge).</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-14: Modularidad del Código</div>
-                    <p><strong>Descripción:</strong> El software debe estar construido bajo una arquitectura hexagonal, facilitando la actualización de módulos individuales (ej. el chatbot) sin afectar al resto[cite: 7].</p>
+                    <p><strong>Descripción:</strong> El software debe estar construido bajo una arquitectura hexagonal, facilitando la actualización de módulos individuales (ej. el chatbot) sin afectar al resto.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-15: Internacionalización (i18n)</div>
-                    <p><strong>Descripción:</strong> La arquitectura debe permitir la adición de nuevos idiomas mediante archivos de recursos externos, sin modificar el código fuente[cite: 7].</p>
+                    <p><strong>Descripción:</strong> La arquitectura debe permitir la adición de nuevos idiomas mediante archivos de recursos externos, sin modificar el código fuente.</p>
                 </div>
             </div>
 
@@ -807,11 +798,11 @@
             <div id="rnf-6" class="tab-content">
                 <div class="card-req">
                     <div class="req-title">RNF-16: Precisión de GPS</div>
-                    <p><strong>Descripción:</strong> El sistema debe manejar una precisión geográfica de al menos 10 metros para asegurar que las rutas y destinos en el Huila sean localizados correctamente[cite: 7].</p>
+                    <p><strong>Descripción:</strong> El sistema debe manejar una precisión geográfica de al menos 10 metros para asegurar que las rutas y destinos en el Huila sean localizados correctamente.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">RNF-17: Funcionamiento en Baja Conectividad</div>
-                    <p><strong>Descripción:</strong> La aplicación móvil debe implementar estrategias de caché agresiva para permitir la visualización de datos previamente cargados cuando el turista entre a zonas con poca señal (cañones o áreas rurales)[cite: 7].</p>
+                    <p><strong>Descripción:</strong> La aplicación móvil debe implementar estrategias de caché agresiva para permitir la visualización de datos previamente cargados cuando el turista entre a zonas con poca señal (cañones o áreas rurales).</p>
                 </div>
             </div>
 
@@ -820,6 +811,7 @@
     </main>
 
     <!-- Script externo JS -->
+    <script src="../assets/js/load-sidebar.js"></script>
     <script src="../assets/js/requerimientos.js"></script>
 </body>
 </html>
