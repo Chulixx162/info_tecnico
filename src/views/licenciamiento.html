@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licenciamiento - HuilaTour Conecta</title>
+    <link rel="stylesheet" href="../assets/css/licenciamiento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>HuilaTour <span>Conecta</span></h2>
+            <small>Panel Técnico</small>
+        </div>
+        <div class="nav-links">
+            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="requerimientos.html"><i class="fa-solid fa-list-check"></i> Requerimientos</a>
+            <a href="desarrollo.html"><i class="fa-solid fa-laptop-code"></i> Desarrollo y Costos</a>
+            <a href="licenciamiento.html" class="active"><i class="fa-solid fa-file-contract"></i> Licenciamiento</a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Licenciamiento del Software</h1>
+            <p>Condiciones técnicas, comerciales, contractuales y legales bajo las cuales los operadores turísticos acceden y utilizan la plataforma HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 1: NATURALEZA Y MODELO DE LICENCIAMIENTO -->
+        <section class="content-section">
+            <h2>1. Naturaleza y Modelo de Licenciamiento</h2>
+            <p>El licenciamiento de HuilaTour define el marco normativo y comercial que regula la relación entre la plataforma y los prestadores de servicios turísticos. A continuación se detallan los pilares fundamentales del modelo:</p>
+            
+            <div class="context-grid" style="margin-top: 20px;">
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3>Software Propietario</h3>
+                        <p>La propiedad, código fuente, diseño, arquitectura, bases de datos y marcas permanecen bajo el control de HuilaTour. El operador obtiene un derecho de uso limitado, no exclusivo, intransferible y no sublicenciable, sin adquirir derechos de propiedad.</p>
+                    </div>
+                </div>
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-cloud"></i></div>
+                        <h3>Cloud-Native Execution</h3>
+                        <p>Ejecución centralizada en infraestructura de nube. El operador accede vía web y autenticación, evitando instalaciones locales y permitiendo a HuilaTour gestionar actualizaciones, parches de seguridad y respaldos.</p>
+                    </div>
+                </div>
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-globe"></i></div>
+                        <h3>Modelo SaaS</h3>
+                        <p>Prestación como servicio accesible a través de Internet mientras la suscripción se encuentre vigente. Centraliza la operación técnica y evita versiones independientes por operador.</p>
+                    </div>
+                </div>
+                <div class="context-card">
+                    <div>
+                        <div class="context-icon"><i class="fa-solid fa-handshake"></i></div>
+                        <h3>Enfoque B2B</h3>
+                        <p>Orientado a prestadores y operadores turísticos como clientes comerciales directos que contratan planes para publicar y administrar su oferta, diferenciándose de los turistas que solo consultan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: PLANES Y SUSCRIPCIÓN -->
+        <section class="content-section">
+            <h2>2. Suscripción, Planes y Alcance del Derecho de Uso</h2>
+            <p>El modelo comercial se basa en un esquema de suscripción donde el operador selecciona un plan según sus necesidades. Utiliza las pestañas para consultar el detalle de cada nivel:</p>
+            
+            <div class="tab-buttons" style="margin-top: 20px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'plan-esencial')">Plan Esencial</button>
+                <button class="tab-btn" onclick="switchTab(event, 'plan-profesional')">Plan Profesional</button>
+                <button class="tab-btn" onclick="switchTab(event, 'plan-premium')">Plan Premium</button>
+            </div>
+
+            <!-- PLAN ESENCIAL -->
+            <div id="plan-esencial" class="tab-content active">
+                <div class="card-req" style="border-left-color: var(--accent-color);">
+                    <div class="req-title">Plan Esencial - Nivel de Entrada</div>
+                    <p><strong>Orientación:</strong> Diseñado para pequeños operadores que requieren las funcionalidades fundamentales de la plataforma.</p>
+                    <p><strong>Capacidades:</strong> Hasta 3 servicios publicados, hasta 5 fotografías por servicio, disponibilidad y estadísticas básicas, historial de 30 días, 1 administrador y soporte estándar.</p>
+                    <p><strong>Tarifas:</strong> Mensual: $89.900 | Trimestral: $242.700 | Anual: $863.000</p>
+                </div>
+            </div>
+
+            <!-- PLAN PROFESIONAL -->
+            <div id="plan-profesional" class="tab-content">
+                <div class="card-req" style="border-left-color: var(--primary-color);">
+                    <div class="req-title">Plan Profesional (Recomendado)</div>
+                    <p><strong>Orientación:</strong> Considerado el plan principal por su equilibrio óptimo entre capacidades de gestión, promoción y costo para el operador.</p>
+                    <p><strong>Capacidades:</strong> Hasta 10 servicios publicados, hasta 10 fotografías por servicio, disponibilidad y estadísticas avanzadas, historial de 12 meses, hasta 3 promociones activas, 2 publicaciones destacadas mensuales, reportes básicos, hasta 3 administradores y soporte prioritario.</p>
+                    <p><strong>Tarifas:</strong> Mensual: $159.900 | Trimestral: $431.700 | Anual: $1.535.000</p>
+                </div>
+            </div>
+
+            <!-- PLAN PREMIUM -->
+            <div id="plan-premium" class="tab-content">
+                <div class="card-req" style="border-left-color: #eab308;">
+                    <div class="req-title">Plan Premium - Alto Rendimiento</div>
+                    <p><strong>Orientación:</strong> Dirigido a operadores con gran volumen de oferta turística y requerimientos máximos de administración y posicionamiento.</p>
+                    <p><strong>Capacidades:</strong> Servicios ilimitados, hasta 20 fotografías por servicio, disponibilidad y estadísticas avanzadas, historial de 24 meses, hasta 10 promociones activas, 5 publicaciones destacadas mensuales, máxima posición en búsquedas, reportes avanzados, hasta 5 administradores y soporte preferencial.</p>
+                    <p><strong>Tarifas:</strong> Mensual: $279.900 | Trimestral: $755.700 | Anual: $2.687.000</p>
+                </div>
+            </div>
+
+            <!-- TABLA COMPARATIVA DE PLANES -->
+            <div class="table-wrapper" style="margin-top: 30px;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Esencial</th>
+                            <th>Profesional</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Servicios publicados</strong></td>
+                            <td>Hasta 3</td>
+                            <td>Hasta 10</td>
+                            <td>Ilimitados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fotografías por servicio</strong></td>
+                            <td>Hasta 5</td>
+                            <td>Hasta 10</td>
+                            <td>Hasta 20</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Disponibilidad</strong></td>
+                            <td>Básica</td>
+                            <td>Avanzada</td>
+                            <td>Avanzada</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Estadísticas</strong></td>
+                            <td>Básicas</td>
+                            <td>Avanzadas</td>
+                            <td>Avanzadas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Historial</strong></td>
+                            <td>30 días</td>
+                            <td>12 meses</td>
+                            <td>24 meses</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Promociones activas</strong></td>
+                            <td>No incluye</td>
+                            <td>Hasta 3</td>
+                            <td>Hasta 10</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Publicaciones destacadas</strong></td>
+                            <td>No incluye</td>
+                            <td>2 al mes</td>
+                            <td>5 al mes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Posición en búsquedas</strong></td>
+                            <td>Normal</td>
+                            <td>Alta</td>
+                            <td>Máxima</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Reportes</strong></td>
+                            <td>No incluye</td>
+                            <td>Básicos</td>
+                            <td>Avanzados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Administradores</strong></td>
+                            <td>1</td>
+                            <td>Hasta 3</td>
+                            <td>Hasta 5</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Soporte</strong></td>
+                            <td>Estándar</td>
+                            <td>Prioritario</td>
+                            <td>Preferencial</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: VIGENCIA, PAGOS Y TÉRMINOS -->
+        <section class="content-section">
+            <h2>3. Vigencia, Pagos, Renovación y Términos Contractuales</h2>
+            <p>El derecho de uso está condicionado a la vigencia de la suscripción (mensual, trimestral o anual). El marco contractual se rige por los Términos y Condiciones y se complementa con las disposiciones del derecho colombiano:</p>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Normativa / Instrumento Legal</th>
+                            <th>Aplicación en HuilaTour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ley 23 de 1982 / Ley 1915 de 2018</strong></td>
+                            <td>Protección del régimen de derechos de autor sobre las obras y desarrollos de software.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Decreto 1360 de 1989</strong></td>
+                            <td>Reconocimiento formal del soporte lógico (software) como creación protegida.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ley 527 de 1999</strong></td>
+                            <td>Marco de comercio electrónico y validez jurídica de la aceptación electrónica de términos (casillas de verificación).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ley 1480 de 2011</strong></td>
+                            <td>Estatuto del consumidor; obligación de presentar precios, planes y condiciones claramente antes de contratar.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ley 1581 de 2012 / Decreto 1074</strong></td>
+                            <td>Cumplimiento de obligaciones de Habeas Data para la protección y tratamiento seguro de datos personales.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: RESUMEN INTEGRAL DEL MODELO -->
+        <section class="content-section">
+            <h2>4. Relación Integral del Modelo</h2>
+            <p>El modelo de licenciamiento de HuilaTour integra de manera armónica los componentes técnicos, comerciales y legales del proyecto:</p>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Aplicación en HuilaTour</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Software Propietario</strong></td>
+                            <td>HuilaTour conserva la propiedad y el control total del software y sus componentes.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cloud-Native Execution</strong></td>
+                            <td>Los componentes principales se ejecutan en infraestructura de nube centralizada.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SaaS</strong></td>
+                            <td>El sistema se ofrece como servicio accesible mediante Internet.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>B2B</strong></td>
+                            <td>Los operadores turísticos operan como clientes comerciales directos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Suscripción y Planes</strong></td>
+                            <td>Definen el período de acceso, las contraprestaciones económicas y los límites de uso.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Seguridad y Propiedad Intelectual</strong></td>
+                            <td>Protección de la plataforma mediante cifrado, controles de acceso y salvaguarda legal.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Script externo JS -->
+    <script src="../assets/js/licenciamiento.js"></script>
+</body>
+</html>
