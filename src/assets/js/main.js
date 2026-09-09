@@ -11,22 +11,22 @@ function switchTab(tabName) {
 }
 
 // Resaltar navegación lateral según scroll
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    const navLi = document.querySelectorAll('.nav-links a');
+// window.addEventListener('scroll', () => {
+//     let current = '';
+//     const sections = document.querySelectorAll('section');
+//     const navLi = document.querySelectorAll('.nav-links a');
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 100) {
-            current = section.getAttribute('id');
-        }
-    });
+//     sections.forEach(section => {
+//         const sectionTop = section.offsetTop;
+//         if (pageYOffset >= sectionTop - 100) {
+//             current = section.getAttribute('id');
+//         }
+//     });
 
-    navLi.forEach(a => {
-        a.classList.remove('active');
-        if (a.getAttribute('href') === `#${current}`) {
-            a.classList.add('active');
-        }
-    });
-});
+//     navLi.forEach(a => {
+//         a.classList.remove('active');
+//         if (a.getAttribute('href') === `#${current}`) {
+//             a.classList.add('active');
+//         }
+//     });
+// });
