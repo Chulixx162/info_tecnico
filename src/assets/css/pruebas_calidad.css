@@ -3,8 +3,8 @@
     --primary-dark: #23781e;
     --primary-light: #eaf6ea;
     --secondary-color: #2D5A27;
-    --accent-color: #227ae6;
-    --accent-light: #e8f1fd;
+    --accent-color: #000000;
+    --accent-light: #39ac76;
     --bg-color: #F3F5F8;
     --card-bg: #FFFFFF;
     --text-color: #1E293B;
@@ -12,15 +12,15 @@
     --border-color: #E2E8F0;
     
     /* Paleta vibrante para etiquetas y badges */
-    --badge-crit-bg: #FFEEEF;
+    --badge-crit-bg: #e45962;
     --badge-crit-text: #D32F2F;
     --badge-crit-border: #FFCDD2;
 
-    --badge-high-bg: #FFF3E0;
+    --badge-high-bg: #daa959;
     --badge-high-text: #E65100;
     --badge-high-border: #FFE0B2;
 
-    --badge-med-bg: #E8F5E9;
+    --badge-med-bg: #62df6c;
     --badge-med-text: #2E7D32;
     --badge-med-border: #C8E6C9;
 
@@ -265,7 +265,7 @@
 
   thead th {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-    color: #FFFFFF;
+    color: #ffffff;
     font-weight: 700;
     font-size: 0.8rem;
     text-transform: uppercase;
@@ -310,7 +310,7 @@
   .badge-critico { background-color: var(--badge-crit-bg); color: var(--badge-crit-text); border-color: var(--badge-crit-border); }
   .badge-alto { background-color: var(--badge-high-bg); color: var(--badge-high-text); border-color: var(--badge-high-border); }
   .badge-medio { background-color: var(--badge-med-bg); color: var(--badge-med-text); border-color: var(--badge-med-border); }
-  .badge-info { background-color: var(--accent-light); color: var(--accent-color); border-color: #BBDEFB; }
+  .badge-info { background-color: var(--accent-light); color: var(--accent-color); border-color: #58e06a; }
 
   /* Criterios de Entrada y Salida */
   .inout-container {
