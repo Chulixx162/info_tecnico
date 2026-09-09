@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HuilaTour - Arquitectura de Software</title>
+
+    <link rel="stylesheet" href="../assets/css/arquitectura.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- MENÚ LATERAL -->
+    <div id="sidebar-container"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+      <!-- INICIO -->
+      <section id="inicio" class="hero-section">
+        <h1>Arquitectura de Software</h1>
+
+        <p>
+          El sistema HuilaTour implementará una arquitectura de tres capas
+          complementada con el patrón de diseño MVC (Modelo–Vista–Controlador).
+        </p>
+      </section>
+
+      <!-- INTRODUCCIÓN -->
+      <section class="content-section">
+        <h2>Descripción General</h2>
+
+        <div class="card">
+          <p>
+            La arquitectura del sistema tiene como propósito separar las
+            responsabilidades, facilitar el mantenimiento y permitir una
+            evolución organizada de los diferentes componentes de HuilaTour.
+          </p>
+
+          <br />
+
+          <p>
+            La estructura combina una arquitectura de tres capas con el patrón
+            MVC, permitiendo que el sistema sea modular, organizado, escalable y
+            fácil de mantener.
+          </p>
+        </div>
+      </section>
+
+      <!-- TRES CAPAS -->
+      <section id="capas" class="content-section">
+        <h2>Arquitectura de Tres Capas</h2>
+
+        <div class="grid-3">
+          <!-- PRESENTACIÓN -->
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-desktop"></i>
+              Capa de Presentación
+            </h3>
+
+            <br />
+
+            <p>
+              Es la encargada de proporcionar la interfaz de interacción con los
+              usuarios del sistema.
+            </p>
+
+            <br />
+
+            <p>
+              Estará desarrollada mediante HTML, CSS y JavaScript. Permitirá la
+              visualización de información turística, interacción con
+              formularios, consulta de destinos, gestión de reservas y demás
+              funcionalidades disponibles para turistas, visitantes, operadores
+              y administradores.
+            </p>
+          </div>
+
+          <!-- NEGOCIO -->
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-gears"></i>
+              Capa de Negocio
+            </h3>
+
+            <br />
+
+            <p>
+              Contiene la lógica y las reglas de funcionamiento de HuilaTour.
+            </p>
+
+            <br />
+
+            <p>
+              Será desarrollada en Java y se encargará de procesar las
+              solicitudes provenientes de la capa de presentación, aplicar las
+              reglas del sistema y coordinar las operaciones necesarias antes de
+              acceder a los datos.
+            </p>
+          </div>
+
+          <!-- DATOS -->
+          <div class="card">
+            <h3>
+              <i class="fa-solid fa-database"></i>
+              Capa de Datos
+            </h3>
+
+            <br />
+
+            <p>
+              Se encarga de la persistencia y recuperación de la información del
+              sistema.
+            </p>
+
+            <br />
+
+            <p>
+              Esta capa será implementada mediante Java para realizar las
+              operaciones de acceso a datos y PostgreSQL como sistema gestor de
+              base de datos.
+            </p>
+
+            <br />
+
+            <p>
+              En ella se gestionan entidades como usuarios, destinos,
+              operadores, reservas, reseñas y demás información requerida por la
+              plataforma.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- MVC -->
+      <section id="mvc" class="content-section">
+        <h2>Patrón de Diseño MVC</h2>
+
+        <div class="card">
+          <p>
+            De manera complementaria, el patrón MVC permite organizar los
+            componentes de la aplicación en tres elementos principales:
+          </p>
+        </div>
+
+        <br />
+
+        <div class="grid-3">
+          <!-- MODELO -->
+          <div class="card-sm">
+            <i class="fa-solid fa-cube"></i>
+
+            <h3>Modelo</h3>
+
+            <p>
+              Representa los datos y las entidades que maneja el sistema, como
+              usuarios, destinos, operadores, reservas y reseñas.
+            </p>
+          </div>
+
+          <!-- VISTA -->
+          <div class="card-sm">
+            <i class="fa-solid fa-eye"></i>
+
+            <h3>Vista</h3>
+
+            <p>
+              Corresponde a las interfaces desarrolladas con HTML y CSS,
+              complementadas con JavaScript para proporcionar interacción
+              dinámica al usuario.
+            </p>
+          </div>
+
+          <!-- CONTROLADOR -->
+          <div class="card-sm">
+            <i class="fa-solid fa-code"></i>
+
+            <h3>Controlador</h3>
+
+            <p>
+              Implementado en Java, recibe las solicitudes provenientes de la
+              interfaz, las dirige hacia la lógica de negocio y coordina la
+              respuesta que será presentada al usuario.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- REPRESENTACIÓN VISUAL -->
+      <section id="flujo" class="content-section">
+        <h2>Flujo General del Sistema</h2>
+
+        <div class="card">
+          <div class="arch-container">
+            <div class="arch-layer">🖥️ Vista</div>
+
+            ↓
+
+            <div class="arch-layer">🎮 Controlador</div>
+
+            ↓
+
+            <div class="arch-layer">⚙️ Capa de Negocio</div>
+
+            ↓
+
+            <div class="arch-layer">🗄️ Capa de Datos</div>
+
+            ↓
+
+            <div class="arch-layer">🐘 PostgreSQL</div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- ESTRUCTURA DEL PROYECTO -->
+      <section id="estructura" class="content-section">
+        <h2>Estructura del Proyecto</h2>
+
+        <div class="card">
+          <p>
+            A continuación, se presenta la distribución de carpetas y archivos
+            que componen el proyecto HuilaTour, estructurado bajo el enfoque de
+            tres capas y el patrón de diseño MVC:
+          </p>
+
+          <br />
+
+          <pre
+            style="
+              background-color: #f8fafc;
+              padding: 20px;
+              border-radius: 8px;
+              border: 1px solid #e2e8f0;
+              font-family:
+                &quot;Consolas&quot;, &quot;Courier New&quot;, monospace;
+              font-size: 0.9rem;
+              line-height: 1.5;
+              overflow-x: auto;
+              color: #1e293b;
+            "
+          ><code>
+            HuilaTour/
+            │
+            ├── src/
+            │   │
+            │   ├── presentation/                  # Capa de Presentación
+            │   │   ├── views/                     # Vista (MVC)
+            │   │   │   ├── login/
+            │   │   │   ├── usuarios/
+            │   │   │   ├── destinos/
+            │   │   │   ├── operadores/
+            │   │   │   ├── reservas/
+            │   │   │   ├── resenas/
+            │   │   │   └── admin/
+            │   │   │
+            │   │   ├── controllers/               # Controladores (MVC)
+            │   │   │   ├── LoginController.java
+            │   │   │   ├── UsuarioController.java
+            │   │   │   ├── DestinoController.java
+            │   │   │   ├── OperadorController.java
+            │   │   │   ├── ReservaController.java
+            │   │   │   └── ResenaController.java
+            │   │   │
+            │   │   └── assets/
+            │   │       ├── css/
+            │   │       │   ├── style.css
+            │   │       │   ├── login.css
+            │   │       │   └── dashboard.css
+            │   │       │
+            │   │       ├── js/
+            │   │       │   ├── main.js
+            │   │       │   ├── login.js
+            │   │       │   ├── reservas.js
+            │   │       │   └── destinos.js
+            │   │       │
+            │   │       └── img/
+            │   │
+            │   ├── business/                      # Capa de Negocio
+            │   │   ├── services/
+            │   │   │   ├── UsuarioService.java
+            │   │   │   ├── DestinoService.java
+            │   │   │   ├── OperadorService.java
+            │   │   │   ├── ReservaService.java
+            │   │   │   └── ResenaService.java
+            │   │   │
+            │   │   └── rules/
+            │   │       ├── ReservaRules.java
+            │   │       ├── UsuarioRules.java
+            │   │       └── DestinoRules.java
+            │   │
+            │   └── data/                          # Capa de Datos
+            │       ├── models/                    # Modelo (MVC)
+            │       │   ├── Usuario.java
+            │       │   ├── Destino.java
+            │       │   ├── Operador.java
+            │       │   ├── Reserva.java
+            │       │   └── Resena.java
+            │       │
+            │       ├── repositories/
+            │       │   ├── UsuarioRepository.java
+            │       │   ├── DestinoRepository.java
+            │       │   ├── OperadorRepository.java
+            │       │   ├── ReservaRepository.java
+            │       │   └── ResenaRepository.java
+            │       │
+            │       └── database/
+            │           ├── DatabaseConnection.java
+            │           └── PostgreSQLConfig.java
+            │
+            ├── web/
+            │   ├── index.html
+            │   ├── login.html
+            │   ├── destinos.html
+            │   ├── reservas.html
+            │   └── dashboard.html
+            │
+            ├── database/
+            │   ├── schema.sql
+            │   ├── inserts.sql
+            │   ├── procedures.sql
+            │   └── queries.sql
+            │
+            ├── docs/
+            │   ├── arquitectura/
+            │   ├── requisitos/
+            │   └── diagramas/
+            │
+            ├── README.md
+            └── pom.xml</code></pre>
+        </div>
+      </section>
+
+      <!-- BENEFICIOS -->
+      <section id="beneficios" class="content-section">
+        <h2>Beneficios de la Arquitectura</h2>
+
+        <div class="grid-2">
+          <div class="card-req">
+            <h3>📌 Separación de responsabilidades</h3>
+
+            <p>
+              Cada componente del sistema tiene una función específica,
+              facilitando la organización del proyecto.
+            </p>
+          </div>
+
+          <div class="card-req">
+            <h3>🔧 Facilidad de mantenimiento</h3>
+
+            <p>
+              Las modificaciones pueden realizarse sin afectar
+              significativamente las demás partes del sistema.
+            </p>
+          </div>
+
+          <div class="card-req">
+            <h3>🧪 Facilidad para realizar pruebas</h3>
+
+            <p>
+              La separación de componentes permite probar cada parte del sistema
+              de manera más organizada.
+            </p>
+          </div>
+
+          <div class="card-req">
+            <h3>📈 Escalabilidad</h3>
+
+            <p>
+              Permite incorporar nuevas funcionalidades y realizar mejoras en el
+              sistema de manera organizada.
+            </p>
+          </div>
+        </div>
+
+        <br />
+
+        <div class="card">
+          <p>
+            La arquitectura de HuilaTour organiza el sistema en capas y utiliza
+            el patrón MVC (Modelo–Vista–Controlador), separando la presentación,
+            la lógica de negocio y el acceso a los datos.
+          </p>
+
+          <br />
+
+          <p>
+            Esta estructura permite reducir el acoplamiento entre las diferentes
+            partes del sistema, facilitar las pruebas y el mantenimiento, y
+            posibilitar la incorporación o modificación de funcionalidades sin
+            afectar significativamente el resto de la aplicación.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="../assets/js/load-sidebar.js"></script>
+  </body>
+</html>

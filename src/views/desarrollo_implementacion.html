@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desarrollo y Costos - HuilaTour Conecta</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/desarrollo_implementacion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -13,17 +14,7 @@
 <body>
 
    <!-- Navbar Lateral -->
-    <nav class="navbar">
-        <div class="logo">
-            <h2>HuilaTour <span>Conecta</span></h2>
-            <small>Panel Técnico</small>
-        </div>
-        <div class="nav-links">
-            <a href="index.html"><i class="fa-solid fa-house"></i> Inicio</a>
-            <a href="requerimientos.html"><i class="fa-solid fa-list-check"></i> Requerimientos</a>
-            <a href="desarrollo.html" class="active"><i class="fa-solid fa-laptop-code"></i> Desarrollo y Costos</a>
-        </div>
-    </nav>
+    <div id="sidebar-container"></div>
 
     <!-- Contenido Principal -->
     <main class="main-content">
@@ -42,7 +33,7 @@
                 <div class="cost-card-interactive">
                     <i class="fa-solid fa-server"></i>
                     <h4>Hardware / Equipos</h4>
-                    <div class="amount">$9.4M - $15M</div>
+                    <div class="amount">$9.4M - $13M</div>
                 </div>
                 <div class="cost-card-interactive" style="border-top-color: var(--accent-color);">
                     <i class="fa-solid fa-code" style="color: var(--accent-color);"></i>
@@ -63,7 +54,7 @@
 
             <div class="total-banner">
                 <h3>Inversión Total Estimada del Proyecto</h3>
-                <div class="total-price">$30.228.000 – $36.188.000 COP</div>
+                <div class="total-price">$30.228.000 – $34.188.000 COP</div>
                 <p style="font-size: 0.9rem; margin-top: 8px; opacity: 0.85;">Escenario contemplado para 8 semanas de ejecución operativa.</p>
             </div>
         </section>
@@ -287,6 +278,7 @@
     </main>
 
     <!-- Script externo JS -->
+    <script src="../assets/js/load-sidebar.js"></script>
     <script src="../assets/js/desarrollo_implementacion.js"></script>
 </body>
 </html>
