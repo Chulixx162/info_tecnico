@@ -277,59 +277,52 @@
 
                 <div class="card-req">
                     <div class="req-title">ERF-03.1: Contactar operador por WhatsApp</div>
-                    <p><strong>Descripción:</strong> Botón de acción rápida que redirige al chat de WhatsApp del operador.</p>
-                    <p><strong>Entrada:</strong> Clic en el botón; número de teléfono.</p>
-                    <p><strong>Salida:</strong> Apertura de WhatsApp con mensaje predefinido.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Uso dinámico de API wa.me en pestaña nueva.</p>
+                    <p><strong>Descripción:</strong> Botón de acción rápida que redirige al turista al chat de WhatsApp del operador para consultas inmediatas.</p>
+                    <p><strong>Entrada:</strong> Clic en el botón de contacto; número de teléfono del operador registrado en la base de datos.</p>
+                    <p><strong>Salida:</strong> Apertura de la aplicación WhatsApp con un mensaje predefinido (ej. "Hola, estoy interesado en el destino [Nombre]").</p>
+                    <p><strong>Criterio de Aceptación:</strong> El enlace debe generarse dinámicamente usando la API de WhatsApp (wa.me) y abrirse en una pestaña nueva o en la app móvil.</p>
                 </div>
                 <div class="card-req">
-                    <div class="req-title">ERF-03.2: Enviar solicitud de reserva</div>
-                    <p><strong>Descripción:</strong> Formulario mediante el cual el turista solicita un cupo o servicio.</p>
-                    <p><strong>Entrada:</strong> Fecha, número de personas, servicios adicionales y comentarios.</p>
-                    <p><strong>Salida:</strong> Registro en base de datos y notificación al operador.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Validar que la fecha sea igual o posterior a la actual.</p>
+                    <div class="req-title">ERF-03.2: Realizar solicitudes de reserva</div>
+                    <p><strong>Descripción:</strong> Las solicitudes de reservas se realizan por vía WhatsApp entre el proveedor y el turista directamente.</p>
+                    <p><strong>Entrada:</strong> Inicio de conversación de WhatsApp entre el proveedor y el turista.</p>
+                    <p><strong>Salida:</strong> Actualización del estado del turista por parte del proveedor en el servicio reservado.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El proveedor deberá validar que la reserva se realizó por medio de WhatsApp y confirmarlo con la actualización del estado del turista en el servicio.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">ERF-03.3: Enviar confirmación de reserva por correo</div>
-                    <p><strong>Descripción:</strong> Envío automatizado de comprobante detallado tras aprobar la reserva.</p>
-                    <p><strong>Entrada:</strong> Estado Confirmada y datos del turista/destino.</p>
-                    <p><strong>Salida:</strong> Correo HTML con ID, costos y código QR.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Enviado en un tiempo menor a 2 minutos.</p>
+                    <p><strong>Descripción:</strong> Por parte del proveedor se enviará un mensaje de confirmación de la reserva teniendo en cuenta las preferencias del turista. Este mensaje será enviado, y en la plataforma web estará registrado el estado del turista en dicho servicio.</p>
+                    <p><strong>Entrada:</strong> Estado de reserva "Confirmada" y datos del turista/destino.</p>
+                    <p><strong>Salida:</strong> Contenido que para el proveedor sea pertinente.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Dado que una reserva tiene estado "Confirmada", cuando el proveedor consulte dicha reserva en la plataforma, entonces el sistema debe mostrar únicamente los datos necesarios del turista (nombre, correo, destino/servicio) para que él redacte y envíe manualmente el correo de confirmación desde su cuenta privada (incluyendo resumen de costos y código QR que él mismo genere); si el proveedor no envía el correo, la plataforma debe registrar y mostrar siempre el estado actualizado de la reserva como mecanismo alterno de verificación para el turista, sin que el sistema sea responsable de generar, rastrear o validar el envío o contenido del correo.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">ERF-03.4: Gestionar estados de reserva</div>
-                    <p><strong>Descripción:</strong> Flujo de trabajo para controlar el ciclo de vida de la solicitud.</p>
+                    <p><strong>Descripción:</strong> Flujo de trabajo para que el operador controle el ciclo de vida de una solicitud.</p>
                     <p><strong>Entrada:</strong> Selección de nuevo estado (Pendiente, Confirmada, Cancelada, Completada).</p>
-                    <p><strong>Salida:</strong> Actualización en base de datos y aviso.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Exigir motivo obligatorio si se marca como Cancelada.</p>
+                    <p><strong>Salida:</strong> Actualización en base de datos y aviso al turista.</p>
+                    <p><strong>Criterio de Aceptación:</strong> Si una reserva se marca como "Cancelada", el sistema debe exigir un motivo de cancelación obligatorio.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">ERF-03.5: Consultar historial de reservas</div>
-                    <p><strong>Descripción:</strong> Listado cronológico de interacciones de reserva.</p>
-                    <p><strong>Entrada:</strong> Filtros de fecha y estado.</p>
-                    <p><strong>Salida:</strong> Tabla o lista detallada.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Turista solo ve sus reservas; operador las de sus destinos.</p>
+                    <p><strong>Descripción:</strong> Listado cronológico de todas las interacciones de reserva realizadas por un usuario o recibidas por un operador.</p>
+                    <p><strong>Entrada:</strong> Filtros de fecha y estado de la reserva.</p>
+                    <p><strong>Salida:</strong> Tabla o lista con el detalle de reservas pasadas y vigentes.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El turista solo debe ver sus propias reservas; el operador solo las asociadas a sus destinos.</p>
                 </div>
                 <div class="card-req">
-                    <div class="req-title">ERF-03.6: Atender consultas con chatbot</div>
-                    <p><strong>Descripción:</strong> Asistente virtual automatizado 24/7 para preguntas frecuentes.</p>
-                    <p><strong>Entrada:</strong> Mensaje de texto en lenguaje natural.</p>
-                    <p><strong>Salida:</strong> Respuesta automática o transferencia a humano.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Tiempo de respuesta inferior a 2 segundos.</p>
+                    <div class="req-title">ERF-03.6: Atender consultas con chatbot(AI API)</div>
+                    <p><strong>Descripción:</strong> Asistente virtual automatizado para responder preguntas frecuentes y guiar al usuario en la plataforma.</p>
+                    <p><strong>Entrada:</strong> Mensaje de texto del usuario en lenguaje natural.</p>
+                    <p><strong>Salida:</strong> Respuesta automática basada en la base de conocimientos o transferencia a un humano si es complejo.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El chatbot debe estar disponible 24/7 y tener un tiempo de respuesta inferior a 2 segundos.</p>
                 </div>
                 <div class="card-req">
                     <div class="req-title">ERF-03.7: Enviar notificaciones push y correo</div>
-                    <p><strong>Descripción:</strong> Sistema de alertas sobre cambios, promociones o recordatorios.</p>
-                    <p><strong>Entrada:</strong> Evento del sistema o campaña de marketing.</p>
-                    <p><strong>Salida:</strong> Notificación móvil y/o correo.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Opción para activar o desactivar desde el perfil.</p>
-                </div>
-                <div class="card-req">
-                    <div class="req-title">ERF-03.8: Gestionar mensajería interna</div>
-                    <p><strong>Descripción:</strong> Canal de chat centralizado entre turista y operador.</p>
-                    <p><strong>Entrada:</strong> Mensajes de texto y archivos adjuntos.</p>
-                    <p><strong>Salida:</strong> Interfaz de chat en tiempo real con historial.</p>
-                    <p><strong>Criterio de Aceptación:</strong> Indicar visualmente estado (Enviado, Leído) y hora.</p>
+                    <p><strong>Descripción:</strong> Sistema de alertas para informar sobre cambios relevantes, promociones o recordatorios de viaje.</p>
+                    <p><strong>Entrada:</strong> Evento del sistema (ej. 24 horas antes de un viaje) o campaña de marketing creada por el administrador.</p>
+                    <p><strong>Salida:</strong> Notificación en el dispositivo móvil y/o mensaje en la bandeja de entrada del correo.</p>
+                    <p><strong>Criterio de Aceptación:</strong> El usuario debe tener la opción de activar o desactivar estas notificaciones desde su perfil.</p>
                 </div>
             </div>
 
