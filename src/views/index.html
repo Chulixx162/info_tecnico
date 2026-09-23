@@ -1,182 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informe Técnico - HuilaTour Conecta</title>
-    <link rel="icon" href="../assets/img/logoSena.png">
+    <title>HuilaTour Conecta - Centro de Documentación</title>
+
     <!-- Estilos CSS -->
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <!-- FontAwesome para iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../assets/css/portal_index.css">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- Navegación Lateral / Header -->
+    <!-- MENÚ LATERAL E INYECTOR DE LOADER -->
     <div id="sidebar-container"></div>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="main-content">
 
-        <!-- Banner Principal -->
+        <!-- BANNER DE BIENVENIDA -->
         <section class="hero-section">
-            <div class="hero-card">
-                <h1>HuilaTour Conecta</h1>
-                <p>Sistema Inteligente de Gestión Turística Regional</p>
-                <div class="team-info">
-                    <p><strong>Aprendices SENA (ADSO - Ficha 3407799):</strong> Julio Andrés Casanova, Laura Daniela Isanoa, Karoll Nikol Coronado, Juan Manuel Barreiro, Jaime Andrés Ladino.</p>
-                    <p><strong>Instructor:</strong> José de Jesús Motta Vargas | Centro de la Industria, la Empresa y los Servicios – SENA Neiva</p>
-                </div>
+            <h1>HuilaTour <span>Conecta</span></h1>
+            <p>Sistema Inteligente de Gestión Turística Regional</p>
+            <small>Plataforma de Documentación Técnica y Análisis de Software — Ficha SENA 3407799</small>
+        </section>
+
+        <!-- SECCIÓN DE SELECCIÓN DE DOCUMENTOS -->
+        <section class="content-section">
+            <div class="portal-header">
+                <h2><i class="fa-solid fa-folder-tree"></i> Selecciona la documentación a consultar</h2>
+                <p>Haz clic en cualquiera de los módulos para explorar las especificaciones, análisis y equipo del proyecto.</p>
+            </div>
+
+            <div class="portal-grid">
+
+                <!-- 1. RESUMEN DEL PROYECTO -->
+                <a href="#resumen-proyecto" class="portal-card" onclick="scrollToSection('resumen-proyecto')">
+                    <div class="card-icon bg-green">
+                        <i class="fa-solid fa-compass"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Resumen del Proyecto</h3>
+                        <p>Visión general de HuilaTour Conecta, propuesta de valor, justificación regional e impacto en el sector turístico.</p>
+                        <span class="card-action">Consultar resumen <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 2. INFORME TÉCNICO -->
+                <a href="arquitectura.html" class="portal-card">
+                    <div class="card-icon bg-blue">
+                        <i class="fa-solid fa-file-code"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Informe Técnico</h3>
+                        <p>Arquitectura MVC en 3 capas, tecnologías elegidas (Java, PostgreSQL), seguridad JWT y modelo de datos DER.</p>
+                        <span class="card-action">Ver informe técnico <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 3. ESPECIFICACIÓN DE REQUISITOS (SRS / REQUERIMIENTOS) -->
+                <a href="requerimientos.html" class="portal-card">
+                    <div class="card-icon bg-orange">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>SRS - Requisitos de Software</h3>
+                        <p>Catálogo detallado de Requerimientos Funcionales (RF-01 a RF-09) y No Funcionales bajo estándar ISO/IEC 25010.</p>
+                        <span class="card-action">Ver requisitos SRS <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 4. INFORME DE ANÁLISIS -->
+                <a href="normas.html" class="portal-card">
+                    <div class="card-icon bg-purple">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Informe de Análisis y Calidad</h3>
+                        <p>Evaluación frente a modelos de calidad de software (ISO/IEC 29148, ISO 25010, CMMI) e instrumentos de recolección.</p>
+                        <span class="card-action">Ver informe de análisis <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <!-- 5. EQUIPO DE TRABAJO -->
+                <a href="#equipo-trabajo" class="portal-card" onclick="scrollToSection('equipo-trabajo')">
+                    <div class="card-icon bg-teal">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Equipo de Trabajo</h3>
+                        <p>Integrantes del Equipo 7 (ADSO SENA), roles asignados y desglose de horas/costos de talento humano.</p>
+
+                        <span class="card-action">Ver integrantes <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
             </div>
         </section>
 
-        <!-- Resumen Ejecutivo & Justificación -->
-        <section id="resumen" class="content-section">
-            <h2><i class="fa-solid fa-compass"></i> Resumen Ejecutivo y Justificación</h2>
+        <!-- SECCIÓN: RESUMEN DEL PROYECTO (DESPLIEGUE EN LÍNEA) -->
+        <section id="resumen-proyecto" class="content-section portal-detail-section">
+            <h2><i class="fa-solid fa-compass"></i> Resumen del Proyecto HuilaTour Conecta</h2>
             <div class="grid-2">
                 <div class="card">
-                    <h3>Resumen del Proyecto</h3>
-                    <p>HuilaTour Conecta es una plataforma tecnológica mobile-first estructurada para centralizar la oferta turística del departamento del Huila (Desierto de la Tatacoa, San Agustín, Festival del Bambuco, etc.). Busca reducir la desarticulación de prestadores, promover la formalización y ofrecer itinerarios inteligentes con analítica de datos.</p>
+                    <h3>Propósito</h3>
+                    <p>Desarrollar una plataforma tecnológica integral orientada a la gestión y articulación del sector turístico del departamento del Huila, permitiendo centralizar la información de prestadores, servicios y rutas turísticas para mejorar la competitividad regional.</p>
                 </div>
                 <div class="card">
-                    <h3>Impacto y Justificación</h3>
-                    <p>Frente a la dispersión de información y la brecha de ocupación hotelera (85% en temporadas festivas vs. 30%-40% en temporada baja), el sistema ofrece un modelo digital unificado bajo cumplimiento normativo Ley 1581 de 2012 e ISO/IEC 25010.</p>
+                    <h3>Problemática Abordada</h3>
+                    <p>Desarticulación entre actores turísticos, baja digitalización de pequeños prestadores, información dispersa y una marcada estacionalidad en destinos clave como el Desierto de la Tatacoa y San Agustín.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Objetivos -->
-        <section id="objetivos" class="content-section">
-            <h2><i class="fa-solid fa-bullseye"></i> Objetivos del Proyecto</h2>
-            <div class="card highlight">
-                <h3>Objetivo General</h3>
-                <p>Diseñar y desarrollar una plataforma digital inteligente para la gestión integral del sector turístico del departamento del Huila, centralizando la oferta y analizando el comportamiento de la demanda.</p>
-            </div>
-            <div class="grid-3">
-                <div class="card-sm">
-                    <i class="fa-solid fa-1"></i>
-                    <p>Analizar necesidades de digitalización del turismo en el Huila.</p>
-                </div>
-                <div class="card-sm">
-                    <i class="fa-solid fa-2"></i>
-                    <p>Diseñar la arquitectura centralizada de servicios y precios referenciales.</p>
-                </div>
-                <div class="card-sm">
-                    <i class="fa-solid fa-3"></i>
-                    <p>Implementar el módulo inteligente de rutas e itinerarios personalizados.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Requisitos Funcionales y No Funcionales -->
-        <section id="requisitos" class="content-section">
-            <h2><i class="fa-solid fa-list-check"></i> Requerimientos de Software</h2>
-            <div class="tab-buttons">
-                <button class="tab-btn active" onclick="switchTab('rf')">Funcionales (RF-01 a RF-09)</button>
-                <button class="tab-btn" onclick="switchTab('rnf')">No Funcionales (RNF)</button>
-            </div>
-
-            <div id="rf-tab" class="tab-content active">
-                <div class="grid-3">
-                    <div class="card-req">
-                        <h4>RF-01: Destinos y Contenido</h4>
-                        <p>Gestión de galerías, precios, estado de vías y clima en tiempo real.</p>
-                    </div>
-                    <div class="card-req">
-                        <h4>RF-02: Usuarios y Autenticación</h4>
-                        <p>Roles (Admin, Operador, Turista) protegidos con tokens JWT.</p>
-                    </div>
-                    <div class="card-req">
-                        <h4>RF-03: Reservas y Chatbot</h4>
-                        <p>Contacto por WhatsApp, solicitudes de reserva e integración con chatbot 24/7.</p>
-                    </div>
-                    <div class="card-req">
-                        <h4>RF-04: Mapas y Geolocalización</h4>
-                        <p>Mapas interactivos (Google Maps / Leaflet) y precarga offline.</p>
-                    </div>
-                    <div class="card-req">
-                        <h4>RF-05: Reseñas y Confianza</h4>
-                        <p>Validación de Registro Nacional de Turismo (RNT) y reseñas verificadas.</p>
-                    </div>
-                    <div class="card-req">
-                        <h4>RF-06: Seguridad y Privacidad</h4>
-                        <p>Cifrado de datos en tránsito/reposo y mitigación de ataques DDoS.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="rnf-tab" class="tab-content">
-                <div class="grid-2">
-                    <div class="card">
-                        <h4>Rendimiento y Usabilidad</h4>
-                        <ul>
-                            <li><strong>RNF-04:</strong> Tiempo de respuesta menor a 2s.</li>
-                            <li><strong>RNF-10:</strong> Accesibilidad bajo estándar WCAG 2.1 AA.</li>
-                            <li><strong>RNF-11:</strong> Diseño Mobile-First para uso en campo.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Disponibilidad y Mantenibilidad</h4>
-                        <ul>
-                            <li><strong>RNF-07:</strong> Disponibilidad (Uptime) del 99.9% anual.</li>
-                            <li><strong>RNF-14:</strong> Código modular estructurado con Arquitectura Hexagonal.</li>
-                            <li><strong>RNF-17:</strong> Estrategia de caché para baja conectividad rural.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Arquitectura de Software -->
-        <section id="arquitectura" class="content-section">
-            <h2><i class="fa-solid fa-sitemap"></i> Arquitectura del Sistema</h2>
-            <p>Estructuración en 3 capas con el patrón MVC (Modelo - Vista - Controlador):</p>
-            <div class="arch-container">
-                <div class="arch-layer">
-                    <h4>Capa de Presentación (Vista)</h4>
-                    <p>HTML5, CSS3, JavaScript (Interfaces interactivas)</p>
-                </div>
-                <i class="fa-solid fa-arrow-down"></i>
-                <div class="arch-layer">
-                    <h4>Capa de Negocio (Controlador)</h4>
-                    <p>Java (Servicios, Reglas de Negocio, JWT, Controladores)</p>
-                </div>
-                <i class="fa-solid fa-arrow-down"></i>
-                <div class="arch-layer">
-                    <h4>Capa de Datos (Modelo)</h4>
-                    <p>PostgreSQL & Java Repositories (Persistencia)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Modelado DER -->
-        <section id="der" class="content-section">
-            <h2><i class="fa-solid fa-database"></i> Modelo Entidad-Relación (DER)</h2>
+        <!-- SECCIÓN: EQUIPO DE TRABAJO -->
+        <section id="equipo-trabajo" class="content-section portal-detail-section">
+            <h2><i class="fa-solid fa-users"></i> Equipo de Trabajo — Grupo 7 (ADSO Ficha 3407799)</h2>
             <div class="card">
-                <p>El esquema físico organiza las entidades principales: <strong>Turistas, Administradores, Proveedores, Sitios Turísticos, Opiniones, Favoritos, Categorías y Servicios</strong>.</p>
+                <p><strong>Centro de Formación:</strong> Centro de la Industria, la Empresa y los Servicios – SENA Neiva</p>
+                <p><strong>Instructor Lider:</strong> José de Jesús Motta Vargas</p>
+                <br>
                 <div class="table-wrapper">
                     <table>
                         <thead>
                             <tr>
-                                <th>Tabla</th>
-                                <th>Campo Clave</th>
-                                <th>Relación Principal</th>
+                                <th>Nombre Completo</th>
+                                <th>Rol Asignado</th>
+                                <th>Tarifa Estimada</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Turistas</td>
-                                <td>n_documento (PK)</td>
-                                <td>1:N con Opiniones y Favoritos</td>
+                                <td><strong>Julio Andrés Casanova Ramírez</strong></td>
+                                <td>Líder de Proyecto / Analista de Requerimientos</td>
+                                <td>$25.000 COP / hora</td>
                             </tr>
                             <tr>
-                                <td>Proveedores</td>
-                                <td>id_proveedor (PK)</td>
-                                <td>1:N con Sitios Turísticos y Servicios</td>
+                                <td><strong>Laura Daniela Isanoa Estrada</strong></td>
+                                <td>Diseñadora de Software</td>
+                                <td>$24.000 COP / hora</td>
                             </tr>
                             <tr>
-                                <td>Sitios Turísticos</td>
-                                <td>id_sitio (PK)</td>
-                                <td>N:1 con Proveedores, 1:N con Imágenes</td>
+                                <td><strong>Karoll Nikol Coronado Bermeo</strong></td>
+                                <td>Desarrolladora Frontend</td>
+                                <td>$22.000 COP / hora</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Juan Manuel Barreiro Polo</strong></td>
+                                <td>Desarrollador Backend</td>
+                                <td>$22.000 COP / hora</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Jaime Andrés Ladino Montealegre</strong></td>
+                                <td>Tester / Calidad de Software</td>
+                                <td>$20.000 COP / hora</td>
                             </tr>
                         </tbody>
                     </table>
@@ -184,32 +164,18 @@
             </div>
         </section>
 
-        <!-- Costos y Presupuesto -->
-        <section id="costos" class="content-section">
-            <h2><i class="fa-solid fa-coins"></i> Presupuesto Estimado</h2>
-            <div class="cost-summary">
-                <div class="cost-card">
-                    <h3>Hardware</h3>
-                    <p class="price">$1.41M - $1.95M</p>
-                    <small>Equipos de desarrollo</small>
-                </div>
-                <div class="cost-card">
-                    <h3>Recursos Humanos</h3>
-                    <p class="price">$111.87M</p>
-                    <small>5 perfiles x 990 horas</small>
-                </div>
-                <div class="cost-card highlight-cost">
-                    <h3>Costo Total Estimado</h3>
-                    <p class="price-total">$124.467.000 – $125.007.000 COP</p>
-                    <small>Incluye 10% de imprevistos/operatividad</small>
-                </div>
-            </div>
-        </section>
-
     </main>
 
-    <!-- JS de la aplicación -->
-     <script src="../assets/js/load-sidebar.js"></script>
-    <script src="../assets/js/main.js"></script>
+    <!-- SCRIPTS -->
+    <script src="../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script>
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
 </body>
+
 </html>

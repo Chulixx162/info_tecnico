@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>HuilaTour - Arquitectura de Software</title>
-    <link rel="icon" href="../assets/img/logoSena.png">
-    <link rel="stylesheet" href="../assets/css/arquitectura.css" />
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <!-- Iconos -->
+    
+    <!-- Rutas relativas corregidas hacia la carpeta assets -->
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/arquitectura.css" />
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css" />
+    
+    <!-- Iconos FontAwesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -16,7 +19,7 @@
   </head>
 
   <body>
-    <!-- MENÚ LATERAL -->
+    <!-- MENÚ LATERAL (Se carga dinámicamente) -->
     <div id="sidebar-container"></div>
 
     <!-- CONTENIDO PRINCIPAL -->
@@ -399,6 +402,8 @@
         </div>
       </section>
     </main>
-    <script src="../assets/js/load-sidebar.js"></script>
+
+    <!-- Script del sidebar apuntando a la ruta absoluta correcta -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
   </body>
 </html>

@@ -1,0 +1,64 @@
+<!-- Botón Menú Hamburguesa -->
+<button id="toggle-sidebar-btn" class="hamburger-btn" aria-label="Abrir menú">
+    <i class="fa-solid fa-bars"></i>
+</button>
+
+<!-- Panel Lateral de Navegación -->
+<header class="navbar" id="sidebar-navbar">
+    <div class="logo">
+        <h2>HuilaTour <span>Conecta</span></h2>
+        <small>Informe Técnico de Software</small>
+    </div>
+    
+    <nav class="nav-links">
+        
+        <!-- Enlace a la Raíz / Index General -->
+        <a href="/src/views/index.html" id="nav-inicio" class="single-link">
+            <i class="fa-solid fa-house"></i> Inicio Portal
+        </a>
+
+        <!-- MÓDULO: Informe Técnico -->
+        <div class="nav-group">
+            <button class="dropdown-btn" id="btn-informe-tecnico">
+                <span><i class="fa-solid fa-folder-open"></i> Informe Técnico</span>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            
+            <div class="dropdown-container">
+                <a href="/src/views/info_tecnico/info_tecnico.html" id="nav-resumen"><i class="fa-solid fa-file-contract"></i> Resumen General</a>
+                <a href="/src/views/info_tecnico/requerimientos.html" id="nav-requerimientos"><i class="fa-solid fa-list"></i> Requerimientos</a>
+                <a href="/src/views/info_tecnico/normas.html" id="nav-normas"><i class="fa-solid fa-gavel"></i> Normas</a>
+                <a href="/src/views/info_tecnico/arquitectura.html" id="nav-arquitectura"><i class="fa-solid fa-sitemap"></i> Arquitectura</a>
+                <a href="/src/views/info_tecnico/modelado_datos.html" id="nav-modelado"><i class="fa-solid fa-database"></i> Modelado y Diagramas</a>
+                <a href="/src/views/info_tecnico/desarrollo_implementacion.html" id="nav-desarrollo"><i class="fa-solid fa-code"></i> Desarrollo e Implementación</a>
+                <a href="/src/views/info_tecnico/pruebas_calidad.html" id="nav-pruebas"><i class="fa-solid fa-bug"></i> Pruebas y Calidad</a>
+                <a href="/src/views/info_tecnico/licenciamiento.html" id="nav-licenciamiento"><i class="fa-solid fa-key"></i> Licenciamiento</a>
+                <a href="/src/views/info_tecnico/terminos_condiciones.html" id="nav-terminos"><i class="fa-solid fa-file-lines"></i> Términos y Condiciones</a>
+                <a href="/src/views/info_tecnico/resto.html" id="nav-resto"><i class="fa-solid fa-ellipsis"></i> Conclusiones y Anexos</a>
+            </div>
+        </div>
+
+        <!-- MÓDULO RESERVADO: SRS (Futuras páginas dentro de views/srs) -->
+        <div class="nav-group">
+            <button class="dropdown-btn">
+                <span><i class="fa-solid fa-file-lines"></i> Módulo SRS</span>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#"><i class="fa-solid fa-circle-notch"></i> Documentación SRS</a>
+            </div>
+        </div>
+
+        <!-- MÓDULO RESERVADO: Informe de Análisis -->
+        <div class="nav-group">
+            <button class="dropdown-btn">
+                <span><i class="fa-solid fa-chart-pie"></i> Informe de Análisis</span>
+                <i class="fa-solid fa-chevron-down arrow"></i>
+            </button>
+            <div class="dropdown-container">
+                <a href="#"><i class="fa-solid fa-circle-notch"></i> Análisis de Resultados</a>
+            </div>
+        </div>
+
+    </nav>
+</header>

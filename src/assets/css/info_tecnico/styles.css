@@ -479,3 +479,79 @@ th {
     50% { transform: scale(1.05); opacity: 1; }
     100% { transform: scale(0.95); opacity: 0.8; }
 }
+
+/* ==========================================
+   MENÚ DESPLEGABLE (DROPDOWN SIDEBAR)
+   ========================================== */
+.nav-group {
+    width: 100%;
+}
+
+.dropdown-btn {
+    width: 100%;
+    background: transparent;
+    color: #CBD5E1;
+    padding: 12px 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-btn span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-btn:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+/* Icono de flecha giratorio */
+.dropdown-btn .arrow {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-btn.active .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-btn.active {
+    color: var(--accent-color);
+}
+
+/* Contenedor del submenú */
+.dropdown-container {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    margin-top: 4px;
+    padding-left: 8px;
+}
+
+.dropdown-container.show {
+    max-height: 800px; /* Altura suficiente para mostrar los enlaces */
+}
+
+/* Enlaces secundarios dentro del submenú */
+.dropdown-container a {
+    font-size: 0.88rem;
+    padding: 8px 12px;
+    color: #94A3B8;
+}
+
+.dropdown-container a:hover,
+.dropdown-container a.active {
+    background-color: var(--primary-color);
+    color: white;
+}
