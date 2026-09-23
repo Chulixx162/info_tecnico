@@ -26,26 +26,34 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Control del Loader
+// Control del Loader
 function initPageLoader() {
-    const loader = document.getElementById("page-loader");
+  const loader = document.getElementById("page-loader");
 
-    if (loader) {
-        setTimeout(() => {
-            loader.classList.add("hidden");
-        }, 500);
+  if (loader) {
+    // Ocultar loader cuando todo el contenido se haya cargado
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 400);
 
-        const navLinks = document.querySelectorAll(".nav-links a");
-        navLinks.forEach(link => {
-            link.addEventListener("click", function (e) {
-                const targetHref = this.getAttribute("href");
-                const currentPath = window.location.pathname.split("/").pop();
+    // Mostrar loader al hacer clic en enlaces de navegación válidos
+    const navLinks = document.querySelectorAll(".nav-links a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", function (e) {
+        const targetHref = this.getAttribute("href");
+        const currentPath = window.location.pathname.split("/").pop();
 
-                if (targetHref && targetHref !== "#" && !targetHref.startsWith("javascript") && targetHref !== currentPath) {
-                    loader.classList.remove("hidden");
-                }
-            });
-        });
-    }
+        if (
+          targetHref &&
+          targetHref !== "#" &&
+          !targetHref.startsWith("javascript") &&
+          targetHref !== currentPath
+        ) {
+          loader.classList.remove("hidden");
+        }
+      });
+    });
+  }
 }
 
 // Control de Acordeones / Desplegables
@@ -65,22 +73,32 @@ function initDropdowns() {
 }
 
 // Resaltar Enlace Activo
+// Resaltar Enlace Activo
 function highlightActiveLink() {
-    let currentPath = window.location.pathname.split("/").pop();
+    // Obtiene la ruta completa actual (ej: "/srs/seccion1.html")
+    let currentPath = window.location.pathname;
 
-    if (currentPath === "") {
-        currentPath = "index.html";
+    if (currentPath === "/" || currentPath.endsWith("/")) {
+        currentPath = "/index.html";
     }
 
     const navLinks = document.querySelectorAll(".nav-links a");
 
     navLinks.forEach(link => {
         link.classList.remove("active");
+        
+        // Se obtiene la propiedad href (que resuelve la URL absoluta) o el atributo href
         const linkHref = link.getAttribute("href");
 
-        if (linkHref && (linkHref === currentPath || linkHref.endsWith(currentPath))) {
+        if (!linkHref) return;
+
+        // Normalizamos ambas rutas para comparar exactitud
+        const linkPath = new URL(link.href, window.location.origin).pathname;
+
+        if (linkPath === currentPath) {
             link.classList.add("active");
 
+            // Desplegar el menú padre si está en un dropdown
             const parentDropdown = link.closest(".dropdown-container");
             if (parentDropdown) {
                 parentDropdown.classList.add("show");
