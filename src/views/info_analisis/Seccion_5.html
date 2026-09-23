@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisitos Funcionales - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Requisitos funcionales y visión general del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 5: REQUISITOS FUNCIONALES Y VISIÓN GENERAL DEL SISTEMA -->
+        <section class="content-section">
+            <h2>5. Requisitos Funcionales y Visión General del Sistema</h2>
+            <p>La documentación del proyecto organiza la plataforma web en nueve requisitos funcionales (RF-01 a RF-09). Los diagramas de actividad describen estos módulos y muestran la participación de turistas, visitantes, operadores/proveedores y administradores.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-resumen')">Vista General</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-tabla')">Tabla Completa (RF-01 a RF-09)</button>
+            </div>
+
+            <!-- TAB VISTA GENERAL -->
+            <div id="tab-resumen" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">Visión General de los Módulos</h3>
+                <p>El sistema se encuentra estructurado para cubrir de manera integral las necesidades de gestión turística en el departamento del Huila, permitiendo una interacción fluida entre los visitantes, prestadores de servicios y la administración central de la plataforma.</p>
+            </div>
+
+            <!-- TAB TABLA COMPLETA -->
+            <div id="tab-tabla" class="tab-content">
+                <h3 style="margin-bottom: 15px;">Matriz de Requisitos Funcionales</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Código</th>
+                                <th>Requisito funcional</th>
+                                <th>Propósito resumido</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>RF-01</strong></td>
+                                <td>Gestión de destinos y contenido turístico</td>
+                                <td>Consultar y administrar información de destinos, imágenes, categorías, precios, horarios, clima y otros datos turísticos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-02</strong></td>
+                                <td>Gestión de usuarios, roles y autenticación</td>
+                                <td>Registrar usuarios, autenticar y controlar el acceso según el rol.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-03</strong></td>
+                                <td>Contacto, reservas y comunicación</td>
+                                <td>Realizar reservas por vía WhatsApp, y comunicación mediante WhatsApp.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-04</strong></td>
+                                <td>Mapas, geolocalización y exploración espacial</td>
+                                <td>Explorar destinos mediante mapas, ubicación, rutas y destinos cercanos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-05</strong></td>
+                                <td>Confianza, reseñas y verificación de calidad</td>
+                                <td>Publicar y consultar reseñas, calificaciones y mecanismos de confianza.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-06</strong></td>
+                                <td>Seguridad, privacidad y protección de datos</td>
+                                <td>Proteger información mediante autenticación, control de acceso, cifrado y auditoría.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-07</strong></td>
+                                <td>Accesibilidad, internacionalización y usabilidad</td>
+                                <td>Adaptar la interfaz mediante idiomas, accesibilidad, teclado, contraste, texto y mensajes claros.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-08</strong></td>
+                                <td>Analítica, reportes y gestión del negocio</td>
+                                <td>Consultar métricas, generar reportes, registrar eventos y ofrecer recomendaciones.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-09</strong></td>
+                                <td>Administración de la plataforma y gobernanza</td>
+                                <td>Gestionar usuarios, proveedores, categorías, alertas, contenido e incidencias.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_5.js"></script>
+</body>
+</html>

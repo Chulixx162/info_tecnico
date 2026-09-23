@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Casos de Uso - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Análisis de casos de uso e interacciones del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 6: ANÁLISIS DE CASOS DE USO -->
+        <section class="content-section">
+            <h2>6. Análisis de Casos de Uso</h2>
+            <p>Los casos de uso permiten describir las interacciones entre actores y sistema. El documento suministrado contiene nueve casos de uso, asociados con los nueve requisitos funcionales. La guía solicita especificar actores, precondiciones, flujo normal, flujos alternos y demás elementos de documentación.</p>
+
+            <!-- Botones de Pestañas para cada CU -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-cu01')">CU-01</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu02')">CU-02</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu03')">CU-03</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu04')">CU-04</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu05')">CU-05</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu06')">CU-06</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu07')">CU-07</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu08')">CU-08</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-cu09')">CU-09</button>
+            </div>
+
+            <!-- TAB CU-01 -->
+            <div id="tab-cu01" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">6.1 CU-01 / RF-01 – Gestión de destinos y contenido turístico</h3>
+                <p>Participan turista, visitante, operador turístico y administrador. El usuario ingresa al sistema, accede al menú principal, selecciona una opción y consulta la información solicitada. Los operadores pueden administrar información, mientras que las reglas establecen que únicamente usuarios autorizados pueden modificar contenido.</p>
+                <p style="margin-top: 15px;">Se contemplan datos incompletos, ausencia de información, pérdida de conexión y errores de carga. El resultado esperado es que la información solicitada quede disponible y que los cambios realizados se almacenen.</p>
+            </div>
+
+            <!-- TAB CU-02 -->
+            <div id="tab-cu02" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.2 CU-02 / RF-02 – Gestión de usuarios, roles y autenticación</h3>
+                <p>El proceso permite registrar e iniciar sesión y controlar el acceso de turistas, visitantes, operadores y administradores. El correo debe ser único; la contraseña debe cumplir la regla establecida en el caso de uso; los operadores deben aportar documentos de soporte y su activación requiere aprobación administrativa.</p>
+                <p style="margin-top: 15px;">Se contemplan correos repetidos, contraseñas inválidas, credenciales incorrectas, cuentas bloqueadas, falta de permisos y fallas de conexión o validación.</p>
+            </div>
+
+            <!-- TAB CU-03 -->
+            <div id="tab-cu03" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.3 CU-03 / RF-03 – Contacto, reservas y comunicación</h3>
+                <p>El turista o visitante puede reservar algún servicio turístico directamente con el proveedor vía WhatsApp, además de poder contactarlo y consultar su historial. El caso de uso establece que la solicitud de reserva y su respectiva actualización del estado debe ser realizada por el proveedor, cabe aclarar que es solo un estado otorgado por el proveedor, ya que las reservas se realizan únicamente por medio de WhatsApp (turista-proveedor).</p>
+            </div>
+
+            <!-- TAB CU-04 -->
+            <div id="tab-cu04" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.4 CU-04 / RF-04 – Mapas y geolocalización</h3>
+                <p>El usuario accede al mapa por medio de la API de Google Maps, selecciona un destino y obtiene una ruta. Si el turista desea obtener un mapa offline, deberá ser descargado directamente por este en el servicio de mapas (Google Maps).</p>
+            </div>
+
+            <!-- TAB CU-05 -->
+            <div id="tab-cu05" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.5 CU-05 / RF-05 – Confianza, reseñas y verificación</h3>
+                <p>Turistas, visitantes, operadores y administradores interactúan con reseñas y calificaciones. Los usuarios registrados pueden publicar reseñas y las calificaciones se encuentran limitadas a una escala de 1 a 5 estrellas. El administrador puede moderar o eliminar contenido que incumpla las políticas.</p>
+            </div>
+
+            <!-- TAB CU-06 -->
+            <div id="tab-cu06" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.6 CU-06 / RF-06 – Seguridad, privacidad y protección de datos</h3>
+                <p>El administrador gestiona acciones de seguridad y protección de datos. Se consideran tokens JWT, bloqueo temporal después de intentos fallidos, cifrado, acceso restringido a documentos y logs de auditoría. El documento relaciona estas medidas con la Ley 1581 de protección de datos personales.</p>
+            </div>
+
+            <!-- TAB CU-07 -->
+            <div id="tab-cu07" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.7 CU-07 / RF-07 – Accesibilidad, internacionalización y usabilidad</h3>
+                <p>El turista o visitante puede cambiar idioma, aplicar opciones de accesibilidad, modificar contraste y tamaño de texto y activar texto simplificado. Las preferencias se aplican durante la sesión.</p>
+            </div>
+
+            <!-- TAB CU-08 -->
+            <div id="tab-cu08" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.8 CU-08 / RF-08 – Analítica, reportes y gestión del negocio</h3>
+                <p>Administradores y proveedores consultan estadísticas, dashboards y reportes; el turista puede recibir recomendaciones y gestionar favoritos. Los eventos de analítica se registran para alimentar métricas y recomendaciones.</p>
+            </div>
+
+            <!-- TAB CU-09 -->
+            <div id="tab-cu09" class="tab-content">
+                <h3 style="margin-bottom: 15px;">6.9 CU-09 / RF-09 – Administración de la plataforma y gobernanza</h3>
+                <p>El administrador accede al panel, gestiona usuarios, contenidos y servicios y guarda cambios. Se establecen controles de permisos y registro de acciones administrativas para fines de auditoría.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_6.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodología de Desarrollo - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Metodología de desarrollo de software y gestión ágil del proyecto HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 3: METODOLOGÍA DE DESARROLLO -->
+        <section class="content-section">
+            <h2>3. Metodología de Desarrollo</h2>
+            <p>El equipo seleccionó Scrum como metodología para orientar el desarrollo de HuilaTour. Según el documento de metodología realizado, la selección se fundamenta en la necesidad de trabajar de manera flexible, organizada, colaborativa e incremental, permitiendo adaptar el producto a cambios y retroalimentación.</p>
+            
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-3-1')">3.1 Justificación</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-3-2')">3.2 Roles</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-3-3')">3.3 Artefactos</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-3-4')">3.4 Ceremonias</button>
+            </div>
+
+            <!-- TAB 3.1 -->
+            <div id="tab-3-1" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">3.1 Justificación de Scrum</h3>
+                <p>Scrum permite trabajar mediante ciclos cortos denominados Sprints. Para HuilaTour, este enfoque facilita la construcción progresiva de módulos relacionados con lugares de interés, recomendaciones, rutas, servicios y eventos culturales. La revisión frecuente del producto permite detectar errores y realizar ajustes antes de que se conviertan en problemas mayores.</p>
+                <p style="margin-top: 15px;">También se destaca el carácter colaborativo de Scrum. La distribución de responsabilidades, las reuniones periódicas y la identificación temprana de obstáculos permiten mantener seguimiento sobre las actividades y mejorar continuamente el proceso.</p>
+            </div>
+
+            <!-- TAB 3.2 -->
+            <div id="tab-3-2" class="tab-content">
+                <h3 style="margin-bottom: 15px;">3.2 Roles</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rol</th>
+                                <th>Responsabilidad en HuilaTour</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Product Owner</strong></td>
+                                <td>Representar las necesidades de usuarios e interesados, priorizar funcionalidades y gestionar el Product Backlog.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Scrum Master</strong></td>
+                                <td>Facilitar la aplicación de Scrum, apoyar al equipo, gestionar obstáculos y promover la mejora continua.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Equipo de Desarrollo</strong></td>
+                                <td>Realizar análisis, diseño, programación, integración, pruebas y documentación necesarias para construir el producto.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 3.3 -->
+            <div id="tab-3-3" class="tab-content">
+                <h3 style="margin-bottom: 15px;">3.3 Artefactos</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Artefacto</th>
+                                <th>Aplicación en HuilaTour</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Product Backlog</strong></td>
+                                <td>Lista priorizada de requisitos, funcionalidades, mejoras y necesidades del producto.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sprint Backlog</strong></td>
+                                <td>Elementos seleccionados para un Sprint y tareas necesarias para cumplir su objetivo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Incremento</strong></td>
+                                <td>Resultado funcional obtenido al terminar un Sprint y que integra nuevas características del sistema.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 3.4 -->
+            <div id="tab-3-4" class="tab-content">
+                <h3 style="margin-bottom: 15px;">3.4 Ceremonias</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Ceremonia</th>
+                                <th>Finalidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Sprint Planning</strong></td>
+                                <td>Definir el objetivo del Sprint y seleccionar el trabajo prioritario.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Daily Scrum</strong></td>
+                                <td>Revisar avance, actividades próximas y obstáculos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sprint Review</strong></td>
+                                <td>Presentar el incremento y recibir retroalimentación.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sprint Retrospective</strong></td>
+                                <td>Analizar el proceso de trabajo y definir mejoras.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px; font-style: italic; font-size: 0.95rem; color: var(--text-color);">Nota: La selección de Scrum se encuentra respaldada por el documento 'METODOLOGÍA ESCOGIDA PARA EL DESARROLLO DE SOFTWARE HUILATOUR'.</p>
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_3.js"></script>
+</body>
+</html>

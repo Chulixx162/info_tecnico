@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramas de Actividad - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Diagramas de actividad y flujos de procesos del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 7: DIAGRAMAS DE ACTIVIDAD -->
+        <section class="content-section">
+            <h2>7. Diagramas de Actividad</h2>
+            <p>La documentación de diagramas de actividad explica el flujo general de HuilaTour y los procesos asociados a los requisitos funcionales. El diagrama general integra las acciones de turistas, operadores y administradores con procesos automáticos del sistema.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-gen')">7.1 Diagrama General</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-req')">7.2 Actividades por Requisito</button>
+            </div>
+
+            <!-- TAB 7.1 -->
+            <div id="tab-gen" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">7.1 Diagrama de actividad general</h3>
+                <p>El flujo general integra gestión de destinos y contenido, registro y autenticación, comunicación y reservas por vía WhatsApp, mapas, reseñas, seguridad, accesibilidad, analítica y administración. Esto permite visualizar el sistema como un conjunto conectado de procesos en lugar de funcionalidades aisladas.</p>
+            </div>
+
+            <!-- TAB 7.2 -->
+            <div id="tab-req" class="tab-content">
+                <h3 style="margin-bottom: 15px;">7.2 Actividades por requisito</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>RF</th>
+                                <th>Proceso representado</th>
+                                <th>Actores principales</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>RF-01</strong></td>
+                                <td>Gestión de destinos y contenido</td>
+                                <td>Turista, visitante, operador, administrador</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-02</strong></td>
+                                <td>Gestión de usuarios, roles y autenticación</td>
+                                <td>Turista, visitante, operador, administrador</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-03</strong></td>
+                                <td>Contacto, reservas y comunicación</td>
+                                <td>Turista, visitante, proveedor, sistema</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-04</strong></td>
+                                <td>Mapas, geolocalización y exploración espacial</td>
+                                <td>Turista, visitante</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-05</strong></td>
+                                <td>Confianza, reseñas y verificación</td>
+                                <td>Turista, visitante, operador, administrador</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-06</strong></td>
+                                <td>Seguridad, privacidad y protección de datos</td>
+                                <td>Administrador, sistema de seguridad, gestión de datos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-07</strong></td>
+                                <td>Accesibilidad, internacionalización y usabilidad</td>
+                                <td>Visitante/turista, sistema</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-08</strong></td>
+                                <td>Analítica, reportes y gestión del negocio</td>
+                                <td>Administrador, proveedor, turista, sistema</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-09</strong></td>
+                                <td>Administración y gobernanza</td>
+                                <td>Administrador, sistema</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p style="margin-top: 20px;">La documentación suministrada describe además los resultados esperados de cada proceso. Por ejemplo, RF-07 busca una plataforma accesible e inclusiva, RF-08 busca facilitar el análisis del negocio mediante estadísticas y reportes, y RF-09 busca mantener organizada y actualizada la administración de la plataforma.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_7.js"></script>
+</body>
+</html>

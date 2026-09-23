@@ -23,26 +23,6 @@ body {
     display: flex;
     min-height: 100vh;
 }
-/* Botón Hamburguesa Flotante */
-/* .hamburger-btn {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    z-index: 1100;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    transition: background-color 0.3s ease;
-}
-
-.hamburger-btn:hover {
-    background-color: var(--secondary-color);
-} */
 
 /* Comportamiento del Sidebar Desplegable */
 .navbar {
@@ -87,7 +67,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Navbar Lateral Fija */
+/* Navbar Lateral Fija optimizada para mostrar todas las secciones */
 .navbar {
     width: 260px;
     height: 100vh;
@@ -96,11 +76,23 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    padding: 1rem;
+    padding: 0.8rem;        /* ¡Ajustado para ganar espacio vertical! */
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;              /* ¡Reducido de 30px a 15px para compactar el menú! */
     z-index: 1000;
+    overflow-y: auto;       
+    overflow-x: hidden;     
+}
+
+/* Estilización de la barra de scroll del sidebar */
+.navbar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.navbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 4px;
 }
 
 .logo h2 span { color: var(--accent-color); }
@@ -109,13 +101,13 @@ body {
 .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;              /* Reducido para mejor distribución */
 }
 
 .nav-links a {
     color: #CBD5E1;
     text-decoration: none;
-    padding: 10px;
+    padding: 8px 10px;      /* Compactado verticalmente */
     border-radius: 6px;
     transition: 0.3s;
     display: flex;
@@ -434,7 +426,7 @@ th {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Por encima de todo el contenido */
+    z-index: 9999;
     opacity: 1;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
@@ -451,14 +443,12 @@ th {
     gap: 20px;
 }
 
-/* Animación de palpitado para tu imagen */
 .loader-img {
     max-width: 130px;
     height: auto;
     animation: pulse 1.5s infinite ease-in-out;
 }
 
-/* Indicador de carga giratorio */
 .loader-spinner {
     width: 45px;
     height: 45px;
@@ -468,7 +458,6 @@ th {
     animation: spin 1s linear infinite;
 }
 
-/* Keyframes para las animaciones */
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -491,11 +480,11 @@ th {
     width: 100%;
     background: transparent;
     color: #CBD5E1;
-    padding: 12px 10px;
+    padding: 10px 10px;     /* Relleno compacto */
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 0.95rem;
+    font-size: 0.9rem;      /* Letra ligeramente más estilizada y compacta */
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -514,7 +503,6 @@ th {
     color: white;
 }
 
-/* Icono de flecha giratorio */
 .dropdown-btn .arrow {
     font-size: 0.8rem;
     transition: transform 0.3s ease;
@@ -528,7 +516,6 @@ th {
     color: var(--accent-color);
 }
 
-/* Contenedor del submenú */
 .dropdown-container {
     max-height: 0;
     overflow: hidden;
@@ -536,17 +523,16 @@ th {
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     margin-top: 4px;
-    padding-left: 8px;
+    padding-left: 6px;
 }
 
 .dropdown-container.show {
-    max-height: 800px; /* Altura suficiente para mostrar los enlaces */
+    max-height: 900px;
 }
 
-/* Enlaces secundarios dentro del submenú */
 .dropdown-container a {
-    font-size: 0.88rem;
-    padding: 8px 12px;
+    font-size: 0.82rem;     /* Letra optimizada para que entren todas las secciones con holgura */
+    padding: 6px 10px;      /* Espaciado vertical reducido en los sub-enlaces */
     color: #94A3B8;
 }
 

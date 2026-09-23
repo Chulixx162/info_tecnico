@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Dominio y Datos - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Modelo de dominio y modelo conceptual de datos del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 8: MODELO DE DOMINIO Y MODELO CONCEPTUAL DE DATOS -->
+        <section class="content-section">
+            <h2>8. Modelo de Dominio y Modelo Conceptual de Datos</h2>
+            <p>El archivo Diagrama_Dominio_HuilaTour.drawio identifica conceptos y relaciones principales del sistema. Entre las entidades y objetos representados se encuentran Turista, Visitante, Administrador, Proveedor, servicios_turisticos, opiniones, sitio_turistico, categoria, imagen, eventos y Favorito.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-entidades')">8.1 Principales Entidades</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-relaciones')">8.2 Relaciones Principales</button>
+            </div>
+
+            <!-- TAB 8.1 -->
+            <div id="tab-entidades" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">8.1 Principales entidades identificadas</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Entidad</th>
+                                <th>Atributos o información representada</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Turista</strong></td>
+                                <td>n_documento, tipo_documento, nombre, n_celular, correo, fecha_nacimiento, plan_pago, password, fecha_registro.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Administrador</strong></td>
+                                <td>admin/turista, ultimo_acceso, estado y operaciones de administración/consulta.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Proveedor</strong></td>
+                                <td>nombre_empresa, NIT, representante, correo, n_celular, direccion, estado, link_redes_sociales.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>servicios_turisticos</strong></td>
+                                <td>proveedor, nombre, descripcion, estado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>opiniones</strong></td>
+                                <td>turista, sitio, calificacion, comentario, fecha.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>sitio_turistico</strong></td>
+                                <td>proveedor, nombre, descripcion, municipio, clima, horario, precio_ingreso, imagen_principal, estado.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>categoria</strong></td>
+                                <td>sitio y categoria.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>imagen</strong></td>
+                                <td>sitio, url_imagen, descripcion.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>eventos</strong></td>
+                                <td>nombre, descripcion, fecha_inicio, fecha_fin, municipio.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Favorito</strong></td>
+                                <td>turista y sitio.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Visitante</strong></td>
+                                <td>consulta y visualización de información.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 8.2 -->
+            <div id="tab-relaciones" class="tab-content">
+                <h3 style="margin-bottom: 15px;">8.2 Relaciones principales</h3>
+                <p>El diagrama representa relaciones de herencia y asociación entre actores y entidades, incluyendo relaciones de contacto, escritura de opiniones, agregación de favoritos, administración, oferta de servicios, pertenencia a categorías y asociación de imágenes con sitios.</p>
+                <p style="margin-top: 15px;">El modelo conceptual se encuentra directamente relacionado con los casos de uso porque debe proporcionar los datos necesarios para mostrar destinos, gestionar usuarios, soportar reseñas, administrar proveedores y atender las operaciones del sistema.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_8.js"></script>
+</body>
+</html>

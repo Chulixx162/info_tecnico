@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis Integral del Estado - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Análisis integral del estado, fortalezas, áreas de atención y coherencia del proyecto HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 11: ANÁLISIS INTEGRAL DEL ESTADO DEL PROYECTO -->
+        <section class="content-section">
+            <h2>11. Análisis Integral del Estado del Proyecto</h2>
+            <p>Evaluación general del nivel de madurez, consistencia y preparación de los artefactos generados durante la fase de análisis del sistema.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-fortalezas')">11.1 Fortalezas</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-atencion')">11.2 Aspectos de Atención</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-coherencia')">11.3 Coherencia General</button>
+            </div>
+
+            <!-- TAB 11.1: FORTALEZAS -->
+            <div id="tab-fortalezas" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">11.1 Fortalezas del Proyecto</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; margin-top: 15px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Metodología de desarrollo seleccionada y justificada: Scrum.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Nueve requisitos funcionales documentados a detalle.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Casos de uso desarrollados para los módulos principales.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Documentación de diagramas de actividad para representar procesos.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Modelo de dominio que identifica entidades y relaciones clave.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Propuestas visuales elaboradas para los nueve requisitos.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Matriz de trazabilidad para detectar mejoras antes del desarrollo.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #10B981; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-check-circle" style="color: #10B981; margin-right: 8px;"></i> Tablero Trello configurado como mecanismo de seguimiento.
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 11.2: ASPECTOS QUE REQUIEREN ATENCIÓN -->
+            <div id="tab-atencion" class="tab-content">
+                <h3 style="margin-bottom: 15px;">11.2 Aspectos que requieren atención</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; margin-right: 10px;"></i> Actualizar el modelo conceptual con las entidades identificadas como faltantes.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; margin-right: 10px;"></i> Verificar que el modelo lógico y físico de base de datos refleje los ajustes de la matriz.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; margin-right: 10px;"></i> Mantener sincronizados casos de uso, diagramas de actividad, modelo de dominio, base de datos y prototipo.
+                    </div>
+                    <div style="background: white; padding: 15px; border-radius: 8px; border-left: 4px solid #F59E0B; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                        <i class="fa-solid fa-triangle-exclamation" style="color: #F59E0B; margin-right: 10px;"></i> Validar los enlaces de prototipos y el acceso al tablero antes de la entrega final.
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 11.3: COHERENCIA GENERAL -->
+            <div id="tab-coherencia" class="tab-content">
+                <h3 style="margin-bottom: 15px;">11.3 Coherencia general</h3>
+                <p>En términos generales, HuilaTour presenta una estructura de análisis avanzada: los requisitos están organizados en nueve módulos y existe correspondencia entre procesos, casos de uso y prototipos. Sin embargo, la matriz demuestra que la coherencia no es absoluta, especialmente en persistencia de reservas por vía WhatsApp, geolocalización, auditoría/documentos y analítica.</p>
+                <p style="margin-top: 15px; padding: 18px; background: rgba(34, 122, 230, 0.05); border-left: 4px solid var(--accent-color); border-radius: 6px; font-weight: 500;">
+                    Por tanto, el proyecto se encuentra en una condición adecuada para continuar hacia el diseño detallado, siempre que primero se incorporen y revisen los ajustes de datos identificados.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_11.js"></script>
+</body>
+</html>

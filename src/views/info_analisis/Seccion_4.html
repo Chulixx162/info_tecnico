@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeación y Seguimiento - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Planeación, seguimiento de actividades y gestión de tareas del proyecto HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 4: PLANEACIÓN Y SEGUIMIENTO DE ACTIVIDADES -->
+        <section class="content-section">
+            <h2>4. Planeación y Seguimiento de Actividades</h2>
+            <p>La guía de trabajo solicita que cada equipo construya un plan de actividades de análisis mediante una herramienta de gestión como Trello, Jira o Notion, definiendo tareas, tiempos de ejecución, entregables y roles.</p>
+            <p style="margin-top: 15px;">Para HuilaTour se suministró un tablero de Trello denominado 'Seguimiento de tareas HuilaTour'. El tablero constituye la evidencia externa de organización y seguimiento del trabajo del equipo.</p>
+
+            <!-- Botón Estilizado para Trello -->
+            <div style="margin: 25px 0; text-align: left;">
+                <a href="https://trello.com/invite/b/6a5f80b955d5c4370d063a65/ATTId6c06b1de95289598a752efdf6f0bb7e451C2383/" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background-color: #026aa7; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: background-color 0.3s ease;">
+                    <i class="fa-brands fa-trello" style="font-size: 1.2rem;"></i> Ver Tablero Trello (Seguimiento de tareas HuilaTour)
+                </a>
+            </div>
+
+            <p style="margin-top: 15px;">En el presente informe se incorpora el enlace como referencia al tablero original. La información detallada de tarjetas, fechas y responsables debe consultarse directamente en el tablero, ya que el contenido de las tarjetas no queda reproducido íntegramente en los documentos entregados.</p>
+            
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-4-gen')">4. Gestión de Tareas</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-4-1')">4.1 Relación con Scrum</button>
+            </div>
+
+            <!-- TAB 4 GENERAL -->
+            <div id="tab-4-gen" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">Gestión General en Trello</h3>
+                <p>El seguimiento operativo se realiza mediante tableros kanban estructurados para garantizar el cumplimiento de los entregables institucionales del SENA.</p>
+            </div>
+
+            <!-- TAB 4.1 -->
+            <div id="tab-4-1" class="tab-content">
+                <h3 style="margin-bottom: 15px;">4.1 Relación de planeación con Scrum</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Elemento de seguimiento</th>
+                                <th>Relación con Scrum</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Tareas</strong></td>
+                                <td>Se pueden organizar como trabajo derivado del Product Backlog y del Sprint Backlog.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Responsables</strong></td>
+                                <td>Permiten asignar responsabilidades al equipo de desarrollo y facilitar el seguimiento.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tiempos</strong></td>
+                                <td>Permiten controlar el trabajo previsto para cada ciclo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Entregables</strong></td>
+                                <td>Representan resultados verificables de las actividades de análisis.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Estado</strong></td>
+                                <td>Permite observar el avance y detectar actividades pendientes o bloqueadas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <p style="margin-top: 30px; font-size: 0.95rem; color: var(--text-color);">La planeación debe mantenerse alineada con los productos exigidos: tablero o cronograma, modelos UML, modelo conceptual de datos, prototipo y matriz de trazabilidad.</p>
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_4.js"></script>
+</body>
+</html>
