@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz de Trazabilidad y Ajustes - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Matriz de trazabilidad, verificación de consistencia y ajustes técnicos del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 10: MATRIZ DE TRAZABILIDAD Y AJUSTES -->
+        <section class="content-section">
+            <h2>10. Matriz de Trazabilidad y Ajustes</h2>
+            <p>La matriz de trazabilidad constituye el mecanismo de verificación entre requisitos/casos de uso, elementos de la base de datos y pantallas del prototipo. La guía propone registrar si existe coincidencia y documentar el ajuste técnico cuando sea necesario.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-resultado')">10.1 Resultado Consolidado</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-hallazgos')">10.2 Análisis de Hallazgos</button>
+            </div>
+
+            <!-- TAB 10.1 -->
+            <div id="tab-resultado" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">10.1 Resultado consolidado</h3>
+                <p>De los nueve procesos revisados, la matriz reporta cinco coincidencias totales: RF-01, RF-02, RF-05, RF-07 y RF-09. Los cuatro restantes presentan inconsistencias que requieren ajustes del modelo conceptual.</p>
+                
+                <div class="table-wrapper" style="margin-top: 20px;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>RF</th>
+                                <th>Resultado</th>
+                                <th>Hallazgo / ajuste</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>RF-01</strong></td>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Sí</span></td>
+                                <td>Los datos del destino, imágenes y categorías están soportados por el modelo.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-02</strong></td>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Sí</span></td>
+                                <td>Los roles de turista, administrador y proveedor se encuentran representados.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-03</strong></td>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Sí</span></td>
+                                <td>Se cumple a la perfección con el requisito.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-04</strong></td>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Sí</span></td>
+                                <td>El requisito se cumple adecuadamente.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-05</strong></td>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Sí</span></td>
+                                <td>Opiniones que soportan calificación, comentarios y favoritos.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-06</strong></td>
+                                <td><span style="background-color: #EF4444; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">No</span></td>
+                                <td>Faltan logs_auditoria y documentos_soporte.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-07</strong></td>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Sí</span></td>
+                                <td>La funcionalidad se maneja como configuración de interfaz y no requiere persistencia de negocio.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-08</strong></td>
+                                <td><span style="background-color: #EF4444; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">No</span></td>
+                                <td>Falta eventos_analitica para alimentar dashboard y métricas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-09</strong></td>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Sí</span></td>
+                                <td>Administradores, proveedores y categorías soportan el panel administrativo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 10.2 -->
+            <div id="tab-hallazgos" class="tab-content">
+                <h3 style="margin-bottom: 15px;">10.2 Análisis de los hallazgos</h3>
+                <p><strong>RF-06:</strong> Las reglas de negocio requieren auditoría de acciones críticas y almacenamiento seguro de documentos de soporte. Se proponen <code>logs_auditoria</code> y <code>documentos_soporte</code>.</p>
+                <p style="margin-top: 15px;"><strong>RF-08:</strong> El dashboard depende de eventos de uso registrados. Se propone <code>eventos_analitica</code> con información del evento, usuario, sitio y fecha.</p>
+                <p style="margin-top: 20px; padding: 15px; background: rgba(34, 122, 230, 0.05); border-left: 4px solid var(--accent-color); border-radius: 4px;">
+                    Los hallazgos demuestran que la matriz cumplió su propósito de validación: el prototipo permitió detectar necesidades que no estaban completamente representadas en el modelo conceptual.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_10.js"></script>
+</body>
+</html>

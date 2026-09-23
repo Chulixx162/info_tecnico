@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referencias y Enlaces - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .docs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .doc-card {
+            background: #FFFFFF;
+            padding: 16px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+            border-color: var(--primary-color);
+        }
+
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .link-box-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #FFFFFF;
+            padding: 16px 20px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            text-decoration: none;
+            color: var(--text-color);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+
+        .link-box-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+            border-color: var(--accent-color);
+        }
+
+        .badge-action {
+            background: linear-gradient(135deg, #F24E1E, #A259FF);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 5px rgba(242, 78, 30, 0.3);
+            white-space: nowrap;
+        }
+
+        .badge-action.trello {
+            background: #026aa7;
+            box-shadow: 0 2px 5px rgba(2, 106, 167, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Referencias documentales y enlaces de evidencia externa del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 15: REFERENCIAS Y ENLACES DE EVIDENCIA -->
+        <section class="content-section">
+            <h2>15. Referencias y Enlaces de Evidencia</h2>
+            <p>Repositorio centralizado de documentos institucionales de soporte y accesos directos a los tableros de gestión y prototipos interactivos en Figma.</p>
+            
+            <!-- Botones de Pestañas para Organizar el Contenido -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-docs')"><i class="fa-solid fa-folder-open" style="margin-right: 8px;"></i> Documentos del Equipo</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-links')"><i class="fa-solid fa-globe" style="margin-right: 8px;"></i> Prototipos y Enlaces Externos</button>
+            </div>
+
+            <!-- TAB 1: DOCUMENTOS -->
+            <div id="tab-docs" class="tab-content active">
+                <h3 style="margin-bottom: 15px; color: var(--secondary-color);">Documentos suministrados por el equipo</h3>
+                <div class="docs-grid">
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-word" style="color: #2563EB; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">Actividades e Instrumentos de Evaluacion.docx</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-word" style="color: #2563EB; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">ANÁLISIS DE CASO DE USO.docx</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-word" style="color: #2563EB; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">BASE_DE_DATOS.docx</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-word" style="color: #2563EB; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">DOCUMENTACIÓN DE LOS DIAGRAMAS DE ACTIVIDAD.docx</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-code" style="color: #F59E0B; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">Diagrama_Dominio_HuilaTour.drawio</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-word" style="color: #2563EB; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">Informe Mockups Huila Tour.docx</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-word" style="color: #2563EB; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">Matriz_de_Trazabilidad_HuilaTour.docx</span>
+                    </div>
+                    <div class="doc-card">
+                        <i class="fa-solid fa-file-word" style="color: #2563EB; font-size: 1.5rem;"></i>
+                        <span style="font-size: 0.88rem; font-weight: 600;">METODOLOGÍA ESCOGIDA PARA EL DESARROLLO.docx</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: ENLACES EXTERNOS Y PROTOTIPOS -->
+            <div id="tab-links" class="tab-content">
+                <h3 style="margin-bottom: 15px; color: var(--secondary-color);">15.1 Tablero de Gestión y Prototipos Interactivos</h3>
+                
+                <div class="links-grid">
+                    <!-- Trello -->
+                    <a href="https://trello.com/invite/b/6a5f80b955d5c4370d063a65/ATTId6c06b1de95289598a752efdf6f0bb7e451C2383/" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-trello" style="font-size: 1.3rem; color: #026aa7;"></i> Tablero Trello (Seguimiento)
+                        </span>
+                        <span class="badge-action trello"><i class="fa-solid fa-arrow-up-right-from-square"></i> Ver</span>
+                    </a>
+
+                    <!-- RF-01 -->
+                    <a href="https://www.figma.com/make/HD3v9a2zrlr7DMW5fFOrGE/Mockup-web-HuilaTour-Conecta?t=x4zkb4SF5tGK5s9p-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-01 – Destinos y Contenido
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-02 -->
+                    <a href="https://www.figma.com/make/Kxo5PbsceK78wClKipXmNH/HuilaTour-Conecta-Platform-Design?t=2wW3AkJn18HeOsGL-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-02 – Usuarios y Roles
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-03 -->
+                    <a href="https://www.figma.com/make/Vhm5Bnvaxqnvcq66LKsWf8/Centro-de-Contacto-HuilaTour?t=y4DUcwpQY6lTT3UP-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-03 – Contacto y Comunicación
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-04 -->
+                    <a href="https://www.figma.com/make/8kNNVVa8XkLmQeTOACqEV9/Interactive-Map-Module?t=fMmUXJhlNwUtZGsr-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-04 – Mapas y Geolocalización
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-05 -->
+                    <a href="https://www.figma.com/make/ZWRHjlc3Dwx5VvDhiq6ACJ/HuilaTour-Conecta-UI-UX-Mockups?t=mJk6hOCexrn6cUmd-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-05 – Reseñas y Confianza
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-06 -->
+                    <a href="https://www.figma.com/make/Kqg4d675EkDtBCSHxQnE2b/UI-UX-Mockups-Seguridad-HuilaTour?t=zV4aMKX3I9zBLrcZ-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-06 – Seguridad y Privacidad
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-07 -->
+                    <a href="https://www.figma.com/make/R3v6r0NLFHRqgYtKwQ6XZP/Accessibility-Panel-Mockup?t=6Aod80DkwcqTf9IJ-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-07 – Accesibilidad y Usabilidad
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-08 -->
+                    <a href="https://www.figma.com/make/0emcFIJzzZ90DLkDkXhfza/Analytics-and-Reporting-Module?t=VLJ2WmptM34Q5Du7-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-08 – Analítica y Reportes
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+
+                    <!-- RF-09 -->
+                    <a href="https://www.figma.com/make/KIJsuLwsLa0G9C40HvRUoI/Prototipo-panel-administrativo-HuilaTour?t=PoY3alVREW1MgkO0-1" target="_blank" class="link-box-card">
+                        <span style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 0.9rem;">
+                            <i class="fa-brands fa-figma" style="font-size: 1.3rem; color: #F24E1E;"></i> RF-09 – Panel Administrativo
+                        </span>
+                        <span class="badge-action"><i class="fa-solid fa-eye"></i> Figma</span>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_15.js"></script>
+</body>
+</html>

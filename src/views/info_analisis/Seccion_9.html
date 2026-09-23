@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipado y Mockups - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Prototipado, mockups y validación visual del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 9: PROTOTIPADO Y MOCKUPS -->
+        <section class="content-section">
+            <h2>9. Prototipado y Mockups</h2>
+            <p>La fase de prototipado tiene como finalidad validar visualmente los modelos construidos. La guía solicita un prototipo interactivo navegable de alta fidelidad centrado en los procesos documentados y una mesa de verificación que compare la interfaz con los modelos técnicos.</p>
+            <p style="margin-top: 15px;">El documento de mockups registra propuestas visuales para los nueve requisitos funcionales.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-general')">Vista General</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-figma')">Tabla de Prototipos (Figma)</button>
+            </div>
+
+            <!-- TAB VISTA GENERAL -->
+            <div id="tab-general" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">Objetivo del Prototipado</h3>
+                <p>Los mockups funcionan como referencia visual para orientar el desarrollo de la interfaz y facilitar la comprobación de que las funciones propuestas respondan a los requisitos definidos.</p>
+            </div>
+
+            <!-- TAB TABLA DE PROTOTIPOS -->
+            <div id="tab-figma" class="tab-content">
+                <h3 style="margin-bottom: 15px;">Enlaces a Prototipos por Requisito Funcional</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>RF</th>
+                                <th>Módulo</th>
+                                <th>Prototipo Interactivo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>RF-01</strong></td>
+                                <td>Gestión de destinos y contenido turístico</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/HD3v9a2zrlr7DMW5fFOrGE/Mockup-web-HuilaTour-Conecta?t=x4zkb4SF5tGK5s9p-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-02</strong></td>
+                                <td>Gestión de usuarios, roles y autenticación</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/Kxo5PbsceK78wClKipXmNH/HuilaTour-Conecta-Platform-Design?t=2wW3AkJn18HeOsGL-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-03</strong></td>
+                                <td>Contacto y comunicación</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/Vhm5Bnvaxqnvcq66LKsWf8/Centro-de-Contacto-HuilaTour?t=y4DUcwpQY6lTT3UP-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-04</strong></td>
+                                <td>Mapas y geolocalización</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/8kNNVVa8XkLmQeTOACqEV9/Interactive-Map-Module?t=fMmUXJhlNwUtZGsr-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-05</strong></td>
+                                <td>Confianza, reseñas y verificación</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/ZWRHjlc3Dwx5VvDhiq6ACJ/HuilaTour-Conecta-UI-UX-Mockups?t=mJk6hOCexrn6cUmd-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-06</strong></td>
+                                <td>Seguridad y privacidad</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/Kqg4d675EkDtBCSHxQnE2b/UI-UX-Mockups-Seguridad-HuilaTour?t=zV4aMKX3I9zBLrcZ-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-07</strong></td>
+                                <td>Accesibilidad, internacionalización y usabilidad</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/R3v6r0NLFHRqgYtKwQ6XZP/Accessibility-Panel-Mockup?t=6Aod80DkwcqTf9IJ-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-08</strong></td>
+                                <td>Analítica y reportes</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/0emcFIJzzZ90DLkDkXhfza/Analytics-and-Reporting-Module?t=VLJ2WmptM34Q5Du7-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><strong>RF-09</strong></td>
+                                <td>Administración de la plataforma y gobernanza</td>
+                                <td>
+                                    <a href="https://www.figma.com/make/KIJsuLwsLa0G9C40HvRUoI/Prototipo-panel-administrativo-HuilaTour?t=PoY3alVREW1MgkO0-1" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #F24E1E, #A259FF); color: white; padding: 6px 14px; border-radius: 20px; text-decoration: none; font-size: 0.85rem; font-weight: 600; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: transform 0.2s ease;">
+                                        <i class="fa-brands fa-figma"></i> Ver en Figma
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_9.js"></script>
+</body>
+</html>

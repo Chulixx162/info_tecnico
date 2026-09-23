@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan de Acción Recomendado - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Plan de acción recomendado y secuencia de validación técnica del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 12: PLAN DE ACCIÓN RECOMENDADO -->
+        <section class="content-section">
+            <h2>12. Plan de Acción Recomendado</h2>
+            <p>Lineamientos, actividades priorizadas y secuencia de pasos necesarios para asegurar la consistencia de los artefactos antes de avanzar a las siguientes etapas del proyecto.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-plan')">12. Actividades Prioritarias</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-secuencia')">12.1 Secuencia de Validación</button>
+            </div>
+
+            <!-- TAB 12 -->
+            <div id="tab-plan" class="tab-content active">
+                <h3 style="margin-bottom: 15px;">Matriz de Actividades y Prioridades</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Prioridad</th>
+                                <th>Actividad</th>
+                                <th>Resultado esperado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span style="background-color: #EF4444; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Alta</span></td>
+                                <td>Crear <code>logs_auditoria</code> y <code>documentos_soporte</code>.</td>
+                                <td>Trazabilidad administrativa y soporte a validación de proveedores.</td>
+                            </tr>
+                            <tr>
+                                <td><span style="background-color: #EF4444; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Alta</span></td>
+                                <td>Crear <code>eventos_analitica</code>.</td>
+                                <td>Datos para dashboard, estadísticas y recomendaciones.</td>
+                            </tr>
+                            <tr>
+                                <td><span style="background-color: #F59E0B; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Media</span></td>
+                                <td>Revisar consistencia de nombres: operador/proveedor.</td>
+                                <td>Terminología uniforme entre documentos.</td>
+                            </tr>
+                            <tr>
+                                <td><span style="background-color: #F59E0B; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Media</span></td>
+                                <td>Actualizar diagramas y documentación después de los cambios.</td>
+                                <td>Trazabilidad completa entre modelos.</td>
+                            </tr>
+                            <tr>
+                                <td><span style="background-color: #F59E0B; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Media</span></td>
+                                <td>Revisar prototipos frente al modelo actualizado.</td>
+                                <td>Interfaz alineada con datos y funciones.</td>
+                            </tr>
+                            <tr>
+                                <td><span style="background-color: #10B981; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem; font-weight: 600;">Baja</span></td>
+                                <td>Realizar una revisión final de enlaces y evidencias.</td>
+                                <td>Entrega consolidada y navegable.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- TAB 12.1 -->
+            <div id="tab-secuencia" class="tab-content">
+                <h3 style="margin-bottom: 15px;">12.1 Secuencia de validación final</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 15px;">
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">1. Actualizar el modelo conceptual.</div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">2. Revisar relaciones y cardinalidades.</div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">3. Actualizar la documentación de casos de uso cuando los cambios afecten flujos.</div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">4. Actualizar diagramas de actividad y dominio cuando sea necesario.</div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">5. Actualizar prototipos que dependan de los nuevos datos.</div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">6. Ejecutar nuevamente la matriz de trazabilidad.</div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">7. Verificar que los nueve requisitos tengan soporte coherente.</div>
+                    <div style="background: white; padding: 12px 16px; border-radius: 6px; border-left: 4px solid var(--accent-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05); font-weight: 500;">8. Consolidar enlaces y evidencias en el informe final.</div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_12.js"></script>
+</body>
+</html>

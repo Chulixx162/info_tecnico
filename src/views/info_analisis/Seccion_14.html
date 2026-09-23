@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conclusiones - HuilaTour Conecta</title>
+    <link rel="icon" href="../../assets/img/logoSena.png">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/desarrollo_implementacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Fase de Análisis</h1>
+            <p>Conclusiones generales y cierre de la fase de análisis del sistema HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN 14: CONCLUSIONES -->
+        <section class="content-section">
+            <h2>14. Conclusiones</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 20px; margin-top: 25px;">
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <p>El análisis consolidado permite establecer que HuilaTour cuenta con una base documental amplia para la fase de análisis. El equipo definió Scrum como metodología de desarrollo, organizó los principales módulos funcionales y desarrolló artefactos de requisitos, UML, datos y prototipado.</p>
+                </div>
+                
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <p>La definición de nueve requisitos funcionales permite estructurar el sistema alrededor de capacidades concretas: destinos y contenido, usuarios y autenticación, comunicación y reservas por vía WhatsApp, mapas, confianza y reseñas, seguridad, accesibilidad, analítica y administración.</p>
+                </div>
+
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <p>Los casos de uso y diagramas de actividad proporcionan una descripción detallada de las interacciones y procesos. El modelo de dominio complementa esta visión al identificar entidades como turistas, proveedores, sitios turísticos, servicios, opiniones, categorías, imágenes, eventos y favoritos.</p>
+                </div>
+
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid var(--primary-color); box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <p>El prototipado constituye un elemento fundamental de validación. La comparación realizada en la matriz de trazabilidad permitió confirmar cinco módulos completamente coherentes y detectar cuatro necesidades de ajuste en el modelo de datos. Este resultado es especialmente importante porque evita trasladar inconsistencias a la etapa de desarrollo.</p>
+                </div>
+
+                <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #F59E0B; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+                    <p><strong>Recomendación previa:</strong> Antes de iniciar la implementación, se recomienda actualizar el modelo conceptual con <code>solicitudes_reserva</code>, <code>logs_auditoria</code>, <code>documentos_soporte</code> y <code>eventos_analitica</code>.</p>
+                </div>
+
+                <div style="background: rgba(34, 122, 230, 0.05); padding: 20px; border-radius: 8px; border-left: 4px solid var(--accent-color); font-weight: 500;">
+                    <p>En conclusión, HuilaTour presenta una estructura de análisis favorable para continuar hacia las siguientes etapas del proyecto, siempre que los hallazgos documentados sean atendidos y que exista una revisión final de consistencia entre requisitos, casos de uso, diagramas, base de datos, prototipos y tablero de trabajo.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/info_analisis/Seccion_14.js"></script>
+</body>
+</html>
