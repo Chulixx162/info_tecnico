@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuilaTour Conecta - Descripción General</title>
+    <!-- Estilos Globales y Específicos -->
+    
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css" />
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="sidebar-container"></div>
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Cabecera de la Sección -->
+        <header class="hero-section">
+            <div class="section-header" style="border:none; margin:0; padding:0;">
+                <span class="badge pk">Documentación SRS</span>
+                <h1 style="color: white; border:none; margin-top: 10px;">2. Descripción General</h1>
+                <p><i class="fas fa-layer-group"></i> HuilaTour Conecta – Sistema Inteligente de Gestión Turística Regional</p>
+            </div>
+        </header>
+
+        <!-- Botones de Pestañas Principales -->
+        <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px;">
+            <button class="tab-btn active" onclick="switchTab(event, 'sec-2-1')">2.1 Perspectivas</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sec-2-2')">2.2 Usuarios</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sec-2-3')">2.3 Restricciones</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sec-2-4')">2.4 Suposiciones y Dependencias</button>
+        </div>
+
+        <!-- Contenido de Pestaña: 2.1 Perspectivas del Producto -->
+        <div class="tab-content active" id="sec-2-1">
+            <section class="content-section">
+                <h2>2.1 Perspectivas del Producto</h2>
+                <div class="card">
+                    <p>El sistema Huila Tour es un producto de software independiente (standalone) diseñado para ofrecer información turística organizada del departamento del Huila. Su objetivo es facilitar a los turistas el acceso a rutas, destinos, itinerarios y precios de servicios turísticos disponibles en la región. Aunque funcionará de forma autónoma, su arquitectura permitirá en el futuro integrarse con plataformas digitales de promoción turística o sistemas institucionales del sector turismo.</p>
+                    <br>
+                    <p>El sistema interactúa con el entorno mediante tres interfaces principales:</p>
+                    <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px;">
+                        <li><strong>Interfaz de Usuario:</strong> La plataforma estará disponible principalmente en versión web, accesible desde navegadores en computadoras, tablets y dispositivos móviles, permitiendo a los usuarios consultar destinos turísticos, rutas, itinerarios y recomendaciones de viaje.</li>
+                        <li><strong>Interfaz de Software:</strong> El sistema podrá integrarse con servicios externos como APIs de mapas y geolocalización para mostrar ubicaciones de destinos turísticos y facilitar la visualización de rutas dentro del departamento.</li>
+                        <li><strong>Interfaz de Hardware:</strong> El sistema funcionará en dispositivos convencionales como computadores personales, tablets y teléfonos inteligentes, sin requerir hardware especializado.</li>
+                        <li><strong>Interfaz de Comunicaciones:</strong> El sistema utilizará protocolos estándar de internet como HTTP/HTTPS para la comunicación entre el usuario, el servidor y la base de datos, permitiendo la consulta y actualización de información turística en la plataforma.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Pestaña: 2.2 Características de los Usuarios -->
+        <div class="tab-content" id="sec-2-2">
+            <section class="content-section">
+                <h2>2.2 Características de los Usuarios</h2>
+                <div class="card" style="margin-bottom: 20px;">
+                    <p>Para el desarrollo del sistema HuilaTour Conecta, se identifican diferentes tipos de usuarios que interactuarán con la plataforma. Cada perfil se describe considerando su nivel de educación, experiencia técnica y habilidades específicas, con el fin de diseñar una interfaz accesible y funcional.</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-user"></i> 1. Turista</h3>
+                        <p style="margin-bottom: 10px;">Persona que utiliza la plataforma para consultar destinos, rutas turísticas e información general para planificar su visita en el departamento del Huila. Esta persona deberá registrarse e iniciar sesión para desbloquear todas las funciones disponibles.</p>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li><strong>Educación:</strong> Nivel educativo variado (secundaria o superior).</li>
+                            <li><strong>Experiencia Técnica:</strong> Nivel básico o medio en el uso de internet y aplicaciones web o móviles.</li>
+                            <li><strong>Habilidades Específicas:</strong> Capacidad para buscar información, comparar opciones de destinos y seguir rutas o itinerarios turísticos.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-user-friends"></i> 2. Visitante</h3>
+                        <p style="margin-bottom: 10px;">Persona que utiliza la plataforma para consultar destinos e información general para planificar su visita en el departamento del Huila. Esta persona no se registra ni inicia sesión. A cambio, no podrá acceder a todas las funciones de la plataforma, solo a las funciones básicas.</p>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li><strong>Educación:</strong> Nivel educativo variado (secundaria o superior).</li>
+                            <li><strong>Experiencia Técnica:</strong> Nivel básico o medio en el uso de internet y aplicaciones web o móviles.</li>
+                            <li><strong>Habilidades Específicas:</strong> Capacidad para buscar información y comparar opciones de destinos.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-concierge-bell"></i> 3. Prestador de Servicios Turísticos</h3>
+                        <p style="margin-bottom: 10px;">Incluye hoteles, restaurantes, guías turísticos o emprendimientos que ofrecen servicios relacionados con el turismo.</p>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li><strong>Educación:</strong> Nivel educativo medio o técnico, en algunos casos formación en turismo o atención al cliente.</li>
+                            <li><strong>Experiencia Técnica:</strong> Nivel básico o medio en el uso de plataformas digitales para registrar o actualizar información de servicios.</li>
+                            <li><strong>Habilidades Específicas:</strong> Gestión de información de servicios turísticos, atención al cliente y actualización de datos dentro de la plataforma.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-user-shield"></i> 4. Administrador del Sistema</h3>
+                        <p style="margin-bottom: 10px;">Usuario responsable de gestionar la información dentro de la plataforma y verificar los registros de prestadores turísticos.</p>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li><strong>Educación:</strong> Formación técnica o tecnológica en áreas relacionadas con sistemas, software, administración o turismo.</li>
+                            <li><strong>Experiencia Técnica:</strong> Nivel medio o alto en el manejo de sistemas informáticos y plataformas web.</li>
+                            <li><strong>Habilidades Específicas:</strong> Gestión de bases de datos, verificación de información registrada y administración general del sistema.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Pestaña: 2.3 Restricciones -->
+        <div class="tab-content" id="sec-2-3">
+            <section class="content-section">
+                <h2>2.3 Restricciones</h2>
+                <div class="card">
+                    <p style="margin-bottom: 15px;">El desarrollo y despliegue del sistema están sujetos a las siguientes limitaciones:</p>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li><strong>Normativa Legal:</strong> El sistema debe cumplir con la Ley 1581 de 2012, garantizando la protección de los datos personales de los usuarios registrados, especialmente la información relacionada con documentos de identidad y fotografías cargadas en la plataforma.</li>
+                        <li><strong>Compatibilidad de Navegadores:</strong> La plataforma debe funcionar correctamente en navegadores web modernos como Google Chrome, Mozilla Firefox y Microsoft Edge, asegurando una experiencia estable para la mayoría de los usuarios.</li>
+                        <li><strong>Conectividad a Internet:</strong> El acceso al sistema depende de la disponibilidad de conexión a internet por parte del usuario, ya que la consulta de rutas, itinerarios y destinos turísticos requiere comunicación con el servidor y la base de datos.</li>
+                        <li><strong>Integración con Servicios Externos:</strong> Algunas funcionalidades, como la visualización de ubicaciones y rutas turísticas, dependen de servicios de geolocalización externos como Google Maps, lo que implica depender de la disponibilidad y políticas de dichos servicios.</li>
+                        <li><strong>Actualización de Información Turística:</strong> La precisión de la información sobre destinos, rutas e itinerarios dependerá de la disponibilidad y actualización de datos proporcionados por entidades turísticas y prestadores de servicios del departamento del Huila.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Pestaña: 2.4 Suposiciones y dependencias -->
+        <div class="tab-content" id="sec-2-4">
+            <section class="content-section">
+                <h2>2.4 Suposiciones y dependencias</h2>
+                <div class="card" style="margin-bottom: 20px;">
+                    <p>A diferencia de las restricciones, estas son condiciones que se espera que se cumplan para que el sistema funcione correctamente, pero que no dependen directamente del equipo de desarrollo.</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="card">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 12px;"><i class="fas fa-check-double"></i> 2.4.1 Suposiciones (Assumptions)</h3>
+                        <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                            <li>Se asume que los usuarios cuentan con acceso a internet para consultar la plataforma.</li>
+                            <li>Se asume que los usuarios poseen conocimientos básicos para navegar en aplicaciones web.</li>
+                            <li>Se asume que los prestadores turísticos proporcionarán información verídica y actualizada sobre sus servicios.</li>
+                            <li>Se asume que la información turística del departamento del Huila estará disponible para ser recopilada y organizada en el sistema.</li>
+                        </ul>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="color: var(--secondary-color); margin-bottom: 12px;"><i class="fas fa-network-wired"></i> 2.4.2 Dependencias (Dependencies)</h3>
+                        <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                            <li>Dependencia de servicios externos de mapas o geolocalización para mostrar ubicaciones y rutas turísticas.</li>
+                            <li>Dependencia de servidores o servicios de alojamiento web donde se ejecutará la plataforma.</li>
+                            <li>Dependencia de una base de datos para almacenar la información de usuarios, destinos y servicios turísticos.</li>
+                            <li>Dependencia de la disponibilidad de conexión a internet para que los usuarios puedan acceder al sistema.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Script JavaScript para Pestañas y Sidebar -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/srs/Seccion_2.js"></script>
+</body>
+</html>

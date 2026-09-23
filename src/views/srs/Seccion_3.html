@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HuilaTour Conecta - Requisitos Específicos</title>
+    <!-- Estilos Globales y Específicos -->
+    <link rel="stylesheet" href="../../assets/css/srs/Seccion_1.css" />
+    <link rel="stylesheet" href="../../assets/css/info_tecnico/styles.css" />
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="sidebar-container"></div>
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        <!-- Cabecera de la Sección -->
+        <header class="hero-section">
+            <div class="section-header" style="border:none; margin:0; padding:0;">
+                <span class="badge pk">Documentación SRS</span>
+                <h1 style="color: white; border:none; margin-top: 10px;">3. Requisitos Específicos</h1>
+                <p><i class="fas fa-clipboard-list"></i> HuilaTour Conecta – Sistema Inteligente de Gestión Turística Regional</p>
+            </div>
+        </header>
+
+        <!-- Botones de Pestañas Principales -->
+        <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 25px;">
+            <button class="tab-btn active" onclick="switchTab(event, 'sec-3-1')">3.1 Interfaces</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sec-3-2')">3.2 Historias de Usuario</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sec-3-3')">3.3 Requerimientos Funcionales</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sec-3-4')">3.4 Requerimientos No Funcionales</button>
+            <button class="tab-btn" onclick="switchTab(event, 'sec-3-5')">3.5 Casos de Uso</button>
+        </div>
+
+        <!-- Contenido de Pestaña: 3.1 Requisitos Comunes de las interfaces -->
+        <div class="tab-content active" id="sec-3-1">
+            <section class="content-section">
+                <h2>1.1 Requisitos Comunes de las interfaces</h2>
+                
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-desktop"></i> 1.1.1 Interfaz de Usuario (UI)</h3>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Diseño intuitivo, accesible y de fácil navegación para turistas, operadores y administradores.</li>
+                        <li>Uso de iconos claros, botones visibles y texto legible con tipografía mínima adecuada.</li>
+                        <li>Compatibilidad con dispositivos móviles, tablet y computadores (enfoque mobile-first).</li>
+                        <li>Soporte multilenguaje (mínimo español e inglés).</li>
+                        <li>Incorporación de opciones de accesibilidad (contraste adecuado, navegación por teclado, texto alternativo en imágenes).</li>
+                        <li>Visualización interactiva mediante mapas, rutas y contenido dinámico.</li>
+                        <li>Mensajes de validación claros y comprensibles en formularios.</li>
+                        <li>Adaptación a condiciones de baja conectividad (modo de texto simplificado).</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-microchip"></i> 1.1.2 Interfaz de Hardware</h3>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Compatibilidad con dispositivos estándar (PC, tablet, smartphone).</li>
+                        <li>Uso del GPS del dispositivo para geolocalización de usuarios y recomendación de destinos cercanos.</li>
+                        <li>Soporte para interacción táctil en dispositivos móviles.</li>
+                        <li>Capacidad de funcionamiento en condiciones de conectividad limitada en zonas rurales.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-code"></i> 1.1.3 Interfaz de Software</h3>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Integración con APIs externas (clima, mapas, autenticación, mensajería).</li>
+                        <li>Comunicación con servicios de backend mediante API REST protegida con autenticación.</li>
+                        <li>Integración con bases de datos para almacenamiento de usuarios, destinos, reservas y reseñas.</li>
+                        <li>Uso de servicios en la nube para almacenamiento de archivos y contenido multimedia.</li>
+                        <li>Integración con sistemas de analítica para seguimiento de comportamiento del usuario.</li>
+                        <li>Implementación de sistemas de caché para optimización del rendimiento.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;"><i class="fas fa-network-wired"></i> 1.1.4 Interfaz de Comunicación</h3>
+                    <ul style="padding-left: 20px; line-height: 1.8;">
+                        <li>Uso de protocolos seguros (HTTPS) para la transmisión de datos.</li>
+                        <li>Comunicación mediante tokens de autenticación (JWT) para control de acceso.</li>
+                        <li>Envío de notificaciones por correo electrónico y notificaciones push.</li>
+                        <li>Integración con servicios externos de mensajería (por ejemplo, contacto vía WhatsApp).</li>
+                        <li>Requerimiento de conexión a internet para funcionalidades en tiempo real y servicios externos.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Pestaña: 3.2 Historias de Usuario -->
+        <div class="tab-content" id="sec-3-2">
+            <section class="content-section">
+                <h2>1.2 Historias de Usuario</h2>
+                <div class="card" style="margin-bottom: 20px;">
+                    <p>A continuación se detallan las historias de usuario que orientan el desarrollo funcional de la plataforma:</p>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-1: Visualización de "Tesoros Escondidos"</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista nacional, quiero ver fotografías de alta calidad y descripciones de miradores en pueblos poco conocidos, para descubrir nuevos destinos que no aparecen en las guías tradicionales.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> La plataforma debe tener una sección de "Destinos Recomendados" con galerías de imágenes y datos de acceso.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-2: Verificación de Legalidad</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista precavido, quiero visualizar el sello de Registro Nacional de Turismo (RNT) en el perfil de la agencia, para tener la seguridad de que estoy contratando a un operador legal y formal.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Cada perfil de operador debe mostrar un icono de verificación vinculado a su número de RNT.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-3: Información Técnica de Acceso</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista que viaja en vehículo particular, quiero conocer el estado de las vías y el clima actual del sitio turístico, para preparar mi viaje y evitar inconvenientes en el trayecto.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> El sistema debe incluir un apartado de "Estado de Ruta" y un widget de clima en tiempo real por municipio.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-4: Filtro por Categorías</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como usuario interesado en fotografía, quiero filtrar los sitios turísticos por la categoría "Miradores", para encontrar específicamente lugares con las mejores vistas panorámicas del Huila.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Existencia de un menú de filtros funcional por tipo de actividad (Miradores, Historia, Gastronomía).</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-5: Contacto Directo por WhatsApp</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista interesado, quiero un botón de acceso directo al WhatsApp de la agencia, para resolver dudas y cerrar la compra de forma inmediata con el operador.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> El botón debe abrir la aplicación de WhatsApp con un mensaje predefinido: "Hola, vi tu servicio en HuilaTour y deseo más información".</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-6: Formulario de Reserva Rápida</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como usuario decidido, quiero rellenar un formulario básico con fecha y número de personas, para solicitar una reserva sin tener que realizar llamadas largas.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Envío automático de correo electrónico al operador con los datos capturados en el formulario.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-7: Chatbot de Preguntas Frecuentes</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista en horario no laboral, quiero que un asistente virtual responda mis dudas básicas sobre precios y horarios, para obtener información inmediata sin esperar a que el operador se conecte.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> El chatbot debe responder al menos 5 preguntas frecuentes configuradas previamente.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-8: Registro de Operador</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como propietaria de agencia de viajes, quiero crear un perfil comercial cargando mis documentos legales, para empezar a promocionar mis rutas en la plataforma oficial.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Formulario de registro con carga de archivos (PDF/JPG) y campos obligatorios de contacto.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-9: Actualización de Catálogo</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como operadora turística, quiero modificar los precios y las rutas de mis paquetes según la temporada, para mantener la información actualizada y evitar reclamos por datos obsoletos.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Panel de administración sencillo (CMS) para editar texto y precios en tiempo real.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-10: Gestión de Reseñas</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como representante legal de la agencia, quiero ver y responder los comentarios que dejan los turistas en mi perfil, para mejorar mi reputación online y agradecer la preferencia de los clientes.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Módulo de comentarios con opción de "Responder" habilitado solo para el dueño del perfil.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-11: Validación de Agencias</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como administrador del sistema, quiero aprobar o rechazar las solicitudes de registro de los operadores, para garantizar que solo empresas legales aparezcan en HuilaTour.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Dashboard administrativo con lista de registros pendientes y botón de aprobación.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-12: Backup de Seguridad</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como ingeniero encargado del sistema, quiero programar respaldos automáticos de la base de datos cada 24 horas, para protegernos ante una posible pérdida de información o fallo del servidor.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Registro de logs que confirme la ejecución exitosa del Backup diario.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-13: Gestión de Roles y Permisos</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como administrador principal, quiero asignar permisos específicos a los desarrolladores y moderadores, para controlar quién puede editar configuraciones críticas del sistema.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Niveles de acceso diferenciados: SuperAdmin, Moderador, Operador y Turista.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-14: Adaptabilidad Móvil (Responsive)</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista que está viajando por carretera, quiero que la web se vea correctamente en mi celular con poca señal, para consultar la ubicación del siguiente mirador sobre la marcha.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> La página debe cargar en menos de 3 segundos en redes 3G y adaptarse a pantallas pequeñas.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-15: Mapa Interactivo del Huila</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista explorador, quiero ver un mapa con pines de colores según el tipo de atracción, para visualizar qué sitios quedan cerca de mi ubicación actual.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Integración funcional con API de mapas que muestre la ubicación del usuario y de los sitios turísticos.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-16: Modo Multilingüe</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista extranjero, quiero cambiar el idioma de la plataforma a inglés o portugués, para entender los detalles técnicos y las recomendaciones de seguridad de las rutas.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Selector de idioma en el encabezado que traduzca las etiquetas principales del sitio.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-17: Reporte de Visitas</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como operador turístico, quiero ver una estadística de cuántas personas visitaron mi perfil en el mes, para medir la efectividad de la plataforma en la visibilidad de mi negocio.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Gráfico básico de barras dentro del panel del operador con el conteo de clics.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-18: Calificación de Experiencia</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista que finalizó un tour, quiero calificar con estrellas la atención recibida por la agencia, para ayudar a otros viajeros a elegir los mejores servicios.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Sistema de 1 a 5 estrellas disponible solo tras el contacto con el operador.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-19: Buscador Predictivo</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como usuario con prisa, quiero que el buscador me sugiera nombres de municipios al empezar a escribir, para ahorrar tiempo en la búsqueda de destinos.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Autocompletado funcional que busque en la base de datos de municipios del Huila.</p>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--secondary-color); font-size: 1.05rem;">HU-20: Sugerencias por Cercanía</h3>
+                        <p style="margin: 8px 0;"><strong>Historia:</strong> Como turista en un municipio específico, quiero ver una lista de "Otros sitios cercanos que te pueden gustar", para aprovechar mi estancia y visitar más lugares en un solo viaje.</p>
+                        <p style="font-size: 0.9rem; color: #475569;">• <strong>Criterios de Aceptación:</strong> Algoritmo lógico que muestre los 3 destinos con menor distancia geográfica al actual.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Pestaña: 3.3 Requerimientos Funcionales (RF) -->
+        <div class="tab-content" id="sec-3-3">
+            <section class="content-section">
+                <h2>1.3 Requerimientos Funcionales (RF)</h2>
+                <div class="card" style="margin-bottom: 20px;">
+                    <p>Los siguientes requerimientos fueron obtenidos a partir de los diferentes métodos de recolección de información utilizados durante el análisis (entrevistas, historias de usuario, encuestas, lluvia de ideas). Los documentos anexos de soporte se encuentran en los siguientes enlaces:</p>
+                    <ul style="padding-left: 20px; line-height: 1.8; margin-top: 10px; font-size: 0.92rem;">
+                        <li><strong>Videos Entrevistas:</strong> <a href="https://drive.google.com/file/d/1QdaHSh0Hy_xUFAlm0gl4CFJL4Ign8tnQ/view?usp=sharing" target="_blank">Ver Enlace</a></li>
+                        <li><strong>Historias de Usuario:</strong> <a href="https://drive.google.com/file/d/1qNCz9zeAxZmV9Nw3j8bzz7i6_-DOXf3z/view?usp=sharing" target="_blank">Ver Enlace</a></li>
+                        <li><strong>Respuestas Encuesta:</strong> <a href="https://docs.google.com/spreadsheets/d/1dZ6H6lT9e6W25uZvpq84kwqSjyTzDdDi/edit?usp=sharing" target="_blank">Ver Enlace</a></li>
+                        <li><strong>Informe General:</strong> <a href="https://drive.google.com/file/d/1dfrDfXLMwSTGb3vbOeywTU8boSv65QR8/view?usp=sharing" target="_blank">Ver Enlace</a></li>
+                    </ul>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-01 Gestión de destinos y contenido turístico</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-01.1 Registrar destinos turísticos</li>
+                            <li>ERF-01.2 Gestionar galería fotográfica</li>
+                            <li>ERF-01.3 Registrar precios y tarifas</li>
+                            <li>ERF-01.4 Mostrar estado de vías y condiciones de acceso</li>
+                            <li>ERF-01.5 Mostrar clima en tiempo real</li>
+                            <li>ERF-01.6 Categorizar y etiquetar destinos</li>
+                            <li>ERF-01.7 Gestionar temporadas turísticas</li>
+                            <li>ERF-01.8 Crear rutas turísticas organizadas</li>
+                            <li>ERF-01.9 Gestionar contenido por operador (CMS)</li>
+                            <li>ERF-01.10 Registrar historial de cambios de contenido</li>
+                            <li>ERF-01.11 Buscar contenido con autocompletado</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-02 Gestión de usuarios, roles y autenticación</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-02.1 Registrar turistas</li>
+                            <li>ERF-02.2 Registrar operadores turísticos</li>
+                            <li>ERF-02.3 Gestionar autenticación con JWT</li>
+                            <li>ERF-02.4 Recuperar y cambiar contraseña</li>
+                            <li>ERF-02.5 Gestionar roles y permisos (RBAC)</li>
+                            <li>ERF-02.6 Gestionar perfil de turista</li>
+                            <li>ERF-02.7 Gestionar perfil de operador</li>
+                            <li>ERF-02.8 Administrar usuarios</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-03 Contacto, reservas y comunicación</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-03.1 Contactar operador por WhatsApp</li>
+                            <li>ERF-03.2 Realizar solicitudes de reserva</li>
+                            <li>ERF-03.3 Enviar confirmación de reserva por correo</li>
+                            <li>ERF-03.4 Gestionar estados de reserva</li>
+                            <li>ERF-03.5 Consultar historial de reservas</li>
+                            <li>ERF-03.6 Atender consultas con chatbot (AI API)</li>
+                            <li>ERF-03.7 Enviar notificaciones push y correo</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-04 Mapas, geolocalización y exploración espacial</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-04.1 Mostrar mapa interactivo de destinos</li>
+                            <li>ERF-04.2 Recomendar destinos por geolocalización</li>
+                            <li>ERF-04.3 Visualizar rutas en el mapa</li>
+                            <li>ERF-04.4 Integrar mapas (Google Maps / Leaflet)</li>
+                            <li>ERF-04.5 Sugerir destinos cercanos</li>
+                            <li>ERF-04.6 Precargar mapas para uso offline</li>
+                            <li>ERF-04.7 Gestionar permisos de geolocalización</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-05 Confianza, reseñas y verificación de calidad</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-05.1 Validar RNT de operadores</li>
+                            <li>ERF-05.2 Mostrar distintivo de operador verificado</li>
+                            <li>ERF-05.3 Gestionar reseñas verificadas</li>
+                            <li>ERF-05.4 Calificar con estrellas</li>
+                            <li>ERF-05.5 Moderar reseñas y permitir respuestas</li>
+                            <li>ERF-05.6 Reportar contenido inapropiado</li>
+                            <li>ERF-05.7 Detectar incoherencias en precios</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-06 Seguridad, privacidad y protección de datos</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-06.1 Proteger endpoints con JWT</li>
+                            <li>ERF-06.2 Mitigar ataques (DDoS y fuerza bruta)</li>
+                            <li>ERF-06.3 Cifrar datos en tránsito y reposo</li>
+                            <li>ERF-06.4 Cumplir Ley 1581 de protección de datos</li>
+                            <li>ERF-06.5 Almacenar documentos de forma segura</li>
+                            <li>ERF-06.6 Auditar acciones críticas</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-07 Accesibilidad, internacionalización y usabilidad</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-07.1 Soportar múltiples idiomas</li>
+                            <li>ERF-07.2 Cumplir estándares de accesibilidad (WCAG)</li>
+                            <li>ERF-07.3 Permitir navegación por teclado</li>
+                            <li>ERF-07.4 Ofrecer modo de texto simplificado</li>
+                            <li>ERF-07.5 Implementar diseño inclusivo</li>
+                            <li>ERF-07.6 Mostrar mensajes de validación claros</li>
+                        </ul>
+                    </div>
+
+                    <div class="card" style="margin-bottom: 20px;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-08 Analítica, reportes y gestión del negocio</h3>
+                        <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                            <li>ERF-08.1 Mostrar estadísticas al operador</li>
+                            <li>ERF-08.2 Exportar reportes</li>
+                            <li>ERF-08.3 Mostrar dashboard global</li>
+                            <li>ERF-08.4 Registrar eventos de analítica</li>
+                            <li>ERF-08.5 Generar recomendaciones por IA</li>
+                            <li>ERF-08.6 Gestionar destinos favoritos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card" style="margin-top: 10px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 10px;">RF-09 Administración de la plataforma y gobernanza</h3>
+                    <ul style="padding-left: 18px; line-height: 1.6; font-size: 0.92rem;">
+                        <li>ERF-9.1 Aprobar o rechazar operadores</li>
+                        <li>ERF-9.2 Controlar tiempos de revisión</li>
+                        <li>ERF-9.3 Gestionar categorías y taxonomía</li>
+                        <li>ERF-9.4 Gestionar alertas internas</li>
+                        <li>ERF-9.5 Gestionar páginas institucionales</li>
+                        <li>ERF-9.6 Registrar incidencias y caídas del sistema</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Pestaña: 3.4 Requerimientos No Funcionales (RNF) -->
+        <div class="tab-content" id="sec-3-4">
+            <section class="content-section">
+                <h2>1.1 Requerimientos No Funcionales (RNF)</h2>
+                
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">1. Seguridad y Privacidad</h3>
+                    <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                        <li><strong>RNF-01: Protección de Datos (Habeas Data):</strong> El sistema debe cumplir estrictamente con la Ley 1581 de 2012 de Colombia, asegurando el cifrado de datos sensibles y el consentimiento explícito para el tratamiento de información personal.</li>
+                        <li><strong>RNF-02: Cifrado de Comunicaciones:</strong> Toda la transferencia de datos entre el cliente (web/app) y el servidor debe realizarse mediante protocolos seguros HTTPS/TLS 1.3.</li>
+                        <li><strong>RNF-03: Seguridad de Contraseñas:</strong> Las credenciales de acceso deben ser almacenadas utilizando algoritmos de hash robustos (como Argon2 o BCrypt) con "sal" aleatoria.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">2. Rendimiento y Escalabilidad</h3>
+                    <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                        <li><strong>RNF-04: Tiempo de Respuesta:</strong> El sistema debe responder a las consultas de búsqueda en menos de 2 segundos bajo condiciones normales de carga.</li>
+                        <li><strong>RNF-05: Capacidad de Usuarios Concurrentes:</strong> La infraestructura debe soportar al menos 100 usuarios simultáneos sin degradación del servicio, con capacidad de escalado automático en temporadas altas (ej. San Pedro).</li>
+                        <li><strong>RNF-06: Optimización de Activos:</strong> Las imágenes deben servirse en formatos de última generación (WebP/Avif) y estar optimizadas para reducir el consumo de datos móviles en zonas rurales.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">3. Disponibilidad y Robustez</h3>
+                    <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                        <li><strong>RNF-07: Disponibilidad (Uptime):</strong> La plataforma debe garantizar una disponibilidad del 99.9% anual, minimizando las ventanas de mantenimiento programado a horas de bajo tráfico.</li>
+                        <li><strong>RNF-08: Tolerancia a Fallos:</strong> En caso de caída de un nodo del servidor, el sistema debe ser capaz de redirigir el tráfico a un nodo de respaldo sin pérdida de sesiones activas.</li>
+                        <li><strong>RNF-09: Recuperación ante Desastres (DRP):</strong> El tiempo objetivo de recuperación (RTO) ante un fallo total no debe exceder las 4 horas.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">4. Usabilidad y Accesibilidad</h3>
+                    <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                        <li><strong>RNF-10: Estándar de Accesibilidad:</strong> La interfaz debe cumplir con las pautas WCAG 2.1 Nivel AA, permitiendo que personas con discapacidades visuales o motoras naveguen la oferta turística.</li>
+                        <li><strong>RNF-11: Diseño Mobile-First:</strong> Debido a que el turista usa el sistema "en campo", la experiencia de usuario debe estar optimizada prioritariamente para dispositivos móviles antes que para escritorio.</li>
+                        <li><strong>RNF-12: Facilidad de Aprendizaje:</strong> Un usuario nuevo debe ser capaz de encontrar un destino y contactar a un operador en menos de 3 minutos sin necesidad de tutoriales externos.</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">5. Portabilidad y Mantenibilidad</h3>
+                    <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                        <li><strong>RNF-13: Compatibilidad de Navegadores:</strong> El sistema debe ser compatible con las últimas dos versiones de los navegadores más usados (Chrome, Safari, Firefox, Edge).</li>
+                        <li><strong>RNF-14: Modularidad del Código:</strong> El software debe estar construido bajo una arquitectura de tres capas (Presentación, Negocio y Datos), complementada con el patrón de diseño MVC (Modelo–Vista–Controlador), donde la Vista corresponde a las interfaces de usuario desarrolladas en HTML, CSS y JavaScript, el Controlador a los componentes en Java que aplican las reglas de negocio, y el Modelo a las entidades y el acceso a datos sobre PostgreSQL. Esta separación de responsabilidades permite que cada módulo funcional del sistema (por ejemplo, el chatbot) pueda ser actualizado, corregido o reemplazado de forma independiente, sin afectar el funcionamiento del resto del sistema, facilitando así el mantenimiento evolutivo y correctivo del software.</li>
+                        <li><strong>RNF-15: Internacionalización (i18n):</strong> La arquitectura debe permitir la adición de nuevos idiomas mediante archivos de recursos externos, sin modificar el código fuente.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 10px;">6. Localización y Contexto Geográfico</h3>
+                    <ul style="padding-left: 18px; line-height: 1.7; font-size: 0.92rem;">
+                        <li><strong>RNF-16: Precisión de GPS:</strong> El sistema debe manejar una precisión geográfica de al menos 10 metros para asegurar que las rutas y destinos en el Huila sean localizados correctamente.</li>
+                        <li><strong>RNF-17: Funcionamiento en Baja Conectividad:</strong> La aplicación móvil debe implementar estrategias de caché agresiva para permitir la visualización de datos previamente cargados cuando el turista entre a zonas con poca señal (cañones o áreas rurales).</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- Contenido de Pestaña: 3.5 Casos de Uso -->
+        <div class="tab-content" id="sec-3-5">
+            <section class="content-section">
+                <h2>1.2 y 1.3 Casos de Uso General</h2>
+                
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="color: var(--primary-color); margin-bottom: 8px;">Diagrama de Casos de Uso General</h3>
+                    <p>El diagrama de casos de uso del sistema se encuentra disponible en el siguiente enlace externo: <a href="https://drive.google.com/file/d/1QqHW0oX39Rdf4PNrFn1zQbAedc_wG5ML/view?usp=sharing" target="_blank">Ver Archivo PDF</a></p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--primary-color); margin-bottom: 15px;">Descripción de Casos de Uso (Diagrama General)</h3>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <strong style="color: var(--secondary-color);">MENU_PPAL:</strong>
+                            <p>Permite al Turista y al Visitante acceder a las principales opciones de la plataforma según su rol, como consultar destinos, gestionar servicios, favoritos y configuraciones de cuenta.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Login:</strong>
+                            <p>Permite que un usuario seleccione la acción que quiera realizar, como Iniciar sesión, Registrarse, o Recuperar contraseña.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Editar perfil:</strong>
+                            <p>Permite al usuario modificar su información personal, como nombre, correo, foto de perfil, contraseña o datos de contacto.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Gestionar favoritos:</strong>
+                            <p>Permite al turista consultar o eliminar destinos turísticos guardados como favoritos para acceder rápidamente a ellos.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Cerrar sesión:</strong>
+                            <p>Permite al usuario salir de manera segura de su cuenta dentro de la plataforma.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Menú Admin:</strong>
+                            <p>Permite al administrador acceder a las funciones administrativas del sistema, como gestión de usuarios, destinos y roles.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Gestionar Usuarios:</strong>
+                            <p>Permite al administrador crear, consultar, editar, bloquear o eliminar usuarios registrados en la plataforma.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Asignar roles:</strong>
+                            <p>Permite al administrador definir o modificar el rol de un usuario, asignándolo como turista, proveedor o administrador.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Gestionar destinos:</strong>
+                            <p>Permite tanto al administrador como al proveedor consultar, editar, aprobar o desactivar destinos turísticos publicados en la plataforma, según su rol.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Publicar destino:</strong>
+                            <p>Permite al proveedor y al administrador registrar y publicar información de un destino turístico, incluyendo descripción, imágenes, ubicación y servicios disponibles.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Desactivar destino:</strong>
+                            <p>Permite al administrador o proveedor ocultar un destino turístico para que deje de mostrarse públicamente en la plataforma.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Recuperar contraseña:</strong>
+                            <p>Permite a cualquier usuario registrado restablecer el acceso a su cuenta mediante un proceso de recuperación utilizando su correo electrónico.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Registrarse:</strong>
+                            <p>Permite a una persona crear una cuenta en la plataforma ingresando sus datos personales y credenciales de acceso.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Iniciar sesión:</strong>
+                            <p>Permite autenticar al usuario dentro del sistema para acceder a funcionalidades personalizadas según su rol.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Guardar favorito:</strong>
+                            <p>Permite al turista almacenar un destino turístico dentro de su lista de favoritos para consultarlo posteriormente.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Menú Proveedor:</strong>
+                            <p>Permite al proveedor acceder a las opciones relacionadas con la administración de servicios y destinos turísticos publicados.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Gestionar servicios:</strong>
+                            <p>Permite al proveedor crear, editar, actualizar o eliminar servicios turísticos asociados a un destino.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Consultar destinos:</strong>
+                            <p>Permite al usuario visualizar la lista de destinos turísticos disponibles dentro de la plataforma.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Filtrar etiquetas:</strong>
+                            <p>Permite al usuario buscar destinos utilizando etiquetas relacionadas con actividades, clima, cultura o tipo de turismo.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Buscar destino:</strong>
+                            <p>Permite al usuario encontrar destinos específicos mediante palabras clave o nombres.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Filtrar categoría:</strong>
+                            <p>Permite al usuario visualizar destinos según categorías como ecoturismo, aventura, gastronomía o turismo cultural.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Ver detalle del destino:</strong>
+                            <p>Permite al usuario consultar información completa de un destino turístico, incluyendo descripción, ubicación, servicios e información relevante.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Ver imágenes:</strong>
+                            <p>Permite al usuario visualizar fotografías relacionadas con un destino turístico para conocer mejor el lugar.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Consultar precios:</strong>
+                            <p>Permite al usuario visualizar precios aproximados de servicios turísticos asociados a un destino, como hospedaje, alimentación o transporte.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Ver clima:</strong>
+                            <p>Permite al usuario consultar información climática del destino turístico para planificar su visita.</p>
+                        </div>
+                        <div>
+                            <strong style="color: var(--secondary-color);">Ver estado de vías:</strong>
+                            <p>Permite al usuario consultar el estado actual de las vías de acceso hacia un destino turístico, facilitando la planificación del viaje.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Script JavaScript para Pestañas y Sidebar -->
+    <script src="../../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script src="../../assets/js/srs/Seccion_3.js"></script>
+
+</body>
+</html>
