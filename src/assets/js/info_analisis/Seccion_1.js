@@ -20,12 +20,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 100);
     });
 });
-document.addEventListener("DOMContentLoaded", () => {
-    // Retraso de 1.2 segundos para que se luzca el logo y luego se oculte suavemente
-    setTimeout(() => {
-        const loader = document.getElementById("page-loader");
-        if (loader) {
-            loader.classList.add("hidden");
-        }
-    }, 1200);
-});

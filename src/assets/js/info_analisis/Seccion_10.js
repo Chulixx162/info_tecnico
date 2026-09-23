@@ -22,4 +22,4 @@ function switchTab(evt, tabId) {
         targetTab.classList.add("active");
     }
     evt.currentTarget.classList.add("active");
-}
+}   

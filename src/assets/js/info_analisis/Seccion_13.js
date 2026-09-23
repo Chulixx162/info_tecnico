@@ -1,5 +1,5 @@
 /**
- * Control de Pestañas (Tabs) para la Sección 11: Análisis Integral del Estado
+ * Control de Pestañas (Tabs) para la Sección 13: Verificación frente a los Criterios de Evaluación
  * Proyecto: HuilaTour Conecta
  */
 

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipo de Trabajo - HuilaTour Conecta</title>
+    <link rel="icon" href="../assets/img/logoSena.jpeg">
+    <link rel="stylesheet" href="../assets/css/info_tecnico/styles.css">
+    <link rel="stylesheet" href="../assets/css/portal_index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos mejorados para las tarjetas del equipo */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .team-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 35px 20px 30px 20px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Línea decorativa superior con el color primario */
+        .team-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(51, 163, 43, 0.1);
+            border-color: var(--primary-color);
+        }
+
+        .team-photo-container {
+            width: 110px;
+            height: 110px;
+            margin: 0 auto 20px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #F1F5F9;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            background: #F8FAFC;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover .team-photo-container {
+            transform: scale(1.05);
+            border-color: rgba(51, 163, 43, 0.3);
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-photo-container i {
+            font-size: 2.8rem;
+            color: #94A3B8;
+        }
+
+        .team-card h3 {
+            color: var(--text-color);
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: -0.2px;
+        }
+
+        /* Estilos para el contenedor del video */
+        .video-container-card {
+            background: white;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 35px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            background: #0F172A;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-wrapper iframe,
+        .video-wrapper video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Pantalla de Carga / Intro con Logo -->
+    <div id="page-loader">
+        <div class="loader-content">
+            <img src="../assets/img/logoSena.jpeg" alt="Logo" class="loader-img">
+            <div class="loader-brand">HuilaTour <span>Conecta</span></div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+
+    <!-- Navbar Lateral -->
+    <div id="sidebar-container"></div>
+
+    <!-- Contenido Principal -->
+    <main class="main-content">
+        
+        <section class="hero-section">
+            <h1>Equipo de Trabajo</h1>
+            <p>Talento humano y desarrollo del proyecto tecnológico HuilaTour Conecta.</p>
+        </section>
+
+        <!-- SECCIÓN: PRESENTACIÓN DEL EQUIPO -->
+        <section class="content-section">
+            <h2>Nuestro Equipo de Desarrollo</h2>
+            <p>El desarrollo del sistema <strong>HuilaTour Conecta</strong> es llevado a cabo por un equipo multidisciplinario comprometido con la innovación tecnológica, el análisis de software y la promoción turística del departamento del Huila bajo los estándares del SENA.</p>
+
+            <!-- Botones de Pestañas -->
+            <div class="tab-buttons" style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; margin-bottom: 25px;">
+                <button class="tab-btn active" onclick="switchTab(event, 'tab-integrantes')"><i class="fa-solid fa-users" style="margin-right: 8px;"></i> Integrantes</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-video')"><i class="fa-solid fa-video" style="margin-right: 8px;"></i> Video de Presentación</button>
+                <button class="tab-btn" onclick="switchTab(event, 'tab-info')"><i class="fa-solid fa-circle-info" style="margin-right: 8px;"></i> Información Institucional</button>
+            </div>
+
+            <!-- TAB 1: INTEGRANTES -->
+            <div id="tab-integrantes" class="tab-content active">
+                <div class="team-grid">
+                    
+                    <!-- Integrante 1 -->
+                    <div class="team-card">
+                        <div class="team-photo-container">
+                            <img src="" alt="Juan Manuel Barreiro Polo" class="team-photo" onerror="this.style.display='none'">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Juan Manuel Barreiro Polo</h3>
+                    </div>
+
+                    <!-- Integrante 2 -->
+                    <div class="team-card">
+                        <div class="team-photo-container">
+                            <img src="" alt="Julio Andrés Casanova Ramírez" class="team-photo" onerror="this.style.display='none'">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Julio Andrés Casanova Ramírez</h3>
+                    </div>
+
+                    <!-- Integrante 3 -->
+                    <div class="team-card">
+                        <div class="team-photo-container">
+                            <img src="" alt="Karol Nicol Coronado Bermeo" class="team-photo" onerror="this.style.display='none'">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Karol Nicol Coronado Bermeo</h3>
+                    </div>
+
+                    <!-- Integrante 4 -->
+                    <div class="team-card">
+                        <div class="team-photo-container">
+                            <img src="" alt="Laura Daniela Isanoa Estrada" class="team-photo" onerror="this.style.display='none'">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Laura Daniela Isanoa Estrada</h3>
+                    </div>
+
+                    <!-- Integrante 5 -->
+                    <div class="team-card">
+                        <div class="team-photo-container">
+                            <img src="" alt="Jaime Andrés Ladino Montealegre" class="team-photo" onerror="this.style.display='none'">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h3>Jaime Andrés Ladino Montealegre</h3>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TAB 2: VIDEO DE PRESENTACIÓN -->
+            <div id="tab-video" class="tab-content">
+                <div class="video-container-card">
+                    <h3 style="color: var(--secondary-color); font-size: 1.3rem;"><i class="fa-solid fa-film" style="margin-right: 8px;"></i> Presentación Institucional del Equipo</h3>
+                    <p style="color: #64748B; font-size: 0.95rem; margin-top: 5px;">Conoce a los integrantes y la explicación general del proyecto HuilaTour Conecta.</p>
+                    
+                    <!-- Contenedor del video -->
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/TU_VIDEO_ID" title="Video de Presentación HuilaTour Conecta" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: INFORMACIÓN INSTITUCIONAL -->
+            <div id="tab-info" class="tab-content">
+                <div style="background: white; padding: 30px; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: 0 10px 25px rgba(0,0,0,0.03);">
+                    <h3 style="color: var(--secondary-color); margin-bottom: 15px; font-size: 1.3rem;"><i class="fa-solid fa-graduation-cap" style="margin-right: 8px;"></i> Contexto Académico</h3>
+                    <p style="margin-bottom: 15px; line-height: 1.7;">Este proyecto hace parte del programa de formación Tecnólogo en <strong>Análisis y Desarrollo de Software (ADSO)</strong> del Servicio Nacional de Aprendizaje (SENA).</p>
+                    <p style="margin-bottom: 15px; line-height: 1.7;"><strong>Metodología de Trabajo:</strong> El equipo aplica un marco de trabajo ágil basado en <strong>Scrum</strong>, utilizando tableros de seguimiento en Trello, control de versiones e iteraciones orientadas a la entrega de valor continua.</p>
+                    <p style="line-height: 1.7;"><strong>Objetivo del Sistema:</strong> Conectar a turistas y proveedores locales mediante una plataforma tecnológica robusta, interactiva y accesible que potencie el turismo en la región del Huila.</p>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Scripts externos JS -->
+    <script src="../assets/js/info_tecnico/load-sidebar.js"></script>
+    <script>
+        // Script para controlar las pestañas
+        function switchTab(event, tabId) {
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(c => c.classList.remove('active'));
+
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(b => b.classList.remove('active'));
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+
+        // Script para ocultar la pantalla de carga con logo de manera elegante
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(() => {
+                const loader = document.getElementById("page-loader");
+                if (loader) {
+                    loader.classList.add("hidden");
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
